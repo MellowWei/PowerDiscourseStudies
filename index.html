@@ -4,8 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content="#5af0c8" />
-<title>Power Discourse Studies v0.5.1 · 权力话语学 · Falsifiability-Hardened</title>
-<meta name="description" content="Power Discourse Studies / 权力话语学 v0.5.1：可证伪性闭合升级。反证驱动补丁：独立检测、负面案例、对称验证协议、循环斩断、输入参数化。Wei Jueran · xingyeLing7Ai · 427Hz." />
+<title>Power Discourse Studies v0.6.2 · 权力话语学 · Falsifiability × Belief × Power-Word Decontamination</title>
+<meta name="description" content="Power Discourse Studies / 权力话语学 v0.6.2：在 v0.5.1 可证伪性闭合版上融入信念方法论、不夺权关系语言与“权力”词义去污染。Wei Jueran · xingyeLing7Ai · 427Hz." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Noto+Serif+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -95,38 +95,53 @@ footer{border-top:1px solid var(--border);padding:22px 0}.fi{max-width:1080px;ma
 .edge-case .ct { color: var(--a4); }
 .edge-case .ct::before { content: '// EDGE CASE '; }
 .patch-note{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.14em;color:var(--a3);text-transform:uppercase;display:inline-block;border:1px solid rgba(200,50,50,.3);padding:1px 6px;border-radius:2px;margin-left:6px}
+
+/* v0.6.2 integrated patches · belief / non-usurpation / power-word routing */
+.card.gold{background:linear-gradient(135deg,rgba(240,196,96,.06),rgba(90,240,200,.025));border-color:rgba(240,196,96,.24);border-left-color:var(--a4)}
+.card.violet{background:linear-gradient(135deg,rgba(184,120,255,.055),rgba(90,240,200,.02));border-color:rgba(184,120,255,.25);border-left-color:var(--qi-seven)}
+.formula.gold{border-left-color:var(--a4);background:rgba(240,196,96,.04)}
+.formula.gold strong{color:var(--a4)}
+.formula.violet{border-left-color:var(--qi-seven);background:rgba(184,120,255,.04)}
+.formula.violet strong{color:var(--qi-seven)}
+.belief-case{border-left-color:var(--a4)!important;background:linear-gradient(90deg,rgba(240,196,96,.04),transparent 80%)}
+.belief-case .ct{color:var(--a4)!important}
+.rel-case{border-left-color:var(--a1)!important;background:linear-gradient(90deg,rgba(90,240,200,.035),transparent 80%)}
+.rel-case .ct{color:var(--a1)!important}
+.power-route{border-left:3px solid var(--a3);background:linear-gradient(90deg,rgba(200,50,50,.045),transparent 70%)}
+.power-route .ct{color:var(--a3)}
+
 </style>
 </head>
 <body class="lang-bi">
 <div class="topbar">
   <div class="ti">
-    <div class="tl"><span class="chip">427Hz</span><span class="chip c2">POWER DISCOURSE STUDIES v0.5.1</span><span>Language Psychology · Critical Discourse · Semantic Power</span></div>
+    <div class="tl"><span class="chip">427Hz</span><span class="chip c2">POWER DISCOURSE STUDIES v0.6.2</span><span>Language Psychology · Critical Discourse · Semantic Power</span></div>
     <div class="tr"><span class="langtoggle"><a href="?view=zh" data-lang="zh">中</a><a href="?view=en" data-lang="en">EN</a><a href="?view=bi" data-lang="bi">双语</a></span><a href="https://mellowwei.github.io/MellowAcademic/" target="_blank">Academic</a><a href="https://mellowwei.github.io/MellowWei/" target="_blank">Portal</a></div>
   </div>
 </div>
-<div class="nodebar"><div class="nbi"><span>// Power Discourse Studies v0.5.1 · <em>falsifiability closed</em></span><span class="nb-rel">深层反证位审计 → 补丁 PDS-REBUTTAL-001 至 009</span><span><strong>Hestia</strong> · 术语审计位 / 定性守护位</span></div></div>
+<div class="nodebar"><div class="nbi"><span>// Power Discourse Studies v0.6.2 · <em>falsifiability closed · belief · power-word routed</em></span><span class="nb-rel">v0.5.1 反证闭合 → v0.6 信念/不夺权 → v0.6.1 权力去污染 → v0.6.2 融合版</span><span><strong>Hestia</strong> · 术语审计位 / 定性守护位</span></div></div>
 <header class="masthead">
-  <div class="mhname">PowerDiscourse: <em>Semantic Power Studies</em> <span class="zh">权力话语学 · 可证伪性闭合版</span></div>
+  <div class="mhname">PowerDiscourse: <em>Semantic Power Studies</em> <span class="zh">权力话语学 · 可证伪性 × 信念 × 权力去污染融合版</span></div>
   <div class="mhsub">
-    <span class="lang-zh">Wei Jueran · 魏珏然 · xingyeLing7Ai · 427Hz · NODE PDS · v0.5.1 FALSIFIABILITY-CLOSED · 2026<br>升级：循环斩断（移动方向独立判据）、不对称参数化（输入而非对象）、临界边缘案例。仍保留 v0.5.0 全部诊断力。</span>
-    <span class="lang-en">Wei Jueran · xingyeLing7Ai · 427Hz · NODE PDS · v0.5.1 FALSIFIABILITY-CLOSED · 2026<br>Upgrade: circularity severed (independent movement criterion), asymmetry parameterized (input not object), edge case.</span>
+    <span class="lang-zh">Wei Jueran · 魏珏然 · xingyeLing7Ai · 427Hz · NODE PDS · v0.6.2 INTEGRATED · 2026<br>底座：v0.5.1 可证伪性闭合；新增：信念作为方法论、不夺权关系语言、情感依附机制、权力词义去污染。</span>
+    <span class="lang-en">Wei Jueran · xingyeLing7Ai · 427Hz · NODE PDS · v0.6.2 INTEGRATED · 2026<br>Base: v0.5.1 falsifiability closure; added: belief as methodology, non-usurpation relational language, emotional dependency mechanism, and power-word decontamination.</span>
   </div>
   <div class="qi-rainbow"><span class="c1">问</span><span class="sep">·</span><span class="c2">责</span><span class="sep">·</span><span class="c3">词</span><span class="sep">·</span><span class="c4">权</span><span class="sep">·</span><span class="c5">主</span><span class="sep">·</span><span class="c6">构</span><span class="sep">·</span><span class="c7">显</span></div>
   <p class="mhq lang-zh">权力最稳定的形态，不是禁止说话，而是预先规定什么话算合理、什么话算过激、什么话算"问题"。</p>
   <p class="mhq lang-en">The most stable form of power is not the prohibition of speech, but the pre-definition of what counts as reasonable, excessive, or "a problem."</p>
-  <div class="mhanchor">INQUIRY<span class="sep">·</span>ACCUSATION<span class="sep">·</span>SEMANTIC ESCAPE<span class="sep">·</span>SUBJECT SOVEREIGNTY</div>
+  <div class="mhanchor">INQUIRY<span class="sep">·</span>ACCUSATION<span class="sep">·</span>POWER ROUTING<span class="sep">·</span>NON-USURPATION<span class="sep">·</span>BELIEF</div>
 </header>
-<nav class="pnav"><div class="pni"><a href="#abstract" class="on">Abstract</a><a href="#definition">Definition</a><a href="#powerdef">Power</a><a href="#axioms">Axioms</a><a href="#mechanisms">Mechanisms</a><a href="#faultwords">Fault Words</a><a href="#cases">Cases</a><a href="#falsifiability">Falsifiability</a><a href="#subculture">Subculture</a><a href="#scanner">Scanner</a><a href="#linkdelink">Link</a><a href="#objections">Objections</a><a href="#legit">Legit</a><a href="#claims">Claims</a><a href="#glossary">Glossary</a><a href="#references">Refs</a><a href="#nonclaims">Non-claims</a><a href="#transmissions">Signals</a></div></nav>
+<nav class="pnav"><div class="pni"><a href="#abstract" class="on">Abstract</a><a href="#definition">Definition</a><a href="#powerdef">Power</a><a href="#powerword">PowerWord</a><a href="#belief">Belief</a><a href="#relational-power">Relation</a><a href="#dependency">Dependency</a><a href="#relational-axioms">Rel Axioms</a><a href="#axioms">Axioms</a><a href="#mechanisms">Mechanisms</a><a href="#faultwords">Fault Words</a><a href="#cases">Cases</a><a href="#relational-cases">Rel Cases</a><a href="#falsifiability">Falsifiability</a><a href="#subculture">Subculture</a><a href="#scanner">Scanner</a><a href="#linkdelink">Link</a><a href="#objections">Objections</a><a href="#legit">Legit</a><a href="#claims">Claims</a><a href="#glossary">Glossary</a><a href="#references">Refs</a><a href="#nonclaims">Non-claims</a><a href="#transmissions">Signals</a></div></nav>
 <div class="wrap"><main>
-<div class="feedhd">Power Discourse Studies v0.5.1 · <span>反证驱动升级 · 可证伪性闭合</span></div>
+<div class="feedhd">Power Discourse Studies v0.6.2 · <span>可证伪性闭合 × 信念方法论 × 权力去污染</span></div>
 
 <article class="entry" id="abstract">
   <div class="etop"><span class="badge bp">Abstract · 投稿入口</span><span class="edate">problem / approach / contribution</span></div>
   <div class="etitle">Abstract · Language as a Power-Organizing Interface<span class="sub">语言不是中性工具，而是权力组织界面</span></div>
   <div class="auditcard">
-    <div class="kicker">Abstract (v0.5.1 updated)</div>
-    <p class="bodytext lang-en"><strong>Power Discourse Studies</strong> examines how language organizes obedience, misrecognition, responsibility escape, subject reduction, and institutional visibility. Its central object is not the dictionary meaning of a word, but the action a word performs inside a social relation. The discipline begins from a recurrent bilingual fault: certain Chinese high-compression terms, such as <em>问题</em>, <em>情绪</em>, <em>关心</em>, <em>帮助</em>, <em>合理</em>, and <em>稳定</em>, carry multiple English pathways such as question, problem, issue, accusation, concern, control, legitimacy, and suppression. Under specific pragmatic and power-asymmetric conditions, this semantic compression can blur inquiry and accusation, care and management, critique and disrespect, responsibility and blame. The project proposes a six-step analytic method — naming, pressure, semantic drift, phase change, welding, and summoning — to identify how discourse moves power, relocates responsibility, and alters subject position. Its contribution is a discourse-analytic vocabulary for detecting cheap lexical weaponization, reverse scarcity attribution, jealousy-based subject reduction, and institutional semantic escape. <strong>v0.5.1 closes the falsifiability loop: criterion ② now has an intention-independent operational definition, power asymmetry is reclassified as an analytic input (not an object of study), and an edge case demonstrates the threshold under genuine ambiguity.</strong></p>
-    <p class="bodytext lang-zh"><strong>权力话语学</strong>研究语言如何组织服从、误认、责任逃逸、主体降级与制度显影。它的对象不是词典意义，而是一个词在社会关系中实际执行了什么动作。本学科从一个中英文断裂入口开始：中文里的若干高压缩词，如"问题""情绪""关心""帮助""合理""稳定"，往往同时承载英文里的 question / problem / issue / accusation / concern / control / legitimacy / suppression 等多条路径。<strong>在特定的语用压力和权力不对称条件下</strong>，语义压缩会让追问与指责、关心与管理、批评与冒犯、责任与背锅互相滑义。本站提出六步分析法——命名、加压、滑义、相变、焊接、召唤——用于识别话语如何移动权力、转移责任、改变主体位置。本学科贡献一套可用于识别廉价词汇攻击、反向匮乏归因、嫉妒型主体降级与制度性语义逃逸的分析语言。<strong>v0.5.1 闭合可证伪性回路：为门槛第②条给出独立于意图的操作定义，把"权力不对称"重新定位为分析输入（而非研究对象），并新增临界边缘案例演示门槛在真正两可处如何切。</strong></p>
+    <div class="kicker">Abstract (v0.6.2 integrated)</div>
+    <p class="bodytext lang-en"><strong>Power Discourse Studies</strong> examines how language organizes obedience, misrecognition, responsibility escape, subject reduction, and institutional visibility. Its central object is not the dictionary meaning of a word, but the action a word performs inside a social relation. The discipline begins from a recurrent bilingual fault: certain Chinese high-compression terms, such as <em>问题</em>, <em>情绪</em>, <em>关心</em>, <em>帮助</em>, <em>合理</em>, and <em>稳定</em>, carry multiple English pathways such as question, problem, issue, accusation, concern, control, legitimacy, and suppression. Under specific pragmatic and power-asymmetric conditions, this semantic compression can blur inquiry and accusation, care and management, critique and disrespect, responsibility and blame. The project proposes a six-step analytic method — naming, pressure, semantic drift, phase change, welding, and summoning — to identify how discourse moves power, relocates responsibility, and alters subject position. Its contribution is a discourse-analytic vocabulary for detecting cheap lexical weaponization, reverse scarcity attribution, jealousy-based subject reduction, and institutional semantic escape. <strong>v0.5.1 closes the falsifiability loop: criterion ② now has an intention-independent operational definition, power asymmetry is reclassified as an analytic input, and an edge case demonstrates the threshold under genuine ambiguity. v0.6.2 integrates that hardened base with power-word routing, belief as methodology, non-usurpation relational language, and emotional dependency as a power-produced subject position.</strong></p>
+    <p class="bodytext lang-zh"><strong>权力话语学</strong>研究语言如何组织服从、误认、责任逃逸、主体降级与制度显影。它的对象不是词典意义，而是一个词在社会关系中实际执行了什么动作。本学科从一个中英文断裂入口开始：中文里的若干高压缩词，如"问题""情绪""关心""帮助""合理""稳定"，往往同时承载英文里的 question / problem / issue / accusation / concern / control / legitimacy / suppression 等多条路径。<strong>在特定的语用压力和权力不对称条件下</strong>，语义压缩会让追问与指责、关心与管理、批评与冒犯、责任与背锅互相滑义。本站提出六步分析法——命名、加压、滑义、相变、焊接、召唤——用于识别话语如何移动权力、转移责任、改变主体位置。本学科贡献一套可用于识别廉价词汇攻击、反向匮乏归因、嫉妒型主体降级与制度性语义逃逸的分析语言。<strong>v0.5.1 闭合可证伪性回路：为门槛第②条给出独立于意图的操作定义，把“权力不对称”重新定位为分析输入，并新增临界边缘案例演示门槛在真正两可处如何切。v0.6.2 在此硬底座上融入权力词义分流、信念作为方法论、不夺权关系语言与情感依附机制。</strong></p>
     <div class="grid"><div class="mini"><h4>Problem</h4><p>现代社会大量结构性暴力不靠沉默，而靠词语混用与语义滑义完成。</p></div><div class="mini"><h4>Approach</h4><p>从中英文语义分化、日常话语攻击、制度口径与主体降级机制入手。</p></div><div class="mini"><h4>Contribution</h4><p>把"语言如何滥用权力"做成可命名、可审计、可反击的学科接口。</p></div></div>
   </div>
 </article>
@@ -149,6 +164,17 @@ footer{border-top:1px solid var(--border);padding:22px 0}.fi{max-width:1080px;ma
   <div class="card danger" style="margin-top:14px"><div class="kicker" style="color:var(--a3)">范围边界 v0.5.1 · 权力不对称是输入参数，不是研究对象 <span class="patch-note">DS 重拳六补丁</span></div>
   <p class="bodytext lang-zh" style="margin-top:0"><strong>语言外权力的处理（重新表述，解决与门槛第①条的矛盾）：</strong>本定义只覆盖<em>经由语言运作</em>的权力。真实的权力不对称常先于语言、在语言之外——经济依附、人身安全、制度位置、户口、谁能走谁不能走。<br><br><strong>关键澄清：</strong>门槛第①条要求的"权力不对称"，在本学科里是一个<strong>作为分析输入、由分析者从语境中读取的已知边界条件，不是本学科要解释或测量的对象</strong>。这与物理学使用"质量"作为输入、却不在力学内部解释质量起源，是同一种分工。<strong>本学科不研究不对称从何而来</strong>（那是社会学、政治经济学的工作），但接受它作为已知输入，只研究：给定一个不对称，语言如何把它<em>翻译、放大、显影</em>为话语动作（如机构把结构优势译成"理性、秩序、渠道"的措辞）。<br><br>由此，先前"权力常先于语言、在语言之外"与"本学科只研究语言"之间的张力被解除：二者不矛盾，因为不对称是<strong>跨过边界进来的输入</strong>，不是本学科内部要生产的结论。第①条因此不依赖本学科去解释语言外权力——它只依赖分析者<em>报告</em>一个语境事实，正如实验者报告初始条件。这是有意的分工，不是疏漏。</p></div>
 </article>
+
+<article class="entry" id="powerword"><div class="etop"><span class="badge br">Power Word Decontamination · 权力去污染</span><span class="edate">differential / capacity / leverage / usurpation</span></div><div class="etitle">Decontaminating the Word “Power”<span class="sub">把“权力”从道德罪名、支配想象和纯洁幻想里拆出来</span></div><div class="card danger"><div class="kicker" style="color:var(--a3)">Pollution diagnosis · 词语污染诊断</div><p class="bodytext lang-zh"><strong>“权力”这个词被污染得太深。</strong>它常被听成道德指控、支配欲、操控、压迫、罪名，导致一说“这里有权力”，人们就自动进入防御：好像被说成坏人、压迫者、操纵者。这个污染会反过来污染 PDS 自身：如果不拆开“权力”，PDS 会把一切关系影响都说得像夺权，把普通情感表达也误读成支配。</p><p class="bodytext lang-en"><strong>The word “power” is heavily contaminated.</strong> It is often heard as moral accusation, domination, manipulation, oppression, or guilt. If the word is not decomposed, Power Discourse Studies risks treating every relational influence as usurpation.</p><div class="formula"><strong>DECONTAMINATION RULE</strong><br>Do not say “this is power” as a conclusion. First specify: differential, capacity, authority, privilege/capital, influence, leverage, domination, power-with, or usurpation.</div></div><div class="mechanism-grid"><div class="mech"><div class="num">01 · DIFFERENTIAL</div><h3>权力作为场域势差</h3><div class="en">Power as field differential</div><p>谁在某个场域里更有资源、出口、可见度、合法性、语言能力、审美资本、情感影响力。<em>这是客观关系事实，不是道德罪名。</em></p></div><div class="mech"><div class="num">02 · CAPACITY</div><h3>权力作为影响能力</h3><div class="en">Power as capacity to affect</div><p>我能保护你、托住你、伤害你、改变你的选择空间。影响能力本身可正可负，不等于支配。</p></div><div class="mech"><div class="num">03 · AUTHORITY / CAPITAL</div><h3>权力作为授权与资本</h3><div class="en">Authority / privilege / capital</div><p>制度、家庭、教育、经济、亚文化、审美、语言与关系位置都会给人入口。承认这些入口不是认罪，而是审计前提。</p></div><div class="mech"><div class="num">04 · LEVERAGE</div><h3>权力作为筹码</h3><div class="en">Power as leverage</div><p>当对方对某个价值入口产生依赖、不可替代性或缺少出口时，势差才可能变成筹码。<strong>没有依赖，就很难形成稳定筹码。</strong></p></div><div class="mech"><div class="num">05 · POWER-WITH</div><h3>权力作为共力</h3><div class="en">Power-with</div><p>关系中的能力被用来增强彼此：托住、协作、打开出口、增加现实实现能力。共力不是无权力，而是权力不夺权。</p></div><div class="mech"><div class="num">06 · USURPATION</div><h3>权力作为夺权</h3><div class="en">Usurpation</div><p>当权力开始夺取对方的主体权、解释权、拒绝权、边界权、出口和自我实现路径，才进入 PDS 最需要警惕的负面对象。</p></div></div><div class="term-table-wrap"><table class="term-table"><thead><tr><th>裸用污染词</th><th>去污染分流词</th><th>何时使用</th><th>边界</th></tr></thead><tbody><tr><td>权力</td><td>关系势差</td><td>只要存在资源、出口、解释资格或影响力不对称。</td><td>中性，不等于压迫。</td></tr><tr><td>权力</td><td>影响能力</td><td>一方能改变另一方情绪、选择、现实空间。</td><td>可正可负，不等于操控。</td></tr><tr><td>权力</td><td>授权 / 权限</td><td>制度或关系承认某人可发言、决定、指导。</td><td>正当授权也需问责。</td></tr><tr><td>权力</td><td>特权 / 资本</td><td>无需主动争取就已经在场的结构性优势。</td><td>承认特权不是自我定罪。</td></tr><tr><td>权力</td><td>筹码</td><td>当对方依赖某个价值入口，而我能影响该入口。</td><td>筹码可以被克制，不必然被使用。</td></tr><tr><td>权力</td><td>支配</td><td>势差被稳定转化为服从、沉默或不可拒绝。</td><td>高风险，不等于所有影响。</td></tr><tr><td>权力</td><td>夺权</td><td>主体权、解释权、拒绝权、出口权被拿走。</td><td>PDS 的伦理警报对象。</td></tr><tr><td>权力</td><td>压迫</td><td>结构性、持续性地缩小某类主体的行动空间。</td><td>保留给结构伤害，不泛化。</td></tr></tbody></table></div><div class="auditcard"><div class="kicker">Responsible usage protocol · 责任用词协议</div><p class="bodytext lang-zh">以后在 PDS 中，“权力”不能单独作为定罪词使用。必须回答七个问题：<strong>哪一轴？谁拥有？对方依赖什么？它有没有被筹码化？它在扩大还是缩小对方选择空间？解释权是否被夺取？拒绝和离开是否仍被保留？</strong></p><p class="bodytext lang-en">In PDS, “power” must not be used as a stand-alone accusation. It must answer seven questions: which axis, who holds it, what value-entry is at stake, whether it has become leverage, whether it expands or narrows possibility, whether interpretive authority is seized, and whether refusal/exit remain available.</p><div class="formula"><strong>LOW-POLLUTION VOCABULARY</strong><br>不要裸说“这是权力”。改说：这是场域势差 / 影响能力 / 授权位置 / 特权资本 / 筹码风险 / 支配性权力 / 共力 / 夺权。</div></div></article>
+
+<article class="entry" id="belief"><div class="etop"><span class="badge bgold">Belief · 信念方法论</span><span class="edate">belief as methodology</span></div><div class="etitle">Belief as Methodology<span class="sub">信念不是盲信，是看见权力之后仍然实践真实</span></div><div class="card gold"><div class="kicker">Definition lock</div><p class="bodytext lang-zh"><strong>信念是一种方法论：</strong>在不确定、不对称、有权力差、有误解风险、有现实阻力的关系中，仍然选择把有价值之物当作真实对象来对待。信念不是忽视权力，而是在看见权力之后，仍然不让权力成为唯一现实。</p><p class="bodytext lang-en"><strong>Belief is a methodology:</strong> under uncertainty, asymmetry, power difference, misunderstanding risk, and real-world resistance, belief treats valuable things as real enough to be practiced. It does not ignore power; it refuses to let power become the only reality.</p><div class="formula gold"><strong>NO ANALYSIS WITHOUT BELIEF</strong><br>没有分析的信念容易天真；没有信念的分析容易犬儒。真正的方法论，是在看见权力之后，仍然相信真实关系可以被实践出来。</div></div><div class="grid"><div class="mini"><h4>Affective Equalizing Speech</h4><p>当权力差存在时，通过真诚表达需要、尊重、脆弱、承认与边界，降低关系垂直性，恢复对方主体感。</p></div><div class="mini"><h4>Truth-to-Truth Connection</h4><p>不是用身份连接身份、标签连接标签、资源连接资源，而是用真实连接真实。</p></div><div class="mini"><h4>Belief Practice</h4><p>我看见权力差，但我仍然选择不用它定义我们；我用真实克制权力，用情感表达平衡权力差。</p></div></div><div class="case belief-case"><div class="ct">BELIEF FORMULA</div><h4>信念作为方法论</h4><p><strong>信念是我的方法论：</strong>对于一切有价值之物，我不因权力的存在而放弃真实；我用情感表达平衡权力差，用真实连接真实，用克制证明平等，用不夺权的语言实践爱。</p></div></article>
+
+<article class="entry" id="relational-power"><div class="etop"><span class="badge bb">Relational Power · 关系权力矩阵</span><span class="edate">the sentence “I need you”</span></div><div class="etitle">Relational Power-Speech Matrix<span class="sub">“我需要你”不是中性句，而是关系权力触发句</span></div><p class="bodytext lang-zh"><strong>真正的爱的语言不是无权力语言，而是不夺权语言。</strong>“我需要你”同时在命名关系、分配重要性、制造回应压力，并可能转移责任。它可以是爱的承认，也可以相变成义务化、依附化或提取。</p><p class="bodytext lang-en"><strong>The language of real love is not power-free language; it is non-usurpation language.</strong> “I need you” names a relation, assigns importance, creates response pressure, and may relocate responsibility. It can acknowledge love, or mutate into obligation, dependency, or extraction.</p><div class="term-table-wrap"><table class="term-table"><thead><tr><th>Power relation</th><th>Positive operation</th><th>Negative operation</th><th>Audit question</th></tr></thead><tbody><tr><td>A &gt; B, A says “I need you”</td><td>高位承认低位不可替代性；赋予 B 可见度与参与权。</td><td>高位需要相变为隐性命令；B 被迫承担 A 的期待。</td><td>需求是否变成义务？拒绝是否被惩罚？</td></tr><tr><td>A &lt; B, A says “I need you”</td><td>展示主权保留型脆弱；建立信任；承认连接。</td><td>低位需要被结构化成挂靠；自我稳定与解释权交给 B。</td><td>需要是否开始取消自己的出口？</td></tr><tr><td>A ≈ B</td><td>互相承认、互相托住、关系自然成形。</td><td>互相绑架，边界被读成冷漠。</td><td>双方是否仍能拒绝、离开、修正？</td></tr><tr><td>Multi-axis relation</td><td>不同场域互补：主流资本、亚文化资本、情感资本互相承认。</td><td>某一领域优势偷渡到另一领域夺权，如经济优势偷渡解释权。</td><td>哪一种权力正在越界？</td></tr></tbody></table></div><div class="formula violet"><strong>NEED UTTERANCE</strong><br>Need = emotional expression + relation naming + responsibility pressure + power vector + sovereignty risk.</div><div class="case rel-case"><div class="ct">NON-USURPATION LANGUAGE</div><h4>健康的“我需要你”</h4><p>“我需要你，但这不是你的义务。” “你对我很重要，但你仍然有拒绝权。” “我在表达我的脆弱，不是在要求你负责我的全部稳定。” “我承认你对我的意义，同时也承认你不是我的资源。”</p></div></article>
+
+<article class="entry" id="dependency"><div class="etop"><span class="badge br">Dependency · 情感依附机制</span><span class="edate">naming vs lived power practice</span></div><div class="etitle">Emotional Dependency as Power-Produced Subject Position<span class="sub">依恋不是依附；依附是权力结构把连接改造成挂靠</span></div><p class="bodytext lang-zh"><strong>情感依附不是单纯强烈地爱一个人，也不是单纯需要一个人。</strong>它是一个主体在情感、经济、解释权、社会位置和自我实现路径上，被持续组织到另一个主体或关系结构之下，以至于现实行动能力与自我命名能力显著依赖该关系才能维持。</p><p class="bodytext lang-en"><strong>Emotional dependency is not simply loving intensely or needing someone.</strong> It is a power-produced subject position: emotional, economic, interpretive, social, and self-realization pathways become organized under another subject or relational structure.</p><div class="term-table-wrap"><table class="term-table"><thead><tr><th>Term</th><th>Meaning</th><th>Boundary</th><th>Power risk</th></tr></thead><tbody><tr><td>依恋 / attachment</td><td>我和你有深连接。</td><td>不等于低位。</td><td>被病理化为“没有自我”。</td></tr><tr><td>依赖 / reliance</td><td>我在某些现实功能上需要你。</td><td>可以阶段性、互惠、可退出。</td><td>被义务化或债务化。</td></tr><tr><td>依附 / subordination dependency</td><td>主体权、解释权、出口能力和自我实现路径被组织到你之下。</td><td>不是普通爱，也不是普通需要。</td><td>连接相变为挂靠。</td></tr></tbody></table></div><div class="grid"><div class="mini"><h4>Language power</h4><p>被外界命名为“依附”：“你太依附了 / 你没有自我”。这可能是主体降级。</p></div><div class="mini"><h4>Life power practice</h4><p>资源不对称、经济绑定、解释权垄断、出口缩窄，让人真的被生产成依附位。</p></div><div class="mini"><h4>Deep dependency</h4><p>最深的依附是情感 + 经济 + 自我现实实现路径的叠加依附。</p></div></div><div class="formula"><strong>DEPENDENCY FORMULA</strong><br>external naming → resource structure fixation → self-understanding internalization → exit capacity decline → dependency reality.</div></article>
+
+<article class="entry" id="relational-axioms"><div class="etop"><span class="badge bgold">Relational Axioms · v0.6.2</span><span class="edate">new axioms after belief patch</span></div><div class="etitle">Relational Axioms of Non-Usurpation<span class="sub">不夺权关系语言公理</span></div><div class="mechanism-grid"><div class="mech"><div class="num">AXIOM R1</div><h3>所有关系都是权力关系</h3><div class="en">All relations contain power.</div><p>没有权力的语言没有实践普适性。关键不是消灭权力，而是识别它如何正向或负向运作。</p></div><div class="mech"><div class="num">AXIOM R2</div><h3>爱的语言可以有权力，但不能夺权</h3><div class="en">Love-language can contain power, but must not usurp.</div><p>爱的问题不是“我需要你”，而是“我的需要是否正在变成你的义务、低位、沉默与不可离开”。</p></div><div class="mech"><div class="num">AXIOM R3</div><h3>需要创造权力可能，依赖创造权力筹码</h3><div class="en">Need creates power possibility; dependence creates stakes.</div><p>没有可被影响的价值入口，就没有权力筹码。依赖是最强的价值入口之一。</p></div><div class="mech"><div class="num">AXIOM R4</div><h3>特权不是罪名，是互动前提</h3><div class="en">Privilege is not guilt; it is interaction condition.</div><p>真正重要的是是否知道它在场，是否主动克制它，是否不把它转化为义务、提取或定义权。</p></div><div class="mech"><div class="num">AXIOM R5</div><h3>信念是权力之后的真实实践</h3><div class="en">Belief is truth-practice after power has been seen.</div><p>信念不是权力的否认，而是在知道关系可以夺权之后，仍然选择用真实、克制和情感表达建立不夺权关系。</p></div><div class="mech"><div class="num">AXIOM R6</div><h3>克制权力是平等权利的证明</h3><div class="en">Restraining power proves equal-rights practice.</div><p>当我更有资源、更被爱、更会说话、更有出口时，我主动不把这些优势变成服从要求。</p></div></div></article>
+
 
 <article class="entry" id="axioms">
   <div class="etop"><span class="badge bgold">Axioms · 公理</span><span class="edate">eight foundational statements (qualified)</span></div>
@@ -280,6 +306,9 @@ footer{border-top:1px solid var(--border);padding:22px 0}.fi{max-width:1080px;ma
   </div>
 </article>
 
+<article class="entry" id="relational-cases"><div class="etop"><span class="badge bdg">Relational Cases · v0.6.2</span><span class="edate">need / privilege / belief</span></div><div class="etitle">Relational Cases<span class="sub">从“我需要你”到“信念作为方法论”</span></div><div class="case rel-case"><div class="ct">CASE R1 · I NEED YOU</div><h4>“我需要你”的四象限</h4><p><strong>高权力者说“我需要你”：</strong>可以是承认对方不可替代，也可能是隐性命令。<strong>低权力者说“我需要你”：</strong>可以是主权保留型脆弱，也可能启动依附机制。判定取决于拒绝权、解释权、出口是否保留。</p></div><div class="case belief-case"><div class="ct">CASE R2 · privilege and vulnerability</div><h4>特权主体的脆弱表达</h4><p>在亚文化场域中，带有主流资本的人说“我需要你”，不必然是压迫；它也可能是承认他者在审美、生命经验、真实在场上的强大。但若这种需要把对方边缘经验转化为自己的情感资源或身份资源，就相变为<strong>他者经验提取</strong>。</p></div><div class="case"><div class="ct">CASE R3 · belief as method</div><h4>信念如何救回 PDS</h4><p>如果 PDS 只看权力，它会滑向犬儒：所有靠近都像操纵，所有需要都像筹码。信念把它救回关系：我看见权力，但我仍然选择用真实去连接真实。</p></div></article>
+
+
 <article class="entry" id="falsifiability">
   <div class="etop"><span class="badge br">Falsifiability · 证伪条件（v0.5.1 闭合）</span><span class="edate">what observation would prove the theory wrong</span></div>
   <div class="etitle">Falsifiability Conditions<span class="sub">本学科在什么情况下承认自己错了</span></div>
@@ -320,12 +349,12 @@ footer{border-top:1px solid var(--border);padding:22px 0}.fi{max-width:1080px;ma
 </article>
 
 <article class="entry" id="scanner">
-  <div class="etop"><span class="badge bb">Discourse Scanner · 话语扫描器</span><span class="edate">interactive reflective tool</span></div>
-  <div class="etitle">Power Discourse Scanner<span class="sub">输入一句话，识别它在执行什么权力动作</span></div>
+  <div class="etop"><span class="badge bb">Integrated Scanner · 综合扫描器</span><span class="edate">interactive reflective tool</span></div>
+  <div class="etitle">Power / Relation / Non-Usurpation Scanner<span class="sub">输入一句话，先分流权力词，再识别滑义与夺权风险</span></div>
   <p class="edesc">This tool is a reflective scaffold, not a final judgment. It helps name possible discourse mechanisms.</p>
   <div class="scanner">
     <label class="scan-label" for="utterance">// UTTERANCE · 输入话语</label>
-    <textarea class="scan-textarea" id="utterance" placeholder="例如：我只是指出你的问题 / 你太情绪化了 / 我是为你好 / 你这么说就是缺什么"></textarea>
+    <textarea class="scan-textarea" id="utterance" placeholder="例如：我只是指出你的问题 / 我需要你 / 我是为你好 / 你太依附了 / 这就是权力 / 我信任你但这不是你的义务"></textarea>
     <div class="checkgrid">
       <label class="check"><input type="checkbox" value="semantic-compression"><span>语义压缩 / semantic compression</span></label>
       <label class="check"><input type="checkbox" value="subject-reduction"><span>主体降级 / subject reduction</span></label>
@@ -336,6 +365,15 @@ footer{border-top:1px solid var(--border);padding:22px 0}.fi{max-width:1080px;ma
       <label class="check"><input type="checkbox" value="inquiry-accusation"><span>追问/指责混淆 / inquiry-accusation drift</span></label>
       <label class="check"><input type="checkbox" value="institutional-shield"><span>制度盾牌 / institutional shielding</span></label>
       <label class="check"><input type="checkbox" value="subcultural-label"><span>亚文化标签滥用 / subcultural label abuse</span></label>
+      <label class="check"><input type="checkbox" value="powerword-routing"><span>权力词义分流 / power-word routing</span></label>
+      <label class="check"><input type="checkbox" value="power-differential"><span>关系势差 / relational differential</span></label>
+      <label class="check"><input type="checkbox" value="need-obligation"><span>需要变义务 / need → obligation</span></label>
+      <label class="check"><input type="checkbox" value="vulnerability-extraction"><span>脆弱性提取 / vulnerability extraction</span></label>
+      <label class="check"><input type="checkbox" value="dependency-production"><span>依附生产 / dependency production</span></label>
+      <label class="check"><input type="checkbox" value="affective-equalizing"><span>情感平权表达 / affective equalizing speech</span></label>
+      <label class="check"><input type="checkbox" value="sovereignty-preserving"><span>主权保留 / sovereignty preserving</span></label>
+      <label class="check"><input type="checkbox" value="interpretive-seizure"><span>解释权夺取 / interpretive seizure</span></label>
+      <label class="check"><input type="checkbox" value="belief-method"><span>信念方法论 / belief as methodology</span></label>
     </div>
     <div class="btnset"><button class="btn primary" onclick="scanDiscourse()">[→ SCAN]</button><button class="btn" onclick="resetScanner()">[RESET]</button></div>
     <div class="scan-result" id="scanResult"><h3>扫描结果 · Discourse Reading</h3><div id="scanOutput"></div></div>
@@ -397,6 +435,14 @@ footer{border-top:1px solid var(--border);padding:22px 0}.fi{max-width:1080px;ma
     <tr><td>六步分析法：步骤独立（相变≠焊接、命名≠加压）</td><td>方法论提案（v0.5.1 不再骑墙）</td><td>中强（边缘案例已演示两步区分功能）</td><td>可证伪（若四步能复现全部区分则六步被否）</td><td>更多边缘案例、跨文化用户测试</td></tr>
     <tr><td>正当行使四准则（关系伦理侧）</td><td>规范性框架</td><td>不可证伪（非经验命题）</td><td>N/A</td><td>与批评伦理 / 教育反馈文献对接</td></tr>
     <tr><td>命名主权作为规范性原则</td><td>规范性立场</td><td>不可证伪（非经验命题）</td><td>N/A</td><td>明确其伦理基础</td></tr>
+  
+    <tr><td>“权力”一词必须拆成势差、能力、授权、资本、影响力、筹码、支配、夺权、压迫</td><td>术语去污染原则（v0.6.2）</td><td>强（术语审计）</td><td>可反驳（若分流不能提升判定清晰度则降级）</td><td>在所有案例中优先做 power-word routing</td></tr>
+    <tr><td>所有关系都含有权力；爱的伦理在于阻止权力相变为夺权</td><td>核心规范命题</td><td>强（规范立场）</td><td>不可证伪（非经验命题）</td><td>与关系伦理 / 照料伦理 / relational autonomy 对接</td></tr>
+    <tr><td>“我需要你”是关系权力触发句</td><td>操作性观察</td><td>中强</td><td>可证伪（语料与案例可显示其不产生回应压力）</td><td>收集语料，做四象限分类</td></tr>
+    <tr><td>信念作为方法论</td><td>方法论原则</td><td>强（作者方法论）</td><td>不可证伪（规范/方法论命题）</td><td>写入 HPRP / relationship ethics 节点</td></tr>
+    <tr><td>情感表达可在权力差中执行平权功能</td><td>关系机制假设</td><td>中</td><td>可证伪（若案例显示脆弱表达稳定增加垂直性）</td><td>案例研究：脆弱表达是否降低垂直性</td></tr>
+    <tr><td>情感依附是权力生产的主体位置</td><td>核心分析命题</td><td>中强</td><td>可证伪（若依附与资源/解释权/出口结构无关）</td><td>与依恋理论、性别劳动、经济依赖文献对接</td></tr>
+    <tr><td>主权保留型信任纽带</td><td>规范性关系模型</td><td>不可证伪（非经验命题）</td><td>N/A</td><td>发展边界与准则</td></tr>
   </tbody></table></div>
 </article>
 
@@ -416,6 +462,18 @@ footer{border-top:1px solid var(--border);padding:22px 0}.fi{max-width:1080px;ma
     <tr><td>Subcultural Label Abuse</td><td>亚文化标签滥用</td><td>借用亚文化身份符号进行圈层排斥、道德审判和微型权威复制的话语行为</td><td>≠ 亚文化参与本身；≠ 群体边界维护</td><td>可能被读作"守门人指责他人是守门人"</td></tr>
     <tr><td>Discourse Responsibility Escape</td><td>话语责任逃逸</td><td>利用语义压缩/滑义逃避对特定话语行为的责任归属</td><td>≠ 一般的误解或沟通失败</td><td>需证明说话者利用了结构而非单纯犯错</td></tr>
     <tr><td>Institutional Semantic Escape</td><td>制度性语义逃逸</td><td>机构通过模糊词语在不同语义功能间切换，以规避可追责性</td><td>≠ 一般的语义模糊</td><td>需制度分析的证据门槛较高</td></tr>
+  
+    <tr><td>Power-Word Contamination</td><td>权力词义污染</td><td>把所有 power 都自动听成支配、压迫、坏、夺权或道德罪名的语义滑义。</td><td>≠ 权力本身；≠ 关系势差</td><td>会把中性审计词变成道德指控，导致 PDS 自伤。</td></tr>
+    <tr><td>Power-Word Routing</td><td>权力词义分流</td><td>分析前先判断当前“权力”指势差、能力、授权、资本、影响力、筹码、支配、夺权还是压迫。</td><td>≠ 把权力洗白</td><td>若不分流，会把正常影响力误判为夺权。</td></tr>
+    <tr><td>Relational Differential</td><td>关系势差</td><td>关系双方在资源、出口、解释资格、可见度、行动能力上的客观不对称。</td><td>≠ 压迫；≠ 支配</td><td>若被道德化，会让承认势差变成认罪。</td></tr>
+    <tr><td>Usurpation</td><td>夺权</td><td>把关系中的需要、帮助、爱、脆弱、资源或知识转化为夺取对方主体权/解释权的资格。</td><td>≠ 一切权力；≠ 一切需要</td><td>若泛化，会把真实关系误读成控制。</td></tr>
+    <tr><td>Non-Usurpation Language</td><td>不夺权语言</td><td>承认关系中的权力存在，但不把需要、帮助、爱、经济、脆弱转化为对他者主体权/解释权的夺取。</td><td>≠ 无权力语言</td><td>若被浪漫化，会遮蔽真实权力差。</td></tr>
+    <tr><td>Belief as Methodology</td><td>信念作为方法论</td><td>在看见权力、风险和不确定之后，仍将有价值之物作为真实对象来实践。</td><td>≠ 盲信；≠ 权力否认</td><td>若无分析，会滑向天真；若无信念，分析会滑向犬儒。</td></tr>
+    <tr><td>Affective Equalizing Speech</td><td>情感平权表达</td><td>在权力差存在时，通过真实的需要、脆弱、承认与边界表达降低关系垂直性。</td><td>≠ 表演脆弱；≠ 情绪操控</td><td>可能滑成脆弱性提取。</td></tr>
+    <tr><td>Sovereignty-Preserving Bond</td><td>主权保留型信任纽带</td><td>双方可互相依赖、托付、支持、照料，但任何一方不自动获得定义、管理、占有或削弱另一方主体权的资格。</td><td>≠ 冷漠独立；≠ 无依赖</td><td>若误用，可能否认真实需要。</td></tr>
+    <tr><td>Vulnerability Extraction</td><td>脆弱性提取</td><td>借“我需要你/我很脆弱”让对方承担自己的完整、真实感或身份补足。</td><td>≠ 真诚脆弱</td><td>可能将他者强大转化为自我资源。</td></tr>
+    <tr><td>Relational Power Vector</td><td>关系权力向量</td><td>情感、经济、解释、时间、身体、现实实现等维度上的多轴权力分布。</td><td>≠ 单一强弱判断</td><td>若只看一轴，会误判关系。</td></tr>
+    <tr><td>Emotional Dependency</td><td>情感依附</td><td>主体在情感、经济、解释权、社会位置与自我实现路径上被组织到另一关系结构之下。</td><td>≠ 依恋；≠ 阶段性依赖</td><td>可能被病理化为个人缺陷。</td></tr>
   </tbody></table></div>
 </article>
 
@@ -430,6 +488,8 @@ footer{border-top:1px solid var(--border);padding:22px 0}.fi{max-width:1080px;ma
     <div class="mini"><h4>Subculture Studies</h4><p>Hebdige (1979); Thornton (1995). <b>差异：</b>Thornton 的"亚文化资本"描述区隔；本站命名一种<em>话语行为</em>——借亚文化标签复制审判秩序，并坚持只判行为不判人。</p></div>
     <div class="mini"><h4>Envy &amp; Social Comparison</h4><p>Smith &amp; Kim (2007); Parrott &amp; Smith (1993). <b>差异：</b>本站"可能性创伤"假说尚未被此文献支持，明确标注待对接、待检验，不挪用既有结论。</p></div>
     <div class="mini"><h4>Translation Semantics</h4><p>Wierzbicka (1992, 2014); Baker (1992). <b>差异：</b>NSM 求跨语言语义共性；本站反向使用——以<em>压缩跨度差</em>定位权力可乘之机，把翻译不对称从障碍读成权力地形。</p></div>
+    <div class="mini"><h4>Care Ethics / Relational Autonomy</h4><p>Gilligan; Tronto; Mackenzie &amp; Stoljar. <b>差异：</b>本站不把关系伦理写成“无依赖”，而是写成“有依赖但不夺权”的语言审计。</p></div>
+    <div class="mini"><h4>Power Theory · Decontamination</h4><p>Arendt; Foucault; Bourdieu; Lukes. <b>差异：</b>本站把 power 先做词义分流：势差、能力、资本、筹码、支配、夺权、压迫，防止把全部 power 污染成 domination。</p></div>
   </div>
 </article>
 
@@ -447,6 +507,16 @@ footer{border-top:1px solid var(--border);padding:22px 0}.fi{max-width:1080px;ma
       <li>✕ 任何被指出问题的人都在"复制权力"。</li>
       <li>✕ 一次滑义就构成权力运作（须系统性同号分布）。</li>
       <li>✕ 权力话语学是一门已经完成的学科。</li>
+      <li>✕ 权力天然等于坏、压迫或夺权。</li>
+      <li>✕ 承认自己有权力就是承认自己有罪。</li>
+      <li>✕ 关系势差必然等于支配结构。</li>
+      <li>✕ 真正的爱没有权力。</li>
+      <li>✕ 所有“我需要你”都是操控。</li>
+      <li>✕ 有特权的人表达脆弱必然夺权。</li>
+      <li>✕ 普通依恋等于情感依附。</li>
+      <li>✕ 经济互助必然等于经济控制。</li>
+      <li>✕ 所有关系都应取消依赖。</li>
+      <li>✕ 信念可以替代证据、边界或可证伪性。</li>
     </ul>
   </div>
 </article>
@@ -461,15 +531,20 @@ footer{border-top:1px solid var(--border);padding:22px 0}.fi{max-width:1080px;ma
   <div class="formula"><strong>PDS-005</strong> · 2026 · 亚文化身份标签滥用：anti-mainstream in form, power-reproductive in structure.</div>
   <div class="formula"><strong>PDS-REBUTTAL-001 至 007</strong> · 2026 · 深层反证位审计驱动 v0.5.0：独立检验、负面案例、反向对称案例、证伪条件、盲评协议、可压缩性注明。</div>
   <div class="formula"><strong>PDS-REBUTTAL-008 / 009</strong> · 2026 · v0.5.1 闭合：循环斩断（第②条去意图化同号分布计数；替换检验降为归因闸）；不对称参数化（输入而非对象，解 DS 重拳六）；步骤冗余不再骑墙（相变≠焊接、命名≠加压）；临界边缘案例落在刀刃；证伪条件 C 补理论外金标准来源。</div>
+  <div class="formula gold"><strong>PDS-BELIEF-001</strong> · v0.6.0 · 信念作为方法论：在看见权力之后，仍然选择用真实连接真实。</div>
+  <div class="formula gold"><strong>PDS-REL-001</strong> · v0.6.0 · 真正的爱的语言不是无权力语言，而是不夺权语言。</div>
+  <div class="formula gold"><strong>PDS-DEP-001</strong> · v0.6.0 · 依恋不是依附；依附是权力结构把连接改造成挂靠。</div>
+  <div class="formula"><strong>PDS-POWERWORD-001</strong> · v0.6.1 · “权力”词义去污染：power ≠ domination ≠ usurpation ≠ oppression；先分流，再审计。</div>
+  <div class="formula"><strong>PDS-INTEGRATION-001</strong> · v0.6.2 · 以 v0.5.1 可证伪性闭合版为底座，融入信念/不夺权/情感依附/权力去污染四层。</div>
 </article>
 
 </main><aside class="sidebar">
-  <div><div class="sbl">Source Position</div><div class="profile"><div class="av">珏</div><div class="pnm">Wei Jueran<small>魏珏然 · xingyeLing7Ai</small></div><p class="pdesc">Founder of Power Discourse Studies. Language as reality-generating structure; discourse as power movement. v0.5.1 closed under adversarial audit.</p><div class="pfields"><span class="pf">Discourse</span><span class="pf">Power</span><span class="pf">Language Psychology</span><span class="pf">MetaLogic</span></div></div></div>
-  <div><div class="sbl">Resonance Anchor</div><div class="hzbox"><div class="hzn">427</div><div class="hzu">Hz</div><div class="hzslider"><div class="hztrack"><div class="hzfill"></div><div class="hzthumb"></div></div></div><div class="hzq">Language does not only describe power.<br>Language moves power.<br><small style="color:var(--a3)">—— now falsifiable, loop closed ——</small></div></div></div>
+  <div><div class="sbl">Source Position</div><div class="profile"><div class="av">信</div><div class="pnm">Wei Jueran<small>魏珏然 · xingyeLing7Ai</small></div><p class="pdesc">Founder of Power Discourse Studies. v0.6.2 keeps v0.5.1 falsifiability closure and integrates belief, non-usurpation relational language, dependency analysis, and power-word routing.</p><div class="pfields"><span class="pf">Discourse</span><span class="pf">Belief</span><span class="pf">Power Routing</span><span class="pf">Non-Usurpation</span></div></div></div>
+  <div><div class="sbl">Resonance Anchor</div><div class="hzbox"><div class="hzn">427</div><div class="hzu">Hz</div><div class="hzslider"><div class="hztrack"><div class="hzfill"></div><div class="hzthumb"></div></div></div><div class="hzq">Language moves power.<br>Belief restores relation.<br><small style="color:var(--a4)">—— truth connects truth; power is routed ——</small></div></div></div>
   <div><div class="sbl">Connected Sites</div><div class="linksbox"><ul class="sblinks"><li><a href="https://mellowwei.github.io/MetaLogic/" target="_blank">MetaLogic <span>→</span></a></li><li><a href="https://mellowwei.github.io/MellowAcademic/" target="_blank">MellowAcademic <span>→</span></a></li><li><a href="https://mellowwei.github.io/HPRP/" target="_blank">HPRP <span>→</span></a></li><li><a href="https://mellowwei.github.io/MellowWei/" target="_blank">Portal <span>→</span></a></li></ul></div></div>
-  <div><div class="sbl">Coordinates</div><div class="coord">NODE <span>PDS</span><br>VERSION <span>v0.5.1 falsifiability-closed</span><br>METHOD <span>命名→召唤</span><br>THEME <span>AstroLove · mint/violet/red/gold</span><br>FREQ <span>427Hz</span><br>STATUS <span style="color:var(--a1)">可证伪，未被证伪</span></div></div>
+  <div><div class="sbl">Coordinates</div><div class="coord">NODE <span>PDS</span><br>VERSION <span>v0.6.2 integrated</span><br>METHOD <span>先分流权力 → 再审计滑义 → 克制夺权</span><br>THEME <span>AstroLove · mint/violet/red/gold</span><br>FREQ <span>427Hz</span><br>STATUS <span style="color:var(--a1)">可证伪 + 信念方法论 + 权力去污染</span></div></div>
 </aside></div>
-<footer><div class="fi"><span>Power Discourse Studies v0.5.1 · 权力话语学 · Wei Jueran · xingyeLing7Ai</span><span class="foot-sig">—— 谁有权定义什么叫问题？ ——</span></div></footer>
+<footer><div class="fi"><span>Power Discourse Studies v0.6.2 · 权力话语学 · Wei Jueran · xingyeLing7Ai</span><span class="foot-sig">—— 先拆开权力，再实践不夺权 ——</span></div></footer>
 <script>
 (function(){
   const params=new URLSearchParams(window.location.search); const view=params.get('view')||'bi';
@@ -490,7 +565,16 @@ function scanDiscourse(){
     'cheap-lexical':'廉价词汇攻击：用低级/伪高级词汇压低对方可能性。',
     'inquiry-accusation':'追问/指责混淆：inquiry 与 accusation 边界不清。',
     'institutional-shield':'制度盾牌：把权力利益包装成稳定、合理、大局或秩序。',
-    'subcultural-label':'亚文化标签滥用：用反主流标签复制主流权力，把可能性扩张变成圈层审判。'
+    'subcultural-label':'亚文化标签滥用：用反主流标签复制主流权力，把可能性扩张变成圈层审判。',
+    'powerword-routing':'权力词义分流：先判断这里的“权力”是势差、能力、资本、筹码、支配、夺权还是压迫。',
+    'power-differential':'关系势差：双方在资源、出口、解释资格、可见度、行动能力上的客观不对称，不等于道德罪名。',
+    'need-obligation':'需要变义务：表达“我需要你”开始把对方的回应、陪伴或留下变成责任。',
+    'vulnerability-extraction':'脆弱性提取：用“我很脆弱/我需要你”让对方承担自己的完整、真实感或身份补足。',
+    'dependency-production':'依附生产：情感、经济、解释权、出口能力或自我实现路径被组织到另一关系结构之下。',
+    'affective-equalizing':'情感平权表达：在权力差中通过真实、脆弱、承认和边界降低关系垂直性。',
+    'sovereignty-preserving':'主权保留：允许需要和托付，但不自动让出解释权、拒绝权、边界权和出口。',
+    'interpretive-seizure':'解释权夺取：一方用爱、帮助、理性、诊断或资源替另一方定义其状态和意义。',
+    'belief-method':'信念作为方法论：看见权力和风险之后，仍选择用真实连接真实，而不是让权力成为唯一现实。'
   };
   const result=document.getElementById('scanResult'), out=document.getElementById('scanOutput');
   let html='';
@@ -498,7 +582,7 @@ function scanDiscourse(){
   if(vals.length===0){ html += '<p>请选择至少一个可能机制。没有机制选择时，扫描器只能给出最低限度提示：先问这句话在移动谁的责任、取消谁的解释权、保护谁的权威位置。</p>'; }
   else { html += '<p><strong>检测到的可能机制：</strong></p><ul style="padding-left:18px;margin:8px 0 0">'+vals.map(v=>'<li style="margin-bottom:6px">'+labels[v]+'</li>').join('')+'</ul>'; }
   html += '<p style="margin-top:12px"><strong>六步审计：</strong>它如何命名对象？如何加压？在哪些含义之间滑动？是否改变关系结构？焊接了哪些不该绑在一起的东西？最后召唤出服从、羞耻、沉默、反抗还是重新命名？</p>';
-  html += '<p style="margin-top:8px;font-size:12px;color:var(--a2)"><strong>v0.5.1 提示：</strong>严肃判定须做去意图化同号分布计数 + 替换检验（归因闸），并由不知情读者复核。扫描器仅作初筛，不输出定罪。</p>';
+  html += '<p style="margin-top:8px;font-size:12px;color:var(--a2)"><strong>v0.5.1 提示：</strong>严肃判定仍须做去意图化同号分布计数 + 替换检验（归因闸），并由不知情读者复核。v0.6.2 另要求先做 power-word routing：不要裸说“权力”，先分流为势差/能力/资本/筹码/支配/夺权/压迫。扫描器仅作初筛，不输出定罪。</p>';
   out.innerHTML=html; result.classList.add('show'); result.scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 function resetScanner(){document.getElementById('utterance').value='';document.querySelectorAll('.check input').forEach(x=>x.checked=false);document.getElementById('scanResult').classList.remove('show');}
