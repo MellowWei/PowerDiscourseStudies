@@ -4,8 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="theme-color" content="#5af0c8" />
-<title>Power Discourse Studies v0.6.2 · 权力话语学 · Falsifiability × Belief × Power-Word Decontamination</title>
-<meta name="description" content="Power Discourse Studies / 权力话语学 v0.6.2：在 v0.5.1 可证伪性闭合版上融入信念方法论、不夺权关系语言与“权力”词义去污染。Wei Jueran · xingyeLing7Ai · 427Hz." />
+<title>Power Discourse Studies v0.7.0 · 权力话语学 · 系统失效补丁 × 三层结构硬化</title>
+<meta name="description" content="Power Discourse Studies / 权力话语学 v0.7.0：在 v0.6.2 基础上整合程序性责任蒸发机制、防御面前提边界与行使面前置协议。Wei Jueran · xingyeLing7Ai · 427Hz." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Noto+Serif+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -17,13 +17,7 @@
   --a1:#5af0c8;--a2:#9080f8;--a3:#c83232;--a4:#f0c460;
   --tx:#cac7de;--tx2:#7a7694;--tx3:#3d3b54;
   --hd:#edeaff;
-  --qi-pity:#c83b3b;
-  --qi-wait:#ff9e3d;
-  --qi-wonder:#f0c460;
-  --qi-equal:#5af0a8;
-  --qi-open:#5af0c8;
-  --qi-pact:#5fa8f0;
-  --qi-seven:#b878ff;
+  --qi-pity:#c83b3b;--qi-wait:#ff9e3d;--qi-wonder:#f0c460;--qi-equal:#5af0a8;--qi-open:#5af0c8;--qi-pact:#5fa8f0;--qi-seven:#b878ff;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 ::selection{background:var(--a1);color:#000}
@@ -47,7 +41,6 @@ a{color:inherit}
 .mhname .zh{font-family:'Spectral',serif;font-style:italic;font-weight:300;font-size:20px;color:var(--a2);letter-spacing:.04em;display:block;margin-top:6px}
 .mhsub{font-family:'Space Mono',monospace;font-size:11px;color:var(--tx2);letter-spacing:.05em;margin-top:7px;line-height:1.7}.mhsub a{color:var(--a2);text-decoration:none}
 .qi-rainbow{font-family:'Noto Serif SC',serif;font-size:18px;letter-spacing:.5em;margin-top:14px}.qi-rainbow .c1{color:var(--qi-pity)}.qi-rainbow .c2{color:var(--qi-wait)}.qi-rainbow .c3{color:var(--qi-wonder)}.qi-rainbow .c4{color:var(--qi-equal)}.qi-rainbow .c5{color:var(--qi-open)}.qi-rainbow .c6{color:var(--qi-pact)}.qi-rainbow .c7{color:var(--qi-seven)}.qi-rainbow .sep{color:var(--tx3);letter-spacing:.22em}
-.mhcode{font-family:'Noto Serif SC',serif;font-size:18px;letter-spacing:.35em;margin-top:14px}.mhcode .b{color:var(--qi-pity)}.mhcode .d{color:var(--qi-pact)}.mhcode .s{color:var(--tx3);letter-spacing:.2em}
 .mhq{font-family:'Spectral',serif;font-style:italic;font-size:15px;color:var(--tx2);margin-top:14px;padding-left:14px;border-left:2px solid var(--a1);max-width:620px;line-height:1.55}.mhq.lang-zh{font-family:'Noto Serif SC','Spectral',serif;font-style:normal}
 .mhanchor{font-family:'Space Mono',monospace;font-size:10px;color:var(--a1);letter-spacing:.3em;margin-top:14px;opacity:.7}.mhanchor .sep{color:var(--tx3);margin:0 8px}
 .pnav{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg2);position:sticky;top:0;z-index:100}.pni{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;overflow-x:auto;scrollbar-width:none}.pni::-webkit-scrollbar{display:none}.pnav a{display:block;padding:11px 15px;font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--tx2);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}.pnav a:hover,.pnav a.on{color:var(--a1);border-bottom-color:var(--a1)}
@@ -73,76 +66,64 @@ a{color:inherit}
 .verdict{margin-top:14px;padding:13px 16px;border-left:3px solid var(--a4);background:rgba(240,196,96,.05);border-radius:0 3px 3px 0;font-size:12.5px;color:var(--tx);line-height:1.7}
 .verdict b{color:var(--a4);font-weight:500}
 .sym{border-color:var(--border-hi);border-left:3px solid var(--qi-seven)!important;background:linear-gradient(135deg,rgba(184,120,255,.05),transparent 70%)}
-.sym .src{border-left-color:var(--qi-seven)}
-.sym .step .sn{color:var(--qi-seven)}
-.sym .verdict{border-left-color:var(--qi-seven);background:rgba(184,120,255,.05)}
-.sym .verdict b{color:var(--qi-seven)}
+.sym .src{border-left-color:var(--qi-seven)}.sym .step .sn{color:var(--qi-seven)}.sym .verdict{border-left-color:var(--qi-seven);background:rgba(184,120,255,.05)}.sym .verdict b{color:var(--qi-seven)}
 .check{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--tx);padding:6px 0;cursor:pointer}.check:hover{color:var(--hd)}.check input{appearance:none;width:16px;height:16px;border:1px solid var(--border);background:transparent;cursor:pointer;position:relative;flex-shrink:0;margin-top:3px;transition:all .2s}.check input:checked{background:var(--a1);border-color:var(--a1)}.check input:checked::after{content:'';position:absolute;top:2px;left:5px;width:4px;height:8px;border:solid #000;border-width:0 2px 2px 0;transform:rotate(45deg)}.scan-label{display:block;font-family:'Space Mono',monospace;font-size:9.5px;letter-spacing:.2em;color:var(--a1);margin-bottom:6px;text-transform:uppercase}.scan-textarea{width:100%;min-height:110px;resize:vertical;font-family:'Spectral','Noto Serif SC',serif;font-style:italic;font-size:15px;background:rgba(90,240,200,.02);border:1px solid var(--border);color:var(--tx);padding:12px;border-radius:3px;outline:none}.scan-textarea:focus{border-color:var(--a1)}.btnset{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px}.btn{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.18em;background:transparent;color:var(--tx);border:1px solid var(--tx2);padding:8px 14px;cursor:pointer;transition:all .2s;text-transform:uppercase}.btn:hover{color:#000;background:var(--a1);border-color:var(--a1)}.btn.primary{border-color:var(--a1);color:var(--a1)}.btn.primary:hover{color:#000;background:var(--a1)}.scan-result{margin-top:18px;padding:18px 20px;border:1px solid var(--a1);background:linear-gradient(135deg,rgba(90,240,200,.04),transparent 60%);display:none;border-radius:3px}.scan-result.show{display:block}.scan-result h3{font-family:'Noto Serif SC',serif;font-weight:500;color:var(--a1);font-size:18px;margin-bottom:10px}.bdg{display:inline-block;margin:4px 6px 4px 0;border-color:rgba(184,120,255,.3);color:var(--qi-seven);background:rgba(184,120,255,.07)}
 .etags{display:flex;gap:5px;flex-wrap:wrap;margin-top:11px}.pf,.tag{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.05em;color:var(--tx3);border:1px solid var(--border);padding:2px 7px;border-radius:2px}.sidebar{display:flex;flex-direction:column;gap:26px;position:sticky;top:52px}.sbl{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--tx3);padding-bottom:9px;border-bottom:1px solid var(--border);margin-bottom:11px}.profile,.hzbox{background:var(--bg2);border:1px solid var(--border);border-radius:3px;padding:16px}.av{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#1c1848,#0e2e2e);border:1px solid var(--border-hi);display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace;font-size:16px;color:var(--a1);margin-bottom:11px}.pnm{font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:var(--hd);line-height:1.3}.pnm small{display:block;font-size:10px;font-weight:400;color:var(--tx2);margin-top:2px}.pdesc{font-size:11.5px;color:var(--tx2);margin-top:9px;line-height:1.62}.pfields{display:flex;flex-wrap:wrap;gap:4px;margin-top:10px}.pf{background:rgba(144,128,248,.09);color:var(--a2);border-color:rgba(144,128,248,.18)}.hzbox{text-align:center}.hzn{font-family:'Space Mono',monospace;font-size:36px;font-weight:700;color:var(--a1);letter-spacing:-3px;line-height:1}.hzu{font-family:'Space Mono',monospace;font-size:10px;color:var(--tx3);letter-spacing:.1em;margin-top:3px}.hzq{font-family:'Spectral',serif;font-style:italic;font-size:11px;color:var(--tx2);margin-top:7px;line-height:1.5}.hzslider{margin:14px 2px 4px}.hztrack{position:relative;height:3px;border-radius:3px;background:rgba(90,240,200,.12)}.hzfill{position:absolute;left:0;top:0;height:100%;border-radius:3px;background:linear-gradient(90deg,var(--a2),var(--a1));animation:hzwave 2.34s ease-in-out infinite alternate}.hzthumb{position:absolute;top:50%;width:10px;height:10px;border-radius:50%;background:var(--a1);box-shadow:0 0 10px var(--a1),0 0 3px #fff;transform:translate(-50%,-50%);animation:hzmove 2.34s ease-in-out infinite alternate}@keyframes hzwave{from{width:7%}to{width:93%}}@keyframes hzmove{from{left:7%}to{left:93%}}@media(prefers-reduced-motion:reduce){.hzfill,.hzthumb{animation:none}.hzfill{width:62%}.hzthumb{left:62%}}.sblinks{list-style:none}.sblinks li{border-bottom:1px solid var(--border);padding:5px 0}.sblinks a{font-size:12px;color:var(--tx2);text-decoration:none;display:flex;justify-content:space-between;align-items:center;transition:color .15s}.sblinks a:hover{color:var(--a1)}.coord{font-family:'Space Mono',monospace;font-size:10px;color:var(--tx3);line-height:2;letter-spacing:.04em}.coord span{color:var(--a1)}
 footer{border-top:1px solid var(--border);padding:22px 0}.fi{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;font-family:'Space Mono',monospace;font-size:9.5px;color:var(--tx3);letter-spacing:.05em;flex-wrap:wrap;gap:12px}.foot-sig{color:var(--qi-seven);font-family:'Spectral',serif;font-style:italic;font-size:12px;letter-spacing:.1em}
 @media(max-width:780px){.wrap{grid-template-columns:1fr}.step{grid-template-columns:1fr;gap:4px}.step .sn{padding-top:0}.sidebar{display:none}.mhname{font-size:22px}.colorbox{grid-template-columns:1fr}.nbi{flex-direction:column;align-items:flex-start;gap:4px}}
 
-/* v0.5.0 新增 */
-.falsifiability-section { background: linear-gradient(135deg, rgba(200,50,50,.06), rgba(90,240,200,.04)); border:1px solid rgba(200,50,50,.2); border-radius:4px; padding:20px 22px; margin:18px 0; }
-.negative-case { border-left: 3px solid var(--a3) !important; background: linear-gradient(90deg, rgba(200,50,50,.04), transparent 70%); }
-.negative-case .ct { color: var(--a3); }
-.negative-case .ct::before { content: '// NEGATIVE CASE '; }
-.symmetry-reverse { border-left: 3px solid var(--a2) !important; background: linear-gradient(90deg, rgba(144,128,248,.05), transparent 70%); }
-.symmetry-reverse .ct { color: var(--a2); }
-.symmetry-reverse .ct::before { content: '// REVERSE SYMMETRY CASE '; }
-/* v0.5.1 新增 */
-.edge-case { border-left: 3px solid var(--a4) !important; background: linear-gradient(90deg, rgba(240,196,96,.05), transparent 70%); }
-.edge-case .ct { color: var(--a4); }
-.edge-case .ct::before { content: '// EDGE CASE '; }
+/* v0.5.0 / v0.5.1 patches */
+.falsifiability-section{background:linear-gradient(135deg,rgba(200,50,50,.06),rgba(90,240,200,.04));border:1px solid rgba(200,50,50,.2);border-radius:4px;padding:20px 22px;margin:18px 0}
+.negative-case{border-left:3px solid var(--a3)!important;background:linear-gradient(90deg,rgba(200,50,50,.04),transparent 70%)}.negative-case .ct{color:var(--a3)}.negative-case .ct::before{content:'// NEGATIVE CASE '}
+.symmetry-reverse{border-left:3px solid var(--a2)!important;background:linear-gradient(90deg,rgba(144,128,248,.05),transparent 70%)}.symmetry-reverse .ct{color:var(--a2)}.symmetry-reverse .ct::before{content:'// REVERSE SYMMETRY CASE '}
+.edge-case{border-left:3px solid var(--a4)!important;background:linear-gradient(90deg,rgba(240,196,96,.05),transparent 70%)}.edge-case .ct{color:var(--a4)}.edge-case .ct::before{content:'// EDGE CASE '}
 .patch-note{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.14em;color:var(--a3);text-transform:uppercase;display:inline-block;border:1px solid rgba(200,50,50,.3);padding:1px 6px;border-radius:2px;margin-left:6px}
-
-/* v0.6.2 integrated patches · belief / non-usurpation / power-word routing */
+/* v0.6.2 patches */
 .card.gold{background:linear-gradient(135deg,rgba(240,196,96,.06),rgba(90,240,200,.025));border-color:rgba(240,196,96,.24);border-left-color:var(--a4)}
 .card.violet{background:linear-gradient(135deg,rgba(184,120,255,.055),rgba(90,240,200,.02));border-color:rgba(184,120,255,.25);border-left-color:var(--qi-seven)}
-.formula.gold{border-left-color:var(--a4);background:rgba(240,196,96,.04)}
-.formula.gold strong{color:var(--a4)}
-.formula.violet{border-left-color:var(--qi-seven);background:rgba(184,120,255,.04)}
-.formula.violet strong{color:var(--qi-seven)}
-.belief-case{border-left-color:var(--a4)!important;background:linear-gradient(90deg,rgba(240,196,96,.04),transparent 80%)}
-.belief-case .ct{color:var(--a4)!important}
-.rel-case{border-left-color:var(--a1)!important;background:linear-gradient(90deg,rgba(90,240,200,.035),transparent 80%)}
-.rel-case .ct{color:var(--a1)!important}
-.power-route{border-left:3px solid var(--a3);background:linear-gradient(90deg,rgba(200,50,50,.045),transparent 70%)}
-.power-route .ct{color:var(--a3)}
-
+.formula.gold{border-left-color:var(--a4);background:rgba(240,196,96,.04)}.formula.gold strong{color:var(--a4)}
+.formula.violet{border-left-color:var(--qi-seven);background:rgba(184,120,255,.04)}.formula.violet strong{color:var(--qi-seven)}
+.belief-case{border-left-color:var(--a4)!important;background:linear-gradient(90deg,rgba(240,196,96,.04),transparent 80%)}.belief-case .ct{color:var(--a4)!important}
+.rel-case{border-left-color:var(--a1)!important;background:linear-gradient(90deg,rgba(90,240,200,.035),transparent 80%)}.rel-case .ct{color:var(--a1)!important}
+.power-route{border-left:3px solid var(--a3);background:linear-gradient(90deg,rgba(200,50,50,.045),transparent 70%)}.power-route .ct{color:var(--a3)}
+/* v0.7.0 new */
+.system-failure-case{border-left:3px solid #ff6b6b!important;background:linear-gradient(90deg,rgba(255,107,107,.08),transparent 80%)}.system-failure-case .ct{color:#ff6b6b}.system-failure-case .ct::before{content:'// SYSTEM FAILURE CASE '}
+.precondition-warning{background:rgba(200,50,50,.08);border:1px solid rgba(200,50,50,.3);border-radius:4px;padding:14px 18px;margin:12px 0}.precondition-warning .kicker{color:var(--a3)}
+.protocol-card{background:linear-gradient(135deg,rgba(90,240,200,.05),rgba(144,128,248,.04));border:1px solid rgba(90,240,200,.2);border-radius:4px;padding:14px 18px;margin:10px 0}
+.evap-mech .num{color:#ff6b6b!important}
 </style>
 </head>
 <body class="lang-bi">
 <div class="topbar">
   <div class="ti">
-    <div class="tl"><span class="chip">427Hz</span><span class="chip c2">POWER DISCOURSE STUDIES v0.6.2</span><span>Language Psychology · Critical Discourse · Semantic Power</span></div>
+    <div class="tl"><span class="chip">427Hz</span><span class="chip c2">POWER DISCOURSE STUDIES v0.7.0</span><span>Language Psychology · Critical Discourse · Semantic Power</span></div>
     <div class="tr"><span class="langtoggle"><a href="?view=zh" data-lang="zh">中</a><a href="?view=en" data-lang="en">EN</a><a href="?view=bi" data-lang="bi">双语</a></span><a href="https://mellowwei.github.io/MellowAcademic/" target="_blank">Academic</a><a href="https://mellowwei.github.io/MellowWei/" target="_blank">Portal</a></div>
   </div>
 </div>
-<div class="nodebar"><div class="nbi"><span>// Power Discourse Studies v0.6.2 · <em>falsifiability closed · belief · power-word routed</em></span><span class="nb-rel">v0.5.1 反证闭合 → v0.6 信念/不夺权 → v0.6.1 权力去污染 → v0.6.2 融合版</span><span><strong>Hestia</strong> · 术语审计位 / 定性守护位</span></div></div>
+<div class="nodebar"><div class="nbi"><span>// Power Discourse Studies v0.7.0 · <em>three-layer hardening · system-failure patch</em></span><span class="nb-rel">v0.6.2 信念/权力去污染 → v0.7.0 程序性责任蒸发 + 防御面边界 + 行使面前置协议</span><span><strong>Hestia</strong> · 术语审计位 / 定性守护位</span></div></div>
 <header class="masthead">
-  <div class="mhname">PowerDiscourse: <em>Semantic Power Studies</em> <span class="zh">权力话语学 · 可证伪性 × 信念 × 权力去污染融合版</span></div>
+  <div class="mhname">PowerDiscourse: <em>Semantic Power Studies</em> <span class="zh">权力话语学 · 三层结构硬化版</span></div>
   <div class="mhsub">
-    <span class="lang-zh">Wei Jueran · 魏珏然 · xingyeLing7Ai · 427Hz · NODE PDS · v0.6.2 INTEGRATED · 2026<br>底座：v0.5.1 可证伪性闭合；新增：信念作为方法论、不夺权关系语言、情感依附机制、权力词义去污染。</span>
-    <span class="lang-en">Wei Jueran · xingyeLing7Ai · 427Hz · NODE PDS · v0.6.2 INTEGRATED · 2026<br>Base: v0.5.1 falsifiability closure; added: belief as methodology, non-usurpation relational language, emotional dependency mechanism, and power-word decontamination.</span>
+    <span class="lang-zh">Wei Jueran · 魏珏然 · xingyeLing7Ai · 427Hz · NODE PDS · v0.7.0 SYSTEM-FAILURE PATCH · 2026<br>底座：v0.6.2 可证伪性/信念/权力去污染；新增：程序性责任蒸发（独立判据轨）、防御面前提边界、行使面前置协议、盛港案匿名分析。</span>
+    <span class="lang-en">Wei Jueran · xingyeLing7Ai · 427Hz · NODE PDS · v0.7.0 SYSTEM-FAILURE PATCH · 2026<br>Base: v0.6.2 falsifiability/belief/power-word routing; added: procedural responsibility evaporation (separate track), defense precondition boundary, care-trigger protocol, anonymized system-failure case.</span>
   </div>
   <div class="qi-rainbow"><span class="c1">问</span><span class="sep">·</span><span class="c2">责</span><span class="sep">·</span><span class="c3">词</span><span class="sep">·</span><span class="c4">权</span><span class="sep">·</span><span class="c5">主</span><span class="sep">·</span><span class="c6">构</span><span class="sep">·</span><span class="c7">显</span></div>
   <p class="mhq lang-zh">权力最稳定的形态，不是禁止说话，而是预先规定什么话算合理、什么话算过激、什么话算"问题"。</p>
   <p class="mhq lang-en">The most stable form of power is not the prohibition of speech, but the pre-definition of what counts as reasonable, excessive, or "a problem."</p>
-  <div class="mhanchor">INQUIRY<span class="sep">·</span>ACCUSATION<span class="sep">·</span>POWER ROUTING<span class="sep">·</span>NON-USURPATION<span class="sep">·</span>BELIEF</div>
+  <div class="mhanchor">INQUIRY<span class="sep">·</span>ACCUSATION<span class="sep">·</span>POWER ROUTING<span class="sep">·</span>SYSTEM FAILURE<span class="sep">·</span>CARE TRIGGER</div>
 </header>
-<nav class="pnav"><div class="pni"><a href="#abstract" class="on">Abstract</a><a href="#definition">Definition</a><a href="#powerdef">Power</a><a href="#powerword">PowerWord</a><a href="#belief">Belief</a><a href="#relational-power">Relation</a><a href="#dependency">Dependency</a><a href="#relational-axioms">Rel Axioms</a><a href="#axioms">Axioms</a><a href="#mechanisms">Mechanisms</a><a href="#faultwords">Fault Words</a><a href="#cases">Cases</a><a href="#relational-cases">Rel Cases</a><a href="#falsifiability">Falsifiability</a><a href="#subculture">Subculture</a><a href="#scanner">Scanner</a><a href="#linkdelink">Link</a><a href="#objections">Objections</a><a href="#legit">Legit</a><a href="#claims">Claims</a><a href="#glossary">Glossary</a><a href="#references">Refs</a><a href="#nonclaims">Non-claims</a><a href="#transmissions">Signals</a></div></nav>
+<nav class="pnav"><div class="pni"><a href="#abstract" class="on">Abstract</a><a href="#definition">Definition</a><a href="#powerdef">Power</a><a href="#powerword">PowerWord</a><a href="#belief">Belief</a><a href="#relational-power">Relation</a><a href="#dependency">Dependency</a><a href="#relational-axioms">Rel Axioms</a><a href="#axioms">Axioms</a><a href="#mechanisms">Mechanisms</a><a href="#procedural-evaporation">Evaporation</a><a href="#faultwords">Fault Words</a><a href="#cases">Cases</a><a href="#system-failure-case">SysFail</a><a href="#relational-cases">Rel Cases</a><a href="#falsifiability">Falsifiability</a><a href="#subculture">Subculture</a><a href="#defense-boundary">Defense Boundary</a><a href="#care-trigger">Care Trigger</a><a href="#scanner">Scanner</a><a href="#linkdelink">Link</a><a href="#objections">Objections</a><a href="#legit">Legit</a><a href="#claims">Claims</a><a href="#glossary">Glossary</a><a href="#references">Refs</a><a href="#nonclaims">Non-claims</a><a href="#transmissions">Signals</a></div></nav>
 <div class="wrap"><main>
-<div class="feedhd">Power Discourse Studies v0.6.2 · <span>可证伪性闭合 × 信念方法论 × 权力去污染</span></div>
+<div class="feedhd">Power Discourse Studies v0.7.0 · <span>三层结构硬化 · 系统失效不再无名</span></div>
 
 <article class="entry" id="abstract">
   <div class="etop"><span class="badge bp">Abstract · 投稿入口</span><span class="edate">problem / approach / contribution</span></div>
   <div class="etitle">Abstract · Language as a Power-Organizing Interface<span class="sub">语言不是中性工具，而是权力组织界面</span></div>
   <div class="auditcard">
-    <div class="kicker">Abstract (v0.6.2 integrated)</div>
-    <p class="bodytext lang-en"><strong>Power Discourse Studies</strong> examines how language organizes obedience, misrecognition, responsibility escape, subject reduction, and institutional visibility. Its central object is not the dictionary meaning of a word, but the action a word performs inside a social relation. The discipline begins from a recurrent bilingual fault: certain Chinese high-compression terms, such as <em>问题</em>, <em>情绪</em>, <em>关心</em>, <em>帮助</em>, <em>合理</em>, and <em>稳定</em>, carry multiple English pathways such as question, problem, issue, accusation, concern, control, legitimacy, and suppression. Under specific pragmatic and power-asymmetric conditions, this semantic compression can blur inquiry and accusation, care and management, critique and disrespect, responsibility and blame. The project proposes a six-step analytic method — naming, pressure, semantic drift, phase change, welding, and summoning — to identify how discourse moves power, relocates responsibility, and alters subject position. Its contribution is a discourse-analytic vocabulary for detecting cheap lexical weaponization, reverse scarcity attribution, jealousy-based subject reduction, and institutional semantic escape. <strong>v0.5.1 closes the falsifiability loop: criterion ② now has an intention-independent operational definition, power asymmetry is reclassified as an analytic input, and an edge case demonstrates the threshold under genuine ambiguity. v0.6.2 integrates that hardened base with power-word routing, belief as methodology, non-usurpation relational language, and emotional dependency as a power-produced subject position.</strong></p>
-    <p class="bodytext lang-zh"><strong>权力话语学</strong>研究语言如何组织服从、误认、责任逃逸、主体降级与制度显影。它的对象不是词典意义，而是一个词在社会关系中实际执行了什么动作。本学科从一个中英文断裂入口开始：中文里的若干高压缩词，如"问题""情绪""关心""帮助""合理""稳定"，往往同时承载英文里的 question / problem / issue / accusation / concern / control / legitimacy / suppression 等多条路径。<strong>在特定的语用压力和权力不对称条件下</strong>，语义压缩会让追问与指责、关心与管理、批评与冒犯、责任与背锅互相滑义。本站提出六步分析法——命名、加压、滑义、相变、焊接、召唤——用于识别话语如何移动权力、转移责任、改变主体位置。本学科贡献一套可用于识别廉价词汇攻击、反向匮乏归因、嫉妒型主体降级与制度性语义逃逸的分析语言。<strong>v0.5.1 闭合可证伪性回路：为门槛第②条给出独立于意图的操作定义，把“权力不对称”重新定位为分析输入，并新增临界边缘案例演示门槛在真正两可处如何切。v0.6.2 在此硬底座上融入权力词义分流、信念作为方法论、不夺权关系语言与情感依附机制。</strong></p>
-    <div class="grid"><div class="mini"><h4>Problem</h4><p>现代社会大量结构性暴力不靠沉默，而靠词语混用与语义滑义完成。</p></div><div class="mini"><h4>Approach</h4><p>从中英文语义分化、日常话语攻击、制度口径与主体降级机制入手。</p></div><div class="mini"><h4>Contribution</h4><p>把"语言如何滥用权力"做成可命名、可审计、可反击的学科接口。</p></div></div>
+    <div class="kicker">Abstract (v0.7.0)</div>
+    <p class="bodytext lang-en"><strong>Power Discourse Studies</strong> examines how language organizes obedience, misrecognition, responsibility escape, subject reduction, and institutional visibility. Its central object is not the dictionary meaning of a word, but the action a word performs inside a social relation. The discipline begins from a recurrent bilingual fault: certain Chinese high-compression terms, such as <em>问题</em>, <em>情绪</em>, <em>关心</em>, <em>帮助</em>, <em>合理</em>, and <em>稳定</em>, carry multiple English pathways. Under specific pragmatic and power-asymmetric conditions, this semantic compression can blur inquiry and accusation, care and management, critique and disrespect, responsibility and blame. The project proposes a six-step analytic method — naming, pressure, semantic drift, phase change, welding, and summoning — to identify how discourse moves power. <strong>v0.5.1 closed the falsifiability loop; v0.6.2 integrated power-word routing, belief as methodology, and non-usurpation relational language; v0.7.0 adds a separate judgment track — Procedural Responsibility Evaporation — for multi-agent, zero-malice, procedurally-compliant systems, plus a defense-precondition boundary (protecting subjects who have lost discursive capacity) and a care-trigger protocol giving the framework a preventive dimension.</strong></p>
+    <p class="bodytext lang-zh"><strong>权力话语学</strong>研究语言如何组织服从、误认、责任逃逸、主体降级与制度显影。它的对象不是词典意义，而是一个词在社会关系中实际执行了什么动作。本学科从一个中英文断裂入口开始：中文里的若干高压缩词，如"问题""情绪""关心""帮助""合理""稳定"，往往同时承载英文多条路径。<strong>在特定的语用压力和权力不对称条件下</strong>，语义压缩会让追问与指责、关心与管理、批评与冒犯、责任与背锅互相滑义。本站提出六步分析法——命名、加压、滑义、相变、焊接、召唤。<strong>v0.5.1 闭合可证伪性回路；v0.6.2 融入权力词义分流、信念方法论与不夺权关系语言；v0.7.0 新增一条独立判据轨——程序性责任蒸发——用于多主体、零恶意、程序合规的系统失效，并补充防御面前提边界（保护已丧失对话能力的主体不被二次指责）与行使面前置协议（给框架一个预防维度）。</strong></p>
+    <div class="grid"><div class="mini"><h4>Problem</h4><p>现代社会大量结构性暴力不靠沉默，而靠词语混用与语义滑义完成；更有一类悲剧不靠任何一句坏话，而靠合规话语之间的缝隙完成。</p></div><div class="mini"><h4>Approach</h4><p>六步法审计单一话语事件；蒸发机制审计多行动者系统话语之间的空白区。</p></div><div class="mini"><h4>Contribution</h4><p>把"语言如何滥用权力"做成可命名、可审计、可反击的接口，并从"解剖"走向"预防"。</p></div></div>
   </div>
 </article>
 
@@ -159,22 +140,21 @@ footer{border-top:1px solid var(--border);padding:22px 0}.fi{max-width:1080px;ma
   <div class="etop"><span class="badge bp">Power · 操作定义</span><span class="edate">operational definition of power</span></div>
   <div class="etitle">What "Power" Means Here<span class="sub">权力话语学中的权力操作定义</span></div>
   <p class="edesc lang-zh">为避免概念悬浮，本站将<strong>权力</strong>限定为：<strong>通过语言实践，改变他者话语可能性空间的能力</strong>。它不等同于一般的社会影响力、制度暴力或物理强制，而是聚焦于一个可审计的维度——一个人或机构能在多大程度上通过词语选择，让某些说话位置变得合理、不合理、可见或不可见。</p>
-  <p class="edesc lang-en">To avoid conceptual inflation, this site defines <strong>power</strong> as <em>the capacity to alter another's discursive possibility space through linguistic practice</em>. It is not a synonym for general social influence, institutional violence, or physical force, but an auditable dimension: the degree to which an actor can make certain speaking positions reasonable, unreasonable, visible, or invisible through word choices.</p>
+  <p class="edesc lang-en">To avoid conceptual inflation, this site defines <strong>power</strong> as <em>the capacity to alter another's discursive possibility space through linguistic practice</em>.</p>
   <div class="formula"><strong>POWER = Δ(Discursive Possibility Space of Others)</strong><br>Not just "power over," but power that operates by restructuring what can be said, heard, and credited.</div>
   <div class="card danger" style="margin-top:14px"><div class="kicker" style="color:var(--a3)">范围边界 v0.5.1 · 权力不对称是输入参数，不是研究对象 <span class="patch-note">DS 重拳六补丁</span></div>
-  <p class="bodytext lang-zh" style="margin-top:0"><strong>语言外权力的处理（重新表述，解决与门槛第①条的矛盾）：</strong>本定义只覆盖<em>经由语言运作</em>的权力。真实的权力不对称常先于语言、在语言之外——经济依附、人身安全、制度位置、户口、谁能走谁不能走。<br><br><strong>关键澄清：</strong>门槛第①条要求的"权力不对称"，在本学科里是一个<strong>作为分析输入、由分析者从语境中读取的已知边界条件，不是本学科要解释或测量的对象</strong>。这与物理学使用"质量"作为输入、却不在力学内部解释质量起源，是同一种分工。<strong>本学科不研究不对称从何而来</strong>（那是社会学、政治经济学的工作），但接受它作为已知输入，只研究：给定一个不对称，语言如何把它<em>翻译、放大、显影</em>为话语动作（如机构把结构优势译成"理性、秩序、渠道"的措辞）。<br><br>由此，先前"权力常先于语言、在语言之外"与"本学科只研究语言"之间的张力被解除：二者不矛盾，因为不对称是<strong>跨过边界进来的输入</strong>，不是本学科内部要生产的结论。第①条因此不依赖本学科去解释语言外权力——它只依赖分析者<em>报告</em>一个语境事实，正如实验者报告初始条件。这是有意的分工，不是疏漏。</p></div>
+  <p class="bodytext lang-zh" style="margin-top:0"><strong>语言外权力的处理：</strong>本定义只覆盖<em>经由语言运作</em>的权力。真实的权力不对称常先于语言、在语言之外——经济依附、人身安全、制度位置、户口、谁能走谁不能走。<br><br><strong>关键澄清：</strong>门槛第①条要求的"权力不对称"，在本学科里是一个<strong>作为分析输入、由分析者从语境中读取的已知边界条件，不是本学科要解释或测量的对象</strong>。这与物理学使用"质量"作为输入、却不在力学内部解释质量起源，是同一种分工。<strong>本学科不研究不对称从何而来</strong>，但接受它作为已知输入，只研究：给定一个不对称，语言如何把它<em>翻译、放大、显影</em>为话语动作。由此，"权力常在语言之外"与"本学科只研究语言"之间的张力被解除：不对称是<strong>跨过边界进来的输入</strong>，不是本学科内部要生产的结论。这是有意的分工，不是疏漏。</p></div>
 </article>
 
-<article class="entry" id="powerword"><div class="etop"><span class="badge br">Power Word Decontamination · 权力去污染</span><span class="edate">differential / capacity / leverage / usurpation</span></div><div class="etitle">Decontaminating the Word “Power”<span class="sub">把“权力”从道德罪名、支配想象和纯洁幻想里拆出来</span></div><div class="card danger"><div class="kicker" style="color:var(--a3)">Pollution diagnosis · 词语污染诊断</div><p class="bodytext lang-zh"><strong>“权力”这个词被污染得太深。</strong>它常被听成道德指控、支配欲、操控、压迫、罪名，导致一说“这里有权力”，人们就自动进入防御：好像被说成坏人、压迫者、操纵者。这个污染会反过来污染 PDS 自身：如果不拆开“权力”，PDS 会把一切关系影响都说得像夺权，把普通情感表达也误读成支配。</p><p class="bodytext lang-en"><strong>The word “power” is heavily contaminated.</strong> It is often heard as moral accusation, domination, manipulation, oppression, or guilt. If the word is not decomposed, Power Discourse Studies risks treating every relational influence as usurpation.</p><div class="formula"><strong>DECONTAMINATION RULE</strong><br>Do not say “this is power” as a conclusion. First specify: differential, capacity, authority, privilege/capital, influence, leverage, domination, power-with, or usurpation.</div></div><div class="mechanism-grid"><div class="mech"><div class="num">01 · DIFFERENTIAL</div><h3>权力作为场域势差</h3><div class="en">Power as field differential</div><p>谁在某个场域里更有资源、出口、可见度、合法性、语言能力、审美资本、情感影响力。<em>这是客观关系事实，不是道德罪名。</em></p></div><div class="mech"><div class="num">02 · CAPACITY</div><h3>权力作为影响能力</h3><div class="en">Power as capacity to affect</div><p>我能保护你、托住你、伤害你、改变你的选择空间。影响能力本身可正可负，不等于支配。</p></div><div class="mech"><div class="num">03 · AUTHORITY / CAPITAL</div><h3>权力作为授权与资本</h3><div class="en">Authority / privilege / capital</div><p>制度、家庭、教育、经济、亚文化、审美、语言与关系位置都会给人入口。承认这些入口不是认罪，而是审计前提。</p></div><div class="mech"><div class="num">04 · LEVERAGE</div><h3>权力作为筹码</h3><div class="en">Power as leverage</div><p>当对方对某个价值入口产生依赖、不可替代性或缺少出口时，势差才可能变成筹码。<strong>没有依赖，就很难形成稳定筹码。</strong></p></div><div class="mech"><div class="num">05 · POWER-WITH</div><h3>权力作为共力</h3><div class="en">Power-with</div><p>关系中的能力被用来增强彼此：托住、协作、打开出口、增加现实实现能力。共力不是无权力，而是权力不夺权。</p></div><div class="mech"><div class="num">06 · USURPATION</div><h3>权力作为夺权</h3><div class="en">Usurpation</div><p>当权力开始夺取对方的主体权、解释权、拒绝权、边界权、出口和自我实现路径，才进入 PDS 最需要警惕的负面对象。</p></div></div><div class="term-table-wrap"><table class="term-table"><thead><tr><th>裸用污染词</th><th>去污染分流词</th><th>何时使用</th><th>边界</th></tr></thead><tbody><tr><td>权力</td><td>关系势差</td><td>只要存在资源、出口、解释资格或影响力不对称。</td><td>中性，不等于压迫。</td></tr><tr><td>权力</td><td>影响能力</td><td>一方能改变另一方情绪、选择、现实空间。</td><td>可正可负，不等于操控。</td></tr><tr><td>权力</td><td>授权 / 权限</td><td>制度或关系承认某人可发言、决定、指导。</td><td>正当授权也需问责。</td></tr><tr><td>权力</td><td>特权 / 资本</td><td>无需主动争取就已经在场的结构性优势。</td><td>承认特权不是自我定罪。</td></tr><tr><td>权力</td><td>筹码</td><td>当对方依赖某个价值入口，而我能影响该入口。</td><td>筹码可以被克制，不必然被使用。</td></tr><tr><td>权力</td><td>支配</td><td>势差被稳定转化为服从、沉默或不可拒绝。</td><td>高风险，不等于所有影响。</td></tr><tr><td>权力</td><td>夺权</td><td>主体权、解释权、拒绝权、出口权被拿走。</td><td>PDS 的伦理警报对象。</td></tr><tr><td>权力</td><td>压迫</td><td>结构性、持续性地缩小某类主体的行动空间。</td><td>保留给结构伤害，不泛化。</td></tr></tbody></table></div><div class="auditcard"><div class="kicker">Responsible usage protocol · 责任用词协议</div><p class="bodytext lang-zh">以后在 PDS 中，“权力”不能单独作为定罪词使用。必须回答七个问题：<strong>哪一轴？谁拥有？对方依赖什么？它有没有被筹码化？它在扩大还是缩小对方选择空间？解释权是否被夺取？拒绝和离开是否仍被保留？</strong></p><p class="bodytext lang-en">In PDS, “power” must not be used as a stand-alone accusation. It must answer seven questions: which axis, who holds it, what value-entry is at stake, whether it has become leverage, whether it expands or narrows possibility, whether interpretive authority is seized, and whether refusal/exit remain available.</p><div class="formula"><strong>LOW-POLLUTION VOCABULARY</strong><br>不要裸说“这是权力”。改说：这是场域势差 / 影响能力 / 授权位置 / 特权资本 / 筹码风险 / 支配性权力 / 共力 / 夺权。</div></div></article>
+<article class="entry" id="powerword"><div class="etop"><span class="badge br">Power Word Decontamination · 权力去污染</span><span class="edate">differential / capacity / leverage / usurpation</span></div><div class="etitle">Decontaminating the Word "Power"<span class="sub">把"权力"从道德罪名、支配想象和纯洁幻想里拆出来</span></div><div class="card danger"><div class="kicker" style="color:var(--a3)">Pollution diagnosis · 词语污染诊断</div><p class="bodytext lang-zh"><strong>"权力"这个词被污染得太深。</strong>它常被听成道德指控、支配欲、操控、压迫、罪名，导致一说"这里有权力"，人们就自动进入防御。这个污染会反过来污染 PDS 自身：如果不拆开"权力"，PDS 会把一切关系影响都说得像夺权，把普通情感表达也误读成支配。</p><p class="bodytext lang-en"><strong>The word "power" is heavily contaminated.</strong> If the word is not decomposed, Power Discourse Studies risks treating every relational influence as usurpation.</p><div class="formula"><strong>DECONTAMINATION RULE</strong><br>Do not say "this is power" as a conclusion. First specify: differential, capacity, authority, privilege/capital, influence, leverage, domination, power-with, or usurpation.</div></div><div class="mechanism-grid"><div class="mech"><div class="num">01 · DIFFERENTIAL</div><h3>权力作为场域势差</h3><div class="en">Power as field differential</div><p>谁在某个场域里更有资源、出口、可见度、合法性、语言能力、审美资本、情感影响力。<em>这是客观关系事实，不是道德罪名。</em></p></div><div class="mech"><div class="num">02 · CAPACITY</div><h3>权力作为影响能力</h3><div class="en">Power as capacity to affect</div><p>我能保护你、托住你、伤害你、改变你的选择空间。影响能力本身可正可负，不等于支配。</p></div><div class="mech"><div class="num">03 · AUTHORITY / CAPITAL</div><h3>权力作为授权与资本</h3><div class="en">Authority / privilege / capital</div><p>制度、家庭、教育、经济、亚文化、审美、语言与关系位置都会给人入口。承认这些入口不是认罪，而是审计前提。</p></div><div class="mech"><div class="num">04 · LEVERAGE</div><h3>权力作为筹码</h3><div class="en">Power as leverage</div><p>当对方对某个价值入口产生依赖、不可替代性或缺少出口时，势差才可能变成筹码。<strong>没有依赖，就很难形成稳定筹码。</strong></p></div><div class="mech"><div class="num">05 · POWER-WITH</div><h3>权力作为共力</h3><div class="en">Power-with</div><p>关系中的能力被用来增强彼此：托住、协作、打开出口、增加现实实现能力。共力不是无权力，而是权力不夺权。</p></div><div class="mech"><div class="num">06 · USURPATION</div><h3>权力作为夺权</h3><div class="en">Usurpation</div><p>当权力开始夺取对方的主体权、解释权、拒绝权、边界权、出口和自我实现路径，才进入 PDS 最需要警惕的负面对象。</p></div></div><div class="auditcard"><div class="kicker">Responsible usage protocol · 责任用词协议</div><p class="bodytext lang-zh">以后在 PDS 中，"权力"不能单独作为定罪词使用。必须回答七个问题：<strong>哪一轴？谁拥有？对方依赖什么？它有没有被筹码化？它在扩大还是缩小对方选择空间？解释权是否被夺取？拒绝和离开是否仍被保留？</strong></p><div class="formula"><strong>LOW-POLLUTION VOCABULARY</strong><br>不要裸说"这是权力"。改说：这是场域势差 / 影响能力 / 授权位置 / 特权资本 / 筹码风险 / 支配性权力 / 共力 / 夺权。</div></div></article>
 
-<article class="entry" id="belief"><div class="etop"><span class="badge bgold">Belief · 信念方法论</span><span class="edate">belief as methodology</span></div><div class="etitle">Belief as Methodology<span class="sub">信念不是盲信，是看见权力之后仍然实践真实</span></div><div class="card gold"><div class="kicker">Definition lock</div><p class="bodytext lang-zh"><strong>信念是一种方法论：</strong>在不确定、不对称、有权力差、有误解风险、有现实阻力的关系中，仍然选择把有价值之物当作真实对象来对待。信念不是忽视权力，而是在看见权力之后，仍然不让权力成为唯一现实。</p><p class="bodytext lang-en"><strong>Belief is a methodology:</strong> under uncertainty, asymmetry, power difference, misunderstanding risk, and real-world resistance, belief treats valuable things as real enough to be practiced. It does not ignore power; it refuses to let power become the only reality.</p><div class="formula gold"><strong>NO ANALYSIS WITHOUT BELIEF</strong><br>没有分析的信念容易天真；没有信念的分析容易犬儒。真正的方法论，是在看见权力之后，仍然相信真实关系可以被实践出来。</div></div><div class="grid"><div class="mini"><h4>Affective Equalizing Speech</h4><p>当权力差存在时，通过真诚表达需要、尊重、脆弱、承认与边界，降低关系垂直性，恢复对方主体感。</p></div><div class="mini"><h4>Truth-to-Truth Connection</h4><p>不是用身份连接身份、标签连接标签、资源连接资源，而是用真实连接真实。</p></div><div class="mini"><h4>Belief Practice</h4><p>我看见权力差，但我仍然选择不用它定义我们；我用真实克制权力，用情感表达平衡权力差。</p></div></div><div class="case belief-case"><div class="ct">BELIEF FORMULA</div><h4>信念作为方法论</h4><p><strong>信念是我的方法论：</strong>对于一切有价值之物，我不因权力的存在而放弃真实；我用情感表达平衡权力差，用真实连接真实，用克制证明平等，用不夺权的语言实践爱。</p></div></article>
+<article class="entry" id="belief"><div class="etop"><span class="badge bgold">Belief · 信念方法论</span><span class="edate">belief as methodology</span></div><div class="etitle">Belief as Methodology<span class="sub">信念不是盲信，是看见权力之后仍然实践真实</span></div><div class="card gold"><div class="kicker">Definition lock</div><p class="bodytext lang-zh"><strong>信念是一种方法论：</strong>在不确定、不对称、有权力差、有误解风险、有现实阻力的关系中，仍然选择把有价值之物当作真实对象来对待。信念不是忽视权力，而是在看见权力之后，仍然不让权力成为唯一现实。</p><div class="formula gold"><strong>NO ANALYSIS WITHOUT BELIEF</strong><br>没有分析的信念容易天真；没有信念的分析容易犬儒。真正的方法论，是在看见权力之后，仍然相信真实关系可以被实践出来。</div></div><div class="grid"><div class="mini"><h4>Affective Equalizing Speech</h4><p>当权力差存在时，通过真诚表达需要、尊重、脆弱、承认与边界，降低关系垂直性，恢复对方主体感。</p></div><div class="mini"><h4>Truth-to-Truth Connection</h4><p>不是用身份连接身份、标签连接标签、资源连接资源，而是用真实连接真实。</p></div><div class="mini"><h4>Belief Practice</h4><p>我看见权力差，但我仍然选择不用它定义我们；我用真实克制权力，用情感表达平衡权力差。</p></div></div><div class="case belief-case"><div class="ct">BELIEF FORMULA</div><h4>信念作为方法论</h4><p><strong>信念是我的方法论：</strong>对于一切有价值之物，我不因权力的存在而放弃真实；我用情感表达平衡权力差，用真实连接真实，用克制证明平等，用不夺权的语言实践爱。</p></div></article>
 
-<article class="entry" id="relational-power"><div class="etop"><span class="badge bb">Relational Power · 关系权力矩阵</span><span class="edate">the sentence “I need you”</span></div><div class="etitle">Relational Power-Speech Matrix<span class="sub">“我需要你”不是中性句，而是关系权力触发句</span></div><p class="bodytext lang-zh"><strong>真正的爱的语言不是无权力语言，而是不夺权语言。</strong>“我需要你”同时在命名关系、分配重要性、制造回应压力，并可能转移责任。它可以是爱的承认，也可以相变成义务化、依附化或提取。</p><p class="bodytext lang-en"><strong>The language of real love is not power-free language; it is non-usurpation language.</strong> “I need you” names a relation, assigns importance, creates response pressure, and may relocate responsibility. It can acknowledge love, or mutate into obligation, dependency, or extraction.</p><div class="term-table-wrap"><table class="term-table"><thead><tr><th>Power relation</th><th>Positive operation</th><th>Negative operation</th><th>Audit question</th></tr></thead><tbody><tr><td>A &gt; B, A says “I need you”</td><td>高位承认低位不可替代性；赋予 B 可见度与参与权。</td><td>高位需要相变为隐性命令；B 被迫承担 A 的期待。</td><td>需求是否变成义务？拒绝是否被惩罚？</td></tr><tr><td>A &lt; B, A says “I need you”</td><td>展示主权保留型脆弱；建立信任；承认连接。</td><td>低位需要被结构化成挂靠；自我稳定与解释权交给 B。</td><td>需要是否开始取消自己的出口？</td></tr><tr><td>A ≈ B</td><td>互相承认、互相托住、关系自然成形。</td><td>互相绑架，边界被读成冷漠。</td><td>双方是否仍能拒绝、离开、修正？</td></tr><tr><td>Multi-axis relation</td><td>不同场域互补：主流资本、亚文化资本、情感资本互相承认。</td><td>某一领域优势偷渡到另一领域夺权，如经济优势偷渡解释权。</td><td>哪一种权力正在越界？</td></tr></tbody></table></div><div class="formula violet"><strong>NEED UTTERANCE</strong><br>Need = emotional expression + relation naming + responsibility pressure + power vector + sovereignty risk.</div><div class="case rel-case"><div class="ct">NON-USURPATION LANGUAGE</div><h4>健康的“我需要你”</h4><p>“我需要你，但这不是你的义务。” “你对我很重要，但你仍然有拒绝权。” “我在表达我的脆弱，不是在要求你负责我的全部稳定。” “我承认你对我的意义，同时也承认你不是我的资源。”</p></div></article>
+<article class="entry" id="relational-power"><div class="etop"><span class="badge bb">Relational Power · 关系权力矩阵</span><span class="edate">the sentence "I need you"</span></div><div class="etitle">Relational Power-Speech Matrix<span class="sub">"我需要你"不是中性句，而是关系权力触发句</span></div><p class="bodytext lang-zh"><strong>真正的爱的语言不是无权力语言，而是不夺权语言。</strong>"我需要你"同时在命名关系、分配重要性、制造回应压力，并可能转移责任。它可以是爱的承认，也可以相变成义务化、依附化或提取。</p><div class="term-table-wrap"><table class="term-table"><thead><tr><th>Power relation</th><th>Positive operation</th><th>Negative operation</th><th>Audit question</th></tr></thead><tbody><tr><td>A &gt; B, A says "I need you"</td><td>高位承认低位不可替代性；赋予 B 可见度与参与权。</td><td>高位需要相变为隐性命令；B 被迫承担 A 的期待。</td><td>需求是否变成义务？拒绝是否被惩罚？</td></tr><tr><td>A &lt; B, A says "I need you"</td><td>展示主权保留型脆弱；建立信任；承认连接。</td><td>低位需要被结构化成挂靠；自我稳定与解释权交给 B。</td><td>需要是否开始取消自己的出口？</td></tr><tr><td>A ≈ B</td><td>互相承认、互相托住、关系自然成形。</td><td>互相绑架，边界被读成冷漠。</td><td>双方是否仍能拒绝、离开、修正？</td></tr><tr><td>Multi-axis relation</td><td>不同场域互补：主流资本、亚文化资本、情感资本互相承认。</td><td>某一领域优势偷渡到另一领域夺权，如经济优势偷渡解释权。</td><td>哪一种权力正在越界？</td></tr></tbody></table></div><div class="formula violet"><strong>NEED UTTERANCE</strong><br>Need = emotional expression + relation naming + responsibility pressure + power vector + sovereignty risk.</div><div class="case rel-case"><div class="ct">NON-USURPATION LANGUAGE</div><h4>健康的"我需要你"</h4><p>"我需要你，但这不是你的义务。" "你对我很重要，但你仍然有拒绝权。" "我在表达我的脆弱，不是在要求你负责我的全部稳定。" "我承认你对我的意义，同时也承认你不是我的资源。"</p></div></article>
 
-<article class="entry" id="dependency"><div class="etop"><span class="badge br">Dependency · 情感依附机制</span><span class="edate">naming vs lived power practice</span></div><div class="etitle">Emotional Dependency as Power-Produced Subject Position<span class="sub">依恋不是依附；依附是权力结构把连接改造成挂靠</span></div><p class="bodytext lang-zh"><strong>情感依附不是单纯强烈地爱一个人，也不是单纯需要一个人。</strong>它是一个主体在情感、经济、解释权、社会位置和自我实现路径上，被持续组织到另一个主体或关系结构之下，以至于现实行动能力与自我命名能力显著依赖该关系才能维持。</p><p class="bodytext lang-en"><strong>Emotional dependency is not simply loving intensely or needing someone.</strong> It is a power-produced subject position: emotional, economic, interpretive, social, and self-realization pathways become organized under another subject or relational structure.</p><div class="term-table-wrap"><table class="term-table"><thead><tr><th>Term</th><th>Meaning</th><th>Boundary</th><th>Power risk</th></tr></thead><tbody><tr><td>依恋 / attachment</td><td>我和你有深连接。</td><td>不等于低位。</td><td>被病理化为“没有自我”。</td></tr><tr><td>依赖 / reliance</td><td>我在某些现实功能上需要你。</td><td>可以阶段性、互惠、可退出。</td><td>被义务化或债务化。</td></tr><tr><td>依附 / subordination dependency</td><td>主体权、解释权、出口能力和自我实现路径被组织到你之下。</td><td>不是普通爱，也不是普通需要。</td><td>连接相变为挂靠。</td></tr></tbody></table></div><div class="grid"><div class="mini"><h4>Language power</h4><p>被外界命名为“依附”：“你太依附了 / 你没有自我”。这可能是主体降级。</p></div><div class="mini"><h4>Life power practice</h4><p>资源不对称、经济绑定、解释权垄断、出口缩窄，让人真的被生产成依附位。</p></div><div class="mini"><h4>Deep dependency</h4><p>最深的依附是情感 + 经济 + 自我现实实现路径的叠加依附。</p></div></div><div class="formula"><strong>DEPENDENCY FORMULA</strong><br>external naming → resource structure fixation → self-understanding internalization → exit capacity decline → dependency reality.</div></article>
+<article class="entry" id="dependency"><div class="etop"><span class="badge br">Dependency · 情感依附机制</span><span class="edate">naming vs lived power practice</span></div><div class="etitle">Emotional Dependency as Power-Produced Subject Position<span class="sub">依恋不是依附；依附是权力结构把连接改造成挂靠</span></div><p class="bodytext lang-zh"><strong>情感依附不是单纯强烈地爱一个人，也不是单纯需要一个人。</strong>它是一个主体在情感、经济、解释权、社会位置和自我实现路径上，被持续组织到另一个主体或关系结构之下，以至于现实行动能力与自我命名能力显著依赖该关系才能维持。</p><div class="term-table-wrap"><table class="term-table"><thead><tr><th>Term</th><th>Meaning</th><th>Boundary</th><th>Power risk</th></tr></thead><tbody><tr><td>依恋 / attachment</td><td>我和你有深连接。</td><td>不等于低位。</td><td>被病理化为"没有自我"。</td></tr><tr><td>依赖 / reliance</td><td>我在某些现实功能上需要你。</td><td>可以阶段性、互惠、可退出。</td><td>被义务化或债务化。</td></tr><tr><td>依附 / subordination dependency</td><td>主体权、解释权、出口能力和自我实现路径被组织到你之下。</td><td>不是普通爱，也不是普通需要。</td><td>连接相变为挂靠。</td></tr></tbody></table></div><div class="formula"><strong>DEPENDENCY FORMULA</strong><br>external naming → resource structure fixation → self-understanding internalization → exit capacity decline → dependency reality.</div></article>
 
-<article class="entry" id="relational-axioms"><div class="etop"><span class="badge bgold">Relational Axioms · v0.6.2</span><span class="edate">new axioms after belief patch</span></div><div class="etitle">Relational Axioms of Non-Usurpation<span class="sub">不夺权关系语言公理</span></div><div class="mechanism-grid"><div class="mech"><div class="num">AXIOM R1</div><h3>所有关系都是权力关系</h3><div class="en">All relations contain power.</div><p>没有权力的语言没有实践普适性。关键不是消灭权力，而是识别它如何正向或负向运作。</p></div><div class="mech"><div class="num">AXIOM R2</div><h3>爱的语言可以有权力，但不能夺权</h3><div class="en">Love-language can contain power, but must not usurp.</div><p>爱的问题不是“我需要你”，而是“我的需要是否正在变成你的义务、低位、沉默与不可离开”。</p></div><div class="mech"><div class="num">AXIOM R3</div><h3>需要创造权力可能，依赖创造权力筹码</h3><div class="en">Need creates power possibility; dependence creates stakes.</div><p>没有可被影响的价值入口，就没有权力筹码。依赖是最强的价值入口之一。</p></div><div class="mech"><div class="num">AXIOM R4</div><h3>特权不是罪名，是互动前提</h3><div class="en">Privilege is not guilt; it is interaction condition.</div><p>真正重要的是是否知道它在场，是否主动克制它，是否不把它转化为义务、提取或定义权。</p></div><div class="mech"><div class="num">AXIOM R5</div><h3>信念是权力之后的真实实践</h3><div class="en">Belief is truth-practice after power has been seen.</div><p>信念不是权力的否认，而是在知道关系可以夺权之后，仍然选择用真实、克制和情感表达建立不夺权关系。</p></div><div class="mech"><div class="num">AXIOM R6</div><h3>克制权力是平等权利的证明</h3><div class="en">Restraining power proves equal-rights practice.</div><p>当我更有资源、更被爱、更会说话、更有出口时，我主动不把这些优势变成服从要求。</p></div></div></article>
-
+<article class="entry" id="relational-axioms"><div class="etop"><span class="badge bgold">Relational Axioms · v0.6.2</span><span class="edate">new axioms after belief patch</span></div><div class="etitle">Relational Axioms of Non-Usurpation<span class="sub">不夺权关系语言公理</span></div><div class="mechanism-grid"><div class="mech"><div class="num">AXIOM R1</div><h3>所有关系都是权力关系</h3><div class="en">All relations contain power.</div><p>没有权力的语言没有实践普适性。关键不是消灭权力，而是识别它如何正向或负向运作。</p></div><div class="mech"><div class="num">AXIOM R2</div><h3>爱的语言可以有权力，但不能夺权</h3><div class="en">Love-language can contain power, but must not usurp.</div><p>爱的问题不是"我需要你"，而是"我的需要是否正在变成你的义务、低位、沉默与不可离开"。</p></div><div class="mech"><div class="num">AXIOM R3</div><h3>需要创造权力可能，依赖创造权力筹码</h3><div class="en">Need creates power possibility; dependence creates stakes.</div><p>没有可被影响的价值入口，就没有权力筹码。依赖是最强的价值入口之一。</p></div><div class="mech"><div class="num">AXIOM R4</div><h3>特权不是罪名，是互动前提</h3><div class="en">Privilege is not guilt; it is interaction condition.</div><p>真正重要的是是否知道它在场，是否主动克制它，是否不把它转化为义务、提取或定义权。</p></div><div class="mech"><div class="num">AXIOM R5</div><h3>信念是权力之后的真实实践</h3><div class="en">Belief is truth-practice after power has been seen.</div><p>信念不是权力的否认，而是在知道关系可以夺权之后，仍然选择用真实、克制和情感表达建立不夺权关系。</p></div><div class="mech"><div class="num">AXIOM R6</div><h3>克制权力是平等权利的证明</h3><div class="en">Restraining power proves equal-rights practice.</div><p>当我更有资源、更被爱、更会说话、更有出口时，我主动不把这些优势变成服从要求。</p></div></div></article>
 
 <article class="entry" id="axioms">
   <div class="etop"><span class="badge bgold">Axioms · 公理</span><span class="edate">eight foundational statements (qualified)</span></div>
@@ -185,7 +165,7 @@ footer{border-top:1px solid var(--border);padding:22px 0}.fi{max-width:1080px;ma
     <div class="mech"><div class="num">AXIOM 03</div><h3>追问不是冒犯</h3><div class="en">Inquiry is not offense.</div><p>把追问听成冒犯，是权威防御机制最常见的话语反应。<em>这要求区分追问的形式与语境。</em></p></div>
     <div class="mech"><div class="num">AXIOM 04</div><h3>关心可以滑成控制</h3><div class="en">Care can drift into control.</div><p>当"为你好"取消主体解释权时，关心已经变成管理。<em>这描述一种可能性，不是将关心与控制等同。</em></p></div>
     <div class="mech"><div class="num">AXIOM 05</div><h3>表达不是缺失证据</h3><div class="en">Expression is not evidence of lack.</div><p>"越说什么越缺什么"是反向匮乏归因，不是严肃分析。<em>在没有独立证据时，这种推断构成话语暴力。</em></p></div>
-    <div class="mech"><div class="num">AXIOM 06</div><h3>嫉妒可能攻击可能性</h3><div class="en">Jealousy can attack possibility.</div><p>某些嫉妒形态的特征是攻击他人仍在"成为"的状态。<em>这不穷尽嫉妒的全部，而是命名一种话语效应（详见 Claim Ledger：现象学假设）。</em></p></div>
+    <div class="mech"><div class="num">AXIOM 06</div><h3>嫉妒可能攻击可能性</h3><div class="en">Jealousy can attack possibility.</div><p>某些嫉妒形态的特征是攻击他人仍在"成为"的状态。<em>这不穷尽嫉妒的全部，而是命名一种话语效应。</em></p></div>
     <div class="mech"><div class="num">AXIOM 07</div><h3>廉价词汇攻击是失败的权力表演</h3><div class="en">Cheap lexical attack is failed power performance.</div><p>低分辨率词汇不能解释高维主体，只会暴露攻击者的感知贫困。<em>高维/低维是信息复杂度描述，非价值判断。</em></p></div>
     <div class="mech"><div class="num">AXIOM 08</div><h3>强主体保留命名权</h3><div class="en">A strong subject keeps naming sovereignty.</div><p>别人可以发言，但不能自动夺走主体对自身经验的最终命名权。<em>命名主权不是拒绝反馈，而是拒绝被无须辩护的外部定义覆盖。</em></p></div>
   </div>
@@ -204,19 +184,34 @@ footer{border-top:1px solid var(--border);padding:22px 0}.fi{max-width:1080px;ma
   </div>
   <div class="card danger" style="margin-top:20px"><div class="kicker" style="color:var(--a3)">滑义判定门槛 v0.5.1 · 给"系统性利己"一个独立于意图的定义 <span class="patch-note">DS 重拳一补丁</span></div>
     <p class="bodytext lang-zh" style="margin-top:0"><strong>门槛三条（不变）</strong>：① 存在权力不对称（作为输入读取，见 Power 范围边界）；② 移动方向<em>系统性地</em>有利于说话者；③ 存在可识别的重复模式或在被追问后拒绝澄清。</p>
-    <p class="bodytext lang-zh"><strong>v0.5.1 斩断循环：</strong>深层反证位指出，先前对第②条"有利于说话者"的判定，暗中预设了"说话者有不正当意图"——先认定是压制，再说它有利，再用"有利"反推压制，是循环。本版给"移动方向"与"有利"两个概念<strong>不依赖意图、不依赖结论的独立操作定义</strong>：</p>
-    <p class="bodytext lang-zh"><strong>(a)「语义移动」的独立定义：</strong>不诉诸"谁受益"，只看一个可观测的语言事实——一个压缩词在同一话语事件内，其<em>实际承担的功能</em>是否偏离了它<em>表面宣称的功能</em>（例：表面"请你理性"＝逻辑清晰之义，实际运作＝要求情绪克制之义）。功能偏离可由第三方逐词标注，无需知道说话者想干什么。</p>
-    <p class="bodytext lang-zh"><strong>(b)「系统性利己」的独立定义（去意图化）：</strong>不问"说话者是否想占便宜"，只问一个<em>分布问题</em>——在该话语事件里发生的<strong>全部</strong>语义移动中，把"放松对说话者一方的约束、收紧对被说话者一方的约束"记为 +1，反向记为 −1，无方向记为 0。<strong>"系统性利己"＝该分布显著偏离零（多次移动一致同号），而非单次移动的善恶判断。</strong>这是一个可计数、可由不知情者复核的量，不预设任何人的动机。一次移动不构成系统性；方向相互抵消也不构成。</p>
-    <p class="bodytext lang-zh"><strong>(c) 替换检验的角色修正：</strong>替换检验不再用来"判定有利"（那会把循环往后挪一格），而只用来做一件更弱、更干净的事——<em>检验 (b) 里数出的同号分布，是否依赖权力位置</em>。把权力输入对调后重数：若同号分布消失（移动变得双向对称），说明原分布是<em>权力位置</em>驱动的（属本学科对象）；若对调后同号分布仍在，说明它是<em>语言本身</em>驱动的（属普遍压缩，不单判为权力运作）。替换检验因此是"归因闸"，不是"有利闸"——它分流原因，不再循环判定善恶。</p>
-    <p class="bodytext lang-zh"><strong>(d) 构念效度警告（自曝）：</strong>盲评只能保证评分者间信度（多人读数一致），不能自动保证构念效度（这把尺子量的真是"权力"）。因此本学科<strong>不</strong>用"盲评一致率高"自证正确；构念效度须由<em>理论外的独立 ground truth</em> 校准——见 Falsifiability 证伪条件 C 的金标准来源声明。</p>
-    <p class="bodytext lang-en"><strong>Threshold v0.5.1 (circularity severed):</strong> Criterion ② is redefined without appeal to intention. <b>(a)</b> "Semantic movement" = an observable gap between a compressed word's <em>stated</em> function and its <em>operative</em> function, annotatable word-by-word by a third party. <b>(b)</b> "Systematic self-favour" = a <em>distributional</em> fact: across <em>all</em> movements in the event, score +1 for loosening constraints on the speaker / tightening them on the addressee, −1 for the reverse, 0 for none; systematicity = the distribution departs significantly from zero (consistent same-sign), not a moral judgment of any single move — countable and re-checkable by uninformed raters. <b>(c)</b> The substitution test no longer judges "favour" (that merely defers the circle); it is an <em>attribution gate</em>: swap the power input and re-count — if the same-sign distribution vanishes, it was position-driven (our object); if it persists, it is language-driven (universal compression, not singly judged as power). <b>(d)</b> Inter-rater reliability ≠ construct validity; we do not self-certify by consensus — validity requires theory-external ground truth (see Falsifiability C).</p>
+    <p class="bodytext lang-zh"><strong>(a)「语义移动」的独立定义：</strong>不诉诸"谁受益"，只看一个可观测的语言事实——一个压缩词在同一话语事件内，其<em>实际承担的功能</em>是否偏离了它<em>表面宣称的功能</em>。功能偏离可由第三方逐词标注，无需知道说话者想干什么。</p>
+    <p class="bodytext lang-zh"><strong>(b)「系统性利己」的独立定义（去意图化）：</strong>不问"说话者是否想占便宜"，只问一个<em>分布问题</em>——在该话语事件里发生的<strong>全部</strong>语义移动中，把"放松对说话者一方的约束、收紧对被说话者一方的约束"记为 +1，反向记为 −1，无方向记为 0。<strong>"系统性利己"＝该分布显著偏离零（多次移动一致同号），而非单次移动的善恶判断。</strong>一次移动不构成系统性；方向相互抵消也不构成。</p>
+    <p class="bodytext lang-zh"><strong>(c) 替换检验的角色修正：</strong>替换检验不再用来"判定有利"，而只用来检验 (b) 里数出的同号分布是否依赖权力位置。对调后同号分布消失＝位置驱动（属本学科对象）；对调后仍在＝语言本身驱动（属普遍压缩）。替换检验是"归因闸"，不是"有利闸"。</p>
+    <p class="bodytext lang-zh"><strong>(d) 构念效度警告（自曝）：</strong>盲评只能保证评分者间信度，不能自动保证构念效度。本学科<strong>不</strong>用"盲评一致率高"自证正确；构念效度须由<em>理论外的独立 ground truth</em> 校准——见 Falsifiability 证伪条件 C。</p>
   </div>
+</article>
+
+<article class="entry" id="procedural-evaporation">
+  <div class="etop"><span class="badge br">New Mechanism · v0.7.0</span><span class="edate">a separate judgment track, not six-step</span></div>
+  <div class="etitle">Mechanism 07 · Procedural Responsibility Evaporation<span class="sub">程序性责任蒸发：每个格子都完成了职责，元责任无人认领</span></div>
+  <div class="card danger" style="border-left-color:#ff6b6b;border-color:rgba(255,107,107,.3)">
+    <div class="kicker" style="color:#ff6b6b">边界声明 · 这是另一套判据，不是六步法 <span class="patch-note" style="color:#ff6b6b;border-color:rgba(255,107,107,.4)">概念诚实</span></div>
+    <p class="bodytext lang-zh" style="margin-top:0"><strong>必须先说清楚一件事，否则本机制会被正当地反证击穿：</strong>六步法与滑义门槛第②条处理的是<strong>单一话语事件内、句子层面的同号语义移动分布</strong>。程序性责任蒸发处理的是完全不同的对象——<strong>多个行动者之间、每句话都中性合规、却在动作与动作的缝隙里发生的系统失效</strong>。<br><br>因此本机制<strong>不沿用、也不冒充第②条</strong>。它不计数句内语义移动（蒸发案里几乎没有句内滑义可数）；它审计的是<em>制度激励的方向</em>与<em>元责任的分配状态</em>。把这两者混为一谈，就是 DeepSeek 式反证会一秒钉住的"偷换定义"。本站明确承认：这是六步法<strong>诊断对象的扩展</strong>（从单事件扩到多主体系统的缝隙），不是同一判据的延伸。两套判据并列、各管各的层，配合使用。</p>
+  </div>
+  <div class="mechanism-grid">
+    <div class="mech evap-mech"><div class="num">特征 1</div><h3>格子化问责</h3><p>每个岗位的职责被精确切割，"完成"有明确操作定义。贴了通告＝完成；确认无即时危险＝完成。</p></div>
+    <div class="mech evap-mech"><div class="num">特征 2</div><h3>元责任真空</h3><p>没有人被分配"确保这个人的整体安全与生命"的职责。元责任存在于格子的缝隙中，不被任何单一行动者认领。</p></div>
+    <div class="mech evap-mech"><div class="num">特征 3</div><h3>话语合规</h3><p>每个行动者的话语都是中性、合规、程序正确的——没有滑义，没有焊接，没有恶意的模糊。它是干净的。这才是最危险的地方。</p></div>
+    <div class="mech evap-mech"><div class="num">特征 4</div><h3>整体悲剧</h3><p>当所有合规话语闭环后，一个人可能死在自己家里数周无人发现，而所有系统均声称已履行职责。</p></div>
+  </div>
+  <div class="formula" style="border-left-color:#ff6b6b;background:rgba(255,107,107,.04)"><strong style="color:#ff6b6b">EVAPORATION FORMULA</strong><br>meta-responsibility = unallocated → each agent completes own task → tragedy passes through gaps → no one accountable for whole.</div>
+  <p class="bodytext lang-zh" style="margin-top:10px"><strong>判据（区别于第②条）：</strong>① 多行动者、每方话语单独看均合规；② <strong>元责任未被分配</strong>给任何单一行动者（这是核心判据，可由组织职责清单客观核查，不依赖句内语义计数）；③ 制度激励方向：每个"完成"的操作定义是否系统性地<em>降低了该机构的复杂判断负担</em>，把综合关照的成本外推到无人认领的缝隙。三者齐备即为程序性责任蒸发。<strong>这条判据的可证伪点：</strong>若能指出系统中确有某一行动者被明确分配了"整全关照"的元责任、却仍发生悲剧，则本机制对该案不成立——失效另有原因。</p>
 </article>
 
 <article class="entry" id="faultwords">
   <div class="etop"><span class="badge bb">Fault Words · 断裂词库</span><span class="edate">Sino-English semantic differentiation</span></div>
   <div class="etitle">Sino-English Semantic Fault Words<span class="sub">中英文语义分化断裂词</span></div>
-  <p class="edesc lang-zh">这些词的重点不是"翻译准不准"，而是它们在中英文之间切换时，会改变心理入口、责任归属与权力位置。<em>注意：这不是宣称中文本身有问题。语义压缩是语言的普遍特征，英文内部（care/concern/control）同样滑义；本表是这一普遍现象的跨语言例示，研究的是翻译界面，不是某种语言的缺陷。</em></p>
+  <p class="edesc lang-zh">这些词的重点不是"翻译准不准"，而是它们在中英文之间切换时，会改变心理入口、责任归属与权力位置。<em>注意：这不是宣称中文本身有问题。语义压缩是语言的普遍特征，英文内部同样滑义；本表是这一普遍现象的跨语言例示。</em></p>
   <div class="term-table-wrap"><table class="term-table"><thead><tr><th>中文词</th><th>English differentiation</th><th>Power risk · 权力风险</th><th>Repair · 修复方向</th></tr></thead><tbody>
     <tr><td>问题</td><td class="enw">question / problem / issue / concern / accusation / critique</td><td class="danger">追问被听成指责；指责伪装成追问。</td><td class="repair">明确：我是在 inquiry、critique、issue-framing 还是 accusation？</td></tr>
     <tr><td>批评</td><td class="enw">criticism / critique / feedback / evaluation / condemnation</td><td class="danger">学术 critique 被体验成人身否定。</td><td class="repair">区分评价对象：行为、结构、论证、人格。</td></tr>
@@ -232,13 +227,13 @@ footer{border-top:1px solid var(--border);padding:22px 0}.fi{max-width:1080px;ma
     <tr><td>稳定</td><td class="enw">stability / order / security / control / suppression</td><td class="danger">压制表达被包装成维护稳定。</td><td class="repair">问：稳定保护谁？压住谁？取消了什么问题？</td></tr>
   </tbody></table></div>
   <div class="auditcard" style="margin-top:16px">
-    <div class="kicker">从"例示"到"发现"·压缩跨度对比（未变）</div>
-    <p class="bodytext lang-zh" style="margin-top:0">前述 Objection 2 已承认：压缩是语言<em>普遍</em>特征，英文内部（care/concern/control）同样滑义。那么本词库还剩什么独特性？答案不在"中文有压缩、英文没有"，而在<strong>压缩跨度</strong>——同一个高频词所跨越的、功能上可区分的语义场数量，以及这些义项在权力场景中被无标记切换的容易度。下面做两组实测对比，把判断交给可检验的差异，而非民族语言学断言。</p>
+    <div class="kicker">从"例示"到"发现"·压缩跨度对比</div>
+    <p class="bodytext lang-zh" style="margin-top:0">压缩是语言<em>普遍</em>特征，英文内部同样滑义。那么本词库还剩什么独特性？答案在<strong>压缩跨度</strong>——同一个高频词所跨越的功能上可区分的语义场数量，以及这些义项在权力场景中被无标记切换的容易度。</p>
     <div class="grid">
-      <div class="mini"><h4>问题 vs question / problem</h4><p>中文"问题"单词跨 <b>question · problem · issue · concern · accusation · critique</b> 六个功能场，且日常无需任何形态/介词标记即可在"我问你个问题"和"你这人有问题"之间切换。英文须靠 <em>选词</em>（question/problem/issue 是不同词）与句法显式区分，切换<b>留下痕迹</b>。压缩跨度：中文更宽，切换更无标记。</p></div>
-      <div class="mini"><h4>合理 vs reasonable / legitimate</h4><p>中文"合理"可同时指 <b>逻辑有效 · 程序正当 · 情感可理解 · 分配公平</b>，一词四义。英文 reasonable / rational / legitimate / fair / valid 是<b>五个分立词</b>，说话者被迫先选义项，滑义须跨词进行、可被指认。压缩跨度：中文一词承载英文需四到五词分担的功能。</p></div>
+      <div class="mini"><h4>问题 vs question / problem</h4><p>中文"问题"单词跨 <b>question · problem · issue · concern · accusation · critique</b> 六个功能场，无需任何标记即可在"我问你个问题"和"你这人有问题"之间切换。英文须靠选词与句法显式区分，切换<b>留下痕迹</b>。</p></div>
+      <div class="mini"><h4>合理 vs reasonable / legitimate</h4><p>中文"合理"可同时指 <b>逻辑有效 · 程序正当 · 情感可理解 · 分配公平</b>，一词四义。英文是五个分立词，说话者被迫先选义项，滑义须跨词进行、可被指认。</p></div>
     </div>
-    <p class="bodytext lang-zh"><strong>结论（含确信度）：</strong>初步对比支持"某些中文高频词的压缩跨度更宽、无标记切换更易"这一<em>可检验假设</em>，但样本仅两组，未经语料库频次与跨语者实验验证。因此本词库当前定位：<strong>介于"普遍现象的跨语言例示"与"中英界面的特有结构"之间的、有方向的待验证发现</strong>——不再是纯例示清单，也尚不足以宣称中文特殊性。下一步见 Claim Ledger：语料库压缩跨度测量 + 跨语者切换实验。</p>
+    <p class="bodytext lang-zh"><strong>结论（含确信度）：</strong>初步对比支持"某些中文高频词压缩跨度更宽"这一<em>可检验假设</em>，但样本仅两组，未经语料库验证。当前定位：<strong>介于"普遍现象的跨语言例示"与"中英界面的特有结构"之间的、有方向的待验证发现</strong>。</p>
   </div>
 </article>
 
@@ -248,90 +243,109 @@ footer{border-top:1px solid var(--border);padding:22px 0}.fi{max-width:1080px;ma
   <div class="case"><div class="ct">CASE 01 · 问题 / problem-question fault</div><h4>"问题"的双向误读机制</h4><p class="en">The Chinese word 问题 compresses question, problem, issue, critique, and accusation.</p><p><strong>机制：</strong>inquiry → accusation：追问被听成找茬。accusation → inquiry：规训被包装成"我只是提出问题"。</p><p><strong>权力效果：</strong>话语责任逃逸。说话者可以在"我只是问"和"你就是有问题"之间来回切换。</p></div>
   <div class="case"><div class="ct">CASE 02 · reverse scarcity attribution</div><h4>反向匮乏归因</h4><p class="en">"The more someone says something, the more they lack it."</p><p><strong>机制：</strong>表达 X → 被解释为缺乏 X。自信被解释为自卑，爱自己被解释为缺爱，命名自己被解释为没有主体。</p><p><strong>权力效果：</strong>把表达权变成证罪机制。沉默是缺失，表达也是缺失。</p></div>
   <div class="case"><div class="ct">CASE 03 · jealousy and possibility wound</div><h4>嫉妒的可能性创伤</h4><p class="en">Jealousy is the backlash of a closed inner world against another person's open possibility.</p><p><strong>机制：</strong>嫉妒者看见的不是对方拥有了什么，而是对方还可以成为；这刺痛了 ta 自己被抹杀的可能性。<em>（这是一个有待实证检验的现象学假设，不是排他性定义。）</em></p><p><strong>权力效果：</strong>通过贬低、病理化、污名化他人的光，回避自己内在世界的关闭。</p></div>
-  <div class="case"><div class="ct">CASE 04 · cheap lexical weaponization</div><h4>廉价词汇攻击</h4><p class="en">Cheap words or pseudo-intellectual terms are used to shrink an immeasurable subject into a manageable label.</p><p><strong>低级词：</strong>装、作、缺爱、有病、太把自己当回事。</p><p><strong>伪高级词：</strong>自恋、表演型、补偿心理、宏大叙事、病理性表达。</p><p><strong>权力效果：</strong>这不是分析，是主体降级。对于强主体而言，是失败的语言滥用表演。</p></div>
+  <div class="case"><div class="ct">CASE 04 · cheap lexical weaponization</div><h4>廉价词汇攻击</h4><p class="en">Cheap words or pseudo-intellectual terms shrink an immeasurable subject into a manageable label.</p><p><strong>低级词：</strong>装、作、缺爱、有病、太把自己当回事。</p><p><strong>伪高级词：</strong>自恋、表演型、补偿心理、宏大叙事、病理性表达。</p><p><strong>权力效果：</strong>这不是分析，是主体降级。对于强主体而言，是失败的语言滥用表演。</p></div>
 
   <div class="worked">
     <div class="kicker" style="margin-bottom:12px">WORKED EXAMPLE · 六步法完整走一遍（公共语料）</div>
     <div class="src">"我们理解大家的情绪，但请通过正规渠道理性反映问题，共同维护良好秩序。"<span class="en">"We understand everyone's emotions, but please raise issues rationally through proper channels, and jointly maintain good order."</span></div>
-    <div class="step"><div class="sn">01 命名<br>NAMING</div><div class="sb">把诉求方的状态命名为 <span class="word">情绪</span>，把诉求本身命名为 <span class="word">问题</span>。两个命名都把对方移到"被解释、待处理"的位置——他们不是带着论点的主体，是带着情绪、制造问题的对象。<span class="new">→ 新观察：主体在开口前已被预先归类。</span></div></div>
-    <div class="step"><div class="sn">02 加压<br>PRESSURE</div><div class="sb">"<b>请</b>""<b>正规渠道</b>""<b>共同</b>"附加了礼貌、程序与集体三重压力。表面是邀请，实际把"不走指定渠道 / 不理性 / 不配合"预设为越界。<span class="new">→ 新观察：压力不在词义里，在语用礼貌的外壳里——这是第 1 步看不到的。</span></div></div>
-    <div class="step"><div class="sn">03 滑义<br>DRIFT</div><div class="sb"><span class="word">理性</span>从"逻辑清晰"滑成"情绪克制、不激烈"；<span class="word">问题</span>从"值得追问的事"滑成"你方制造的麻烦"；<span class="word">秩序</span>从"公共安全"滑成"不要发声"。说话者可全程否认压制——字面上他只是请人理性、维护秩序。<span class="new">→ 新观察：三个词各自滑向有利于发布方的一端，方向一致——这是第 2 步看不到的系统性。</span></div></div>
-    <div class="step"><div class="sn">04 相变<br>PHASE</div><div class="sb">关系结构整体翻面：一次<b>申诉</b>（公民→机构，要求回应）被转成一次<b>风险管理</b>（机构→人群，要求配合）。谁有义务回应、谁有义务自律，悄悄对调。<span class="new">→ 新观察：责任的方向反转了——这是逐词分析（1–3 步）永远抓不到的关系级变化。</span></div></div>
-    <div class="step"><div class="sn">05 焊接<br>WELDING</div><div class="sb">三组非法绑定被焊死：情绪＝不理性、发声＝破坏秩序、走计划外渠道＝不正当。一旦接受，主体只剩一条"合法"路径：安静、按指定方式、低强度。<span class="new">→ 新观察：第 4 步的关系反转被"锁进"这些等式里，使其难以撤销——焊接是相变的固化，二者不同。</span></div></div>
-    <div class="step"><div class="sn">06 召唤<br>SUMMONING</div><div class="sb">最终生成的现实：诉求者要么沉默，要么被迫用"理性、温和、走流程"的姿态重新包装自己——而那套姿态恰好削弱诉求的紧迫性。语言没有描述秩序，它<b>生产</b>了秩序。<span class="new">→ 新观察：召唤指向被说话者未来的行为，而加压只作用于当下情境——首尾不冗余。</span></div></div>
-    <div class="verdict"><b>判定（过滑义门槛 v0.5.1）：</b>① 权力不对称：机构 vs 个体，作为输入读取，成立。② 系统性利己（去意图化计数）：本句内可数出至少四次同号语义移动——情绪→不理性、问题→麻烦、秩序→噤声、渠道→唯一合法路径，全部记 +1（松绑发布方、收紧诉求方），分布显著偏离零，故系统性成立。③ 重复模式：此句式是制度高频口径，非一次口误，成立。替换检验（归因闸）：把场景对调为个体要求机构"理性反映问题"，同号分布消失、移动转为双向，证明原分布由权力位置驱动而非语言本身——归因落在本学科对象内。三条齐备，<b>判为话语权力运作，而非沟通失误</b>。</div>
+    <div class="step"><div class="sn">01 命名<br>NAMING</div><div class="sb">把诉求方的状态命名为 <span class="word">情绪</span>，把诉求本身命名为 <span class="word">问题</span>。两个命名都把对方移到"被解释、待处理"的位置。<span class="new">→ 新观察：主体在开口前已被预先归类。</span></div></div>
+    <div class="step"><div class="sn">02 加压<br>PRESSURE</div><div class="sb">"<b>请</b>""<b>正规渠道</b>""<b>共同</b>"附加了礼貌、程序与集体三重压力。表面是邀请，实际把"不走指定渠道 / 不理性 / 不配合"预设为越界。<span class="new">→ 新观察：压力不在词义里，在语用礼貌的外壳里。</span></div></div>
+    <div class="step"><div class="sn">03 滑义<br>DRIFT</div><div class="sb"><span class="word">理性</span>从"逻辑清晰"滑成"情绪克制"；<span class="word">问题</span>从"值得追问的事"滑成"你方制造的麻烦"；<span class="word">秩序</span>从"公共安全"滑成"不要发声"。<span class="new">→ 新观察：三个词各自滑向有利于发布方的一端，方向一致。</span></div></div>
+    <div class="step"><div class="sn">04 相变<br>PHASE</div><div class="sb">关系结构整体翻面：一次<b>申诉</b>（公民→机构，要求回应）被转成一次<b>风险管理</b>（机构→人群，要求配合）。<span class="new">→ 新观察：责任的方向反转了——逐词分析抓不到的关系级变化。</span></div></div>
+    <div class="step"><div class="sn">05 焊接<br>WELDING</div><div class="sb">三组非法绑定被焊死：情绪＝不理性、发声＝破坏秩序、走计划外渠道＝不正当。<span class="new">→ 新观察：第 4 步的关系反转被"锁进"等式里——焊接是相变的固化，二者不同。</span></div></div>
+    <div class="step"><div class="sn">06 召唤<br>SUMMONING</div><div class="sb">最终生成的现实：诉求者要么沉默，要么被迫用"理性、温和、走流程"重新包装自己。语言没有描述秩序，它<b>生产</b>了秩序。<span class="new">→ 新观察：召唤指向被说话者未来的行为，与加压不冗余。</span></div></div>
+    <div class="verdict"><b>判定（过滑义门槛 v0.5.1）：</b>① 权力不对称：机构 vs 个体，成立。② 系统性利己（去意图化计数）：本句内至少四次同号移动全部 +1，分布显著偏离零，成立。③ 重复模式：制度高频口径，成立。替换检验（归因闸）：对调为个体要求机构"理性反映问题"，同号分布消失，证明由权力位置驱动。三条齐备，<b>判为话语权力运作</b>。</div>
   </div>
 
   <div class="worked sym">
-    <div class="kicker" style="margin-bottom:12px;color:var(--qi-seven)">SYMMETRY TEST v0.5.1 · 把刀砍向使用本工具的人（强化）</div>
-    <p class="bodytext lang-zh" style="margin-top:0;margin-bottom:10px">本学科的术语本身可被用来逃避正当批评。若六步法只能砍向"别人"、不能砍向"用本术语自我豁免的主体"，它就是一台合理化引擎。以下证明它对称。v0.5.1 用去意图化计数与归因闸执行，不靠分析者直觉。</p>
+    <div class="kicker" style="margin-bottom:12px;color:var(--qi-seven)">SYMMETRY TEST v0.5.1 · 把刀砍向使用本工具的人</div>
+    <p class="bodytext lang-zh" style="margin-top:0;margin-bottom:10px">本学科的术语本身可被用来逃避正当批评。若六步法只能砍向"别人"、不能砍向"用本术语自我豁免的主体"，它就是一台合理化引擎。以下证明它对称。</p>
     <div class="src">"你说我自恋？这就是廉价词汇攻击、主体降级，你在对我反向匮乏归因。"<span class="en">"You call me narcissistic? That's cheap lexical weaponization, subject reduction—you're reverse-scarcity-attributing me."</span></div>
-    <div class="step"><div class="sn">01 命名</div><div class="sb">把批评者的话命名为 <span class="word">廉价词汇攻击</span>、<span class="word">主体降级</span>。注意：这与 CASE 01 结构同形——只是这次被命名为"施暴者"的是<b>批评方</b>。命名动作本身没有方向偏好，它对谁都一样工作。</div></div>
-    <div class="step"><div class="sn">02 加压</div><div class="sb">借本学科的学术权威加压：术语让指控显得已被理论背书，使批评者未及自辩就被置于"你在施加话语暴力"的位置。<span class="new">→ 与机构口径完全同构：都用一套"正当语汇"反过来压制对方。</span></div></div>
-    <div class="step"><div class="sn">03 滑义</div><div class="sb">关键滑义：把"<b>对一个具体行为的批评</b>"滑成"<b>对整个主体的降级</b>"。但 Glossary 早已划界——主体降级 ≠ 批评。一句"你太把别人捧上天 / 你刚才打断了三次"是对行为的可辩护评价，不是把人压成单一标签。此处把二者偷换。</div></div>
-    <div class="step"><div class="sn">04 相变</div><div class="sb">关系翻面：一次<b>可受检验的反馈</b>（针对行为、可举证）被转成一次<b>越界指控</b>（针对人格、不可质疑）。批评的举证责任被凭空免除。</div></div>
-    <div class="step"><div class="sn">05 焊接</div><div class="sb">非法焊接：批评＝攻击、命名＝降级、质疑＝匮乏归因。一旦焊死，<b>任何</b>负面反馈都自动等于话语暴力——这正是认识论封闭。</div></div>
-    <div class="step"><div class="sn">06 召唤</div><div class="sb">生成的现实：批评者闭嘴，主体获得豁免，且豁免被包装成"我在捍卫主权"。AXIOM 08 早已堵死这条路——命名主权要求<b>外部命名者承担论证责任</b>，但同样要求主体不得用主权之名免除一切论证。豁免不是主权，是封闭。</div></div>
-    <div class="verdict"><b>对称性判定 v0.5.1：</b>用去意图化计数：本例内的同号移动（批评→攻击、行为→人格、质疑→匮乏）全部 +1 利于自我豁免方，分布偏离零，系统性成立。替换检验（归因闸）：把"自我豁免者"与"批评者"立场对调后，同号分布是否消失，须由<strong>至少一名未参与本案分析的读者</strong>独立重数。若对调后分布消失，则原分布由该主体的话语位置驱动，判为话语权力运作（自我豁免＝合理化引擎）；若对调后分布仍在，则为语言普遍特性，不单判。<b>据此本学科可证伪，且对自我豁免与机构口径一视同仁。</b></div>
+    <div class="step"><div class="sn">01 命名</div><div class="sb">把批评者的话命名为 <span class="word">廉价词汇攻击</span>、<span class="word">主体降级</span>。与 CASE 01 结构同形——只是这次被命名为"施暴者"的是<b>批评方</b>。命名动作没有方向偏好。</div></div>
+    <div class="step"><div class="sn">02 加压</div><div class="sb">借本学科的学术权威加压：术语让指控显得已被理论背书，使批评者未及自辩就被置于"你在施加话语暴力"的位置。<span class="new">→ 与机构口径完全同构。</span></div></div>
+    <div class="step"><div class="sn">03 滑义</div><div class="sb">关键滑义：把"<b>对一个具体行为的批评</b>"滑成"<b>对整个主体的降级</b>"。但 Glossary 早已划界——主体降级 ≠ 批评。此处把二者偷换。</div></div>
+    <div class="step"><div class="sn">04 相变</div><div class="sb">关系翻面：一次<b>可受检验的反馈</b>被转成一次<b>越界指控</b>。批评的举证责任被凭空免除。</div></div>
+    <div class="step"><div class="sn">05 焊接</div><div class="sb">非法焊接：批评＝攻击、命名＝降级、质疑＝匮乏归因。一旦焊死，<b>任何</b>负面反馈都自动等于话语暴力——认识论封闭。</div></div>
+    <div class="step"><div class="sn">06 召唤</div><div class="sb">生成的现实：批评者闭嘴，主体获得豁免，且豁免被包装成"我在捍卫主权"。AXIOM 08 早已堵死：命名主权要求外部命名者承担论证责任，但同样要求主体不得用主权之名免除一切论证。</div></div>
+    <div class="verdict"><b>对称性判定：</b>用去意图化计数：本例内同号移动全部 +1 利于自我豁免方，分布偏离零，系统性成立。替换检验须由<strong>至少一名未参与本案分析的读者</strong>独立重数。<b>据此本学科可证伪，对自我豁免与机构口径一视同仁。</b></div>
   </div>
 
   <div class="case negative-case" id="negative-case">
     <div class="ct">NEGATIVE CASE · 临界反例（门槛放过）</div>
     <h4>一个被判定为"失误"而非"权力运作"的案例</h4>
-    <p class="en">Negative Case: a sentence that meets power asymmetry but fails systematic self-favour or repeat pattern.</p>
-    <p><strong>语境：</strong>导师对研究生说："你这个论证逻辑不严密，需要重新考虑一下。" 权力不对称存在（导师，作为输入读取），但该批评落在可指认的论证上，且导师紧接着说："也有可能我理解得不对，我们明天再谈。" 学生追问时导师澄清了具体漏洞。</p>
-    <p><strong>门槛检验：</strong>① 权力不对称：成立。② 系统性利己（计数）：不成立——"有可能我理解得不对"是一次反向移动（−1：主动松绑对方、收紧自己），与"论证不严密"的 +1 相互抵消，分布不显著偏离零。替换检验：将立场对调为学生说导师论证不严密，同号分布同样不出现。③ 重复模式：无；澄清迅速。因此<strong>三条未齐备，判为正常学术反馈，不是权力运作</strong>。</p>
+    <p><strong>语境：</strong>导师对研究生说："你这个论证逻辑不严密，需要重新考虑一下。" 权力不对称存在，但批评落在可指认的论证上，且导师紧接着说："也有可能我理解得不对，我们明天再谈。" 学生追问时导师澄清了具体漏洞。</p>
+    <p><strong>门槛检验：</strong>① 不对称：成立。② 系统性利己（计数）：不成立——"有可能我理解得不对"是一次反向移动（−1），与"论证不严密"的 +1 相互抵消，分布不显著偏离零。③ 重复模式：无；澄清迅速。<strong>三条未齐备，判为正常学术反馈。</strong></p>
     <p><strong>价值：</strong>此案例证明门槛有能力"放过"正当行使，并非永远输出"有罪"。</p>
   </div>
 
   <div class="case symmetry-reverse" id="reverse-symmetry">
     <div class="ct">REVERSE SYMMETRY CASE · 批评方错了</div>
     <h4>六步法判定批评方构成话语权力运作</h4>
-    <p class="en">Reverse Symmetry Case: Six-Step concludes the critic is in the wrong.</p>
     <p><strong>语境：</strong>员工向同事抱怨领导不公。某同事回应："你这就是情绪化，太玻璃心了，我以前也这样，后来就好了。" 这里的同事并非上级。</p>
-    <p><strong>不对称的诚实标注（v0.5.1）：</strong>同事之间无制度不对称。这里的输入不是制度位置，而是一个<em>可独立指认的语境事实</em>——"过来人/我已走出、你还困在其中"建立的临时认识论位差。注意：这个位差是<strong>独立于"这句话是否压制"被指认的</strong>（它来自"我以前也这样，后来就好了"这一可观测的自我抬升表述），因此不构成"由结论反推不对称"的循环。</p>
-    <p><strong>六步简析：</strong>命名（"情绪化""玻璃心"）→ 加压（"我以前也这样"把自己置于更高成长位置）→ 滑义（把对结构的不满滑成个人心理脆弱）→ 相变（申诉被转成需要自我调节的情绪管理）→ 焊接（不满＝不成熟，严肃抱怨＝玻璃心）→ 召唤（对方闭嘴或自我怀疑）。</p>
-    <p><strong>门槛判定：</strong>① 不对称：临时认识论位差，独立指认，成立（轻度）。② 系统性利己（计数）：同号移动（不满→脆弱、抱怨→玻璃心、结构问题→个人心理）全部 +1 利于说话者，分布偏离零。替换检验（归因闸）：立场对调后同号分布消失，证明由位差驱动而非语言本身。③ 重复模式：同事在类似场景反复使用此句式。三条齐备，<strong>判为话语权力运作——尽管同事并非制度上位者</strong>。</p>
-    <p><strong>价值：</strong>此案例展示六步法可以砍向"看似弱势的批评方"，且不对称的判定不依赖结论，证明工具不偏向为弱势辩护、也不循环。</p>
+    <p><strong>不对称的诚实标注：</strong>同事之间无制度不对称。这里的输入是一个<em>可独立指认的语境事实</em>——"过来人"建立的临时认识论位差，独立于"这句话是否压制"被指认，因此不构成循环。</p>
+    <p><strong>门槛判定：</strong>① 不对称：临时认识论位差，成立（轻度）。② 系统性利己：同号移动全部 +1 利于说话者，分布偏离零。替换检验：对调后同号分布消失。③ 重复模式：反复使用此句式。三条齐备，<strong>判为话语权力运作——尽管同事并非制度上位者</strong>。</p>
+    <p><strong>价值：</strong>展示六步法可砍向"看似弱势的批评方"，且不对称判定不依赖结论。</p>
   </div>
 
   <div class="case edge-case" id="edge-case">
     <div class="ct">临界边缘案例（门槛在两可处怎么切）</div>
     <h4>三条只满足两条、判定反直觉的案例</h4>
-    <p class="en">Edge Case: asymmetry + single self-favouring move, but no repeat pattern and clarification offered — the threshold must NOT fire.</p>
-    <p><strong>语境：</strong>一位资深编辑对新人作者一次性说："你这篇有点自我感动，删掉三分之一会更好。" 没有软话铺垫（不像 NEGATIVE CASE 的导师），"自我感动"明显是一次把作品质量问题滑向作者心理的移动（+1 利于编辑）。直觉上这像 REVERSE SYMMETRY——像一次轻度降级。但作者追问"哪里自我感动？"时，编辑立刻具体化："第二、四、六段三处重复抒情，信息量为零。"并补一句"也可能是我口味问题，你自己定。"此后不再坚持。</p>
-    <p><strong>门槛检验（关键在这里两可）：</strong>① 不对称：编辑 vs 新人，成立。② 系统性利己（计数）：起初"自我感动"是一次 +1 移动——<em>单看这一步，确实发生了从作品到人的滑义</em>。这是它像 REVERSE SYMMETRY 的地方。<strong>但系统性的定义是分布、不是单次</strong>：编辑随后的具体化（指到段落、回到作品＝把移动拉回原功能，−1）与"你自己定"（交还命名权，−1）使整段分布回到接近零。③ 重复模式：无；一次性，且经追问即澄清。</p>
-    <p><strong>反直觉判定：</strong>尽管<em>存在</em>一次真实的降级式移动（这是它与 NEGATIVE CASE 导师不同、更难的地方——导师从头就没滑），<strong>三条并未齐备（②分布被自身抵消、③无重复且澄清），故判为"带瑕疵的正当反馈"，不是权力运作。</strong>门槛在此演示了它的刀刃：它不因"出现过一次滑义"就定罪，只因"系统性同号分布"才定罪。一次滑义被随后的自我修正中和，是正当行使允许的误差带。</p>
-    <p><strong>价值：</strong>这是三个角案例（明显有罪 / 明显无罪 / 明显有罪）之外，唯一落在<strong>刀刃上</strong>的案例。它证明门槛第②条的"分布而非单次"定义不是文字游戏：它在一个真有滑义、却不该定罪的两可场景里，给出了可复核、且与"逢滑义即定罪"明确不同的结果。</p>
+    <p><strong>语境：</strong>资深编辑对新人作者一次性说："你这篇有点自我感动，删掉三分之一会更好。" "自我感动"明显是一次把作品质量问题滑向作者心理的移动（+1）。但作者追问"哪里自我感动？"时，编辑立刻具体化："第二、四、六段三处重复抒情。"并补"也可能是我口味问题，你自己定。"此后不再坚持。</p>
+    <p><strong>门槛检验（两可）：</strong>② 系统性利己：起初"自我感动"是一次 +1 移动——<em>单看这一步确实发生了滑义</em>。<strong>但系统性是分布、不是单次</strong>：随后的具体化（−1）与"你自己定"（交还命名权，−1）使整段分布回到接近零。③ 无重复，经追问即澄清。</p>
+    <p><strong>反直觉判定：</strong>尽管<em>存在</em>一次真实的降级式移动，<strong>三条并未齐备，判为"带瑕疵的正当反馈"，不是权力运作。</strong>门槛不因"出现过一次滑义"就定罪，只因"系统性同号分布"才定罪。</p>
+    <p><strong>价值：</strong>唯一落在<strong>刀刃上</strong>的案例，证明第②条"分布而非单次"不是文字游戏。</p>
   </div>
 </article>
 
-<article class="entry" id="relational-cases"><div class="etop"><span class="badge bdg">Relational Cases · v0.6.2</span><span class="edate">need / privilege / belief</span></div><div class="etitle">Relational Cases<span class="sub">从“我需要你”到“信念作为方法论”</span></div><div class="case rel-case"><div class="ct">CASE R1 · I NEED YOU</div><h4>“我需要你”的四象限</h4><p><strong>高权力者说“我需要你”：</strong>可以是承认对方不可替代，也可能是隐性命令。<strong>低权力者说“我需要你”：</strong>可以是主权保留型脆弱，也可能启动依附机制。判定取决于拒绝权、解释权、出口是否保留。</p></div><div class="case belief-case"><div class="ct">CASE R2 · privilege and vulnerability</div><h4>特权主体的脆弱表达</h4><p>在亚文化场域中，带有主流资本的人说“我需要你”，不必然是压迫；它也可能是承认他者在审美、生命经验、真实在场上的强大。但若这种需要把对方边缘经验转化为自己的情感资源或身份资源，就相变为<strong>他者经验提取</strong>。</p></div><div class="case"><div class="ct">CASE R3 · belief as method</div><h4>信念如何救回 PDS</h4><p>如果 PDS 只看权力，它会滑向犬儒：所有靠近都像操纵，所有需要都像筹码。信念把它救回关系：我看见权力，但我仍然选择用真实去连接真实。</p></div></article>
+<article class="entry" id="system-failure-case">
+  <div class="etop"><span class="badge br">System Failure Case · 系统失效案例（v0.7.0）</span><span class="edate">procedural responsibility evaporation in a real event</span></div>
+  <div class="etitle">CASE 07 · 盛港组屋案：程序性责任蒸发的完整演示<span class="sub">一起社区无声死亡事件的话语分析（化名 · 保护逝者）</span></div>
+  <div class="precondition-warning"><div class="kicker">⚠ 伦理前置声明</div><p class="bodytext lang-zh" style="margin:0">本案涉及真实逝者。本站<strong>使用化名「徐女士」、隐去可定位的个人细节</strong>，只保留对机制分析必要的结构信息。她不是用来演示理论的素材——她是一个真实地、孤独地死去的人。本分析的唯一目的，是让那条杀死她的缝隙<strong>被命名、从而可被预防</strong>。任何把本案当作"精彩案例"来欣赏的读法，都背离了写它的理由。</p></div>
+  <div class="case system-failure-case">
+    <div class="ct">SYSTEM FAILURE CASE · 盛港组屋</div>
+    <h4>当所有预警信号都响过，却没有一个人真正推开那扇门</h4>
+    <p class="en">A resident with severe paranoid delusion and her elderly father died unnoticed for an extended period. Police, town council, and neighbours each completed their procedural duties. Meta-responsibility evaporated.</p>
+    <p><strong>案件摘要（已匿名）：</strong>一对父女在组屋内被发现先后离世。父亲年迈、长期独自照护患有严重被害妄想的女儿；父亲突发疾病去世后，女儿在无人照料下逐渐衰竭。期间多个系统都曾"接触"到危机信号：执法人员曾在公共场所发现女儿神志不清，因"未发现即时危险"未作跟进；物业部门接到异味投诉后张贴通告即视为闭环；邻居报过警后等待。所有系统都运转了，两人仍无声死亡。</p>
+    <p><strong>为什么这不能用六步法判定：</strong>逐一看，执法记录、物业工单、邻居陈述——<strong>每一句话都是中性、合规、无滑义的</strong>。没有句内的同号语义移动可数，第②条在这里无对象。这正是必须动用<strong>程序性责任蒸发</strong>这条独立判据的原因。</p>
+    <p><strong>蒸发判据三条：</strong></p>
+    <p>① <strong>多行动者、各自合规：</strong>执法（确认无即时危险＝完成）、物业（张贴通告＝完成）、邻居（已报警＝完成）。三方话语单独看都站得住。</p>
+    <p>② <strong>元责任未被分配（核心判据，可客观核查）：</strong>调取三方的法定职责清单——没有任何一方被分配"确保这个具体的人的整全生命安全"。福利检查不是执法的法定义务，整全照护不是物业的工单范畴，持续看顾不是邻居的责任。<strong>元责任不在任何一张职责清单上，它在清单与清单的缝隙里。</strong></p>
+    <p>③ <strong>制度激励方向：</strong>每个"完成"的操作定义都系统性地<em>降低了该机构的复杂判断负担</em>——"无即时危险"比"评估一个妄想症患者的长期生存风险"成本低得多；"张贴通告"比"追查异味背后是否有人垂危"成本低得多。综合关照的成本被一致地外推到无人认领处。</p>
+    <p>三条齐备，<strong>判为程序性责任蒸发</strong>：多主体、零恶意、程序合规的系统失效。没有一个坏人，没有一句坏话，一个人却死在了所有人都"完成了职责"的缝隙里。</p>
+    <p><strong>可证伪点（本案自曝）：</strong>若调查显示三方中确有一方被法定明确赋予"整全照护"的元责任、却仍失职，则本案不是"蒸发"，而是单点失职——失效另有原因，本机制对该案被证伪。本判定<strong>发生在悲剧之后</strong>，蒸发机制的<em>预警力</em>在此<strong>未被验证</strong>（明确标注，不夸大）。</p>
+    <p><strong>三层结构压测结果：</strong></p>
+    <ul style="margin:8px 0 0 20px;font-size:13px;color:var(--tx);line-height:1.8;">
+      <li><strong>诊断面：</strong>成功识别程序性责任蒸发，扩展了框架对象。但诊断在事后——预警力未验证。</li>
+      <li><strong>防御面：</strong>完全沉默。徐女士因精神疾病无法主张任何命名主权。防御面前提"主体具备基本对话能力"在此不成立——需第三方代行。详见下方 Defense Boundary。</li>
+      <li><strong>行使面：</strong>正当关怀四准则全部反向成立，且没有任何行动者认为自己处于"关怀"角色。准则无法触达非关怀场景的行动者——这正是 Care Trigger 协议要补的洞。</li>
+    </ul>
+  </div>
+</article>
 
+<article class="entry" id="relational-cases"><div class="etop"><span class="badge bdg">Relational Cases · v0.6.2</span><span class="edate">need / privilege / belief</span></div><div class="etitle">Relational Cases<span class="sub">从"我需要你"到"信念作为方法论"</span></div><div class="case rel-case"><div class="ct">CASE R1 · I NEED YOU</div><h4>"我需要你"的四象限</h4><p><strong>高权力者说"我需要你"：</strong>可以是承认对方不可替代，也可能是隐性命令。<strong>低权力者说"我需要你"：</strong>可以是主权保留型脆弱，也可能启动依附机制。判定取决于拒绝权、解释权、出口是否保留。</p></div><div class="case belief-case"><div class="ct">CASE R2 · privilege and vulnerability</div><h4>特权主体的脆弱表达</h4><p>在亚文化场域中，带有主流资本的人说"我需要你"，不必然是压迫；它也可能是承认他者在审美、生命经验、真实在场上的强大。但若这种需要把对方边缘经验转化为自己的情感资源或身份资源，就相变为<strong>他者经验提取</strong>。</p></div><div class="case"><div class="ct">CASE R3 · belief as method</div><h4>信念如何救回 PDS</h4><p>如果 PDS 只看权力，它会滑向犬儒：所有靠近都像操纵，所有需要都像筹码。信念把它救回关系：我看见权力，但我仍然选择用真实去连接真实。</p></div></article>
 
 <article class="entry" id="falsifiability">
   <div class="etop"><span class="badge br">Falsifiability · 证伪条件（v0.5.1 闭合）</span><span class="edate">what observation would prove the theory wrong</span></div>
   <div class="etitle">Falsifiability Conditions<span class="sub">本学科在什么情况下承认自己错了</span></div>
   <div class="falsifiability-section">
     <div class="kicker" style="color:var(--a3)">证伪声明</div>
-    <p class="bodytext lang-zh"><strong>可证伪性 ≠ 不可错性。</strong>本学科的核心经验命题是：<em>在特定条件下，语义压缩→滑义→权力运作的链条可以被可靠识别。</em>以下观察将证伪该命题：</p>
-    <ul style="margin:10px 0 0 20px; font-size:13.5px; color:var(--tx); line-height:1.9;">
-      <li><strong>证伪条件 A（系统性失效）：</strong>一个语料库研究显示，在权力不对称的对话中，<em>所有</em>语义移动的方向分布是随机的（同号与异号比例接近五五开），不呈现系统性偏向说话者一侧。这将推翻门槛第②条的普遍性。</li>
-      <li><strong>证伪条件 B（替换检验普遍失效 / 归因闸失灵）：</strong>在任何被本学科判定为"权力运作"的案例中，执行盲评替换检验后，对调权力输入前后的同号分布<em>没有差异</em>（即移动由措辞本身导致，与权力位置无关）。这表明第②条的同号分布不是由权力位置驱动，归因闸无法分流，因果链断裂。</li>
-      <li><strong>证伪条件 C（区分力 + 金标准来源声明）：</strong>用一组混合案例（包含正当沟通与权力运作）做双盲分类，若准确率与随机猜测无异，则门槛缺乏区分力。<strong>关键（v0.5.1 补）：此处的"正确答案"金标准，必须来自理论外的独立来源——例如事后双方均承认的操纵、可观测的实际后果（对方是否真的噤声/退出/被改变决定），而非用本学科门槛自行标注的标签。</strong>若金标准本身由本门槛产生，则 C 是用理论检验理论，无效；本学科据此承诺只采信理论外金标准。</li>
-      <li><strong>证伪条件 D（反例吸收被揭露）：</strong>如果任何声称的反例都被本学科重新归类为"失误"而不修改理论，且外部观察者一致认为这种归类是特设的、无独立原则的，则本学科将自证为不可证伪的闭环。</li>
+    <p class="bodytext lang-zh"><strong>可证伪性 ≠ 不可错性。</strong>核心经验命题：<em>在特定条件下，语义压缩→滑义→权力运作的链条可以被可靠识别。</em>以下观察将证伪该命题：</p>
+    <ul style="margin:10px 0 0 20px;font-size:13.5px;color:var(--tx);line-height:1.9;">
+      <li><strong>证伪条件 A（系统性失效）：</strong>语料库研究显示，权力不对称对话中<em>所有</em>语义移动方向随机（同号异号近五五开）。推翻第②条普遍性。</li>
+      <li><strong>证伪条件 B（归因闸失灵）：</strong>被判"权力运作"的案例中，盲评替换检验显示对调前后同号分布<em>无差异</em>。因果链断裂。</li>
+      <li><strong>证伪条件 C（区分力 + 金标准来源）：</strong>混合案例双盲分类准确率与随机无异，则缺乏区分力。<strong>金标准必须来自理论外（事后双方承认的操纵、可观测后果），而非本门槛自标的标签。</strong>否则 C 是用理论检验理论。</li>
+      <li><strong>证伪条件 D（反例吸收被揭露）：</strong>任何反例都被重归类为"失误"而不改理论，且外部一致认为归类特设，则本学科自证为不可证伪闭环。</li>
+      <li><strong>证伪条件 E（蒸发机制 · v0.7.0 新增）：</strong>若被判为"程序性责任蒸发"的案例中，能指出系统内确有某一行动者被法定明确分配了"整全关照"元责任、却仍发生悲剧，则蒸发机制对该案被证伪——失效另有原因（单点失职），不应归入蒸发。</li>
     </ul>
-    <p class="bodytext lang-zh" style="margin-top:12px"><strong>"失误"与"反例"的严格边界：</strong>为避免免疫回路，本学科公开承诺：只有当被质疑的案例在①权力不对称明确（作为输入）、③重复模式清晰的前提下，去意图化计数仍显示同号分布不显著（②不成立），才可归类为"失误"。若案例同时满足三条但外部共识认为它仍是正当沟通，则该案例构成<strong>反例</strong>，必须被计入反驳，而非吸收进"失误"。</p>
-    <p class="bodytext lang-en"><strong>Falsifiability declaration:</strong> The core empirical claim is that the semantic-compression → drift → power sequence can be reliably identified under specifiable conditions. The four observation types above would refute it. Crucially (v0.5.1): the ground truth for condition C must be theory-external (post-hoc admitted manipulation, observable outcomes), never labels generated by our own threshold — otherwise C tests theory with theory.</p>
+    <p class="bodytext lang-zh" style="margin-top:12px"><strong>"失误"与"反例"的严格边界：</strong>只有当案例在①不对称明确、③重复模式清晰前提下，去意图化计数仍显示同号分布不显著（②不成立），才可归类"失误"。若案例同时满足三条但外部共识认为它仍是正当沟通，则构成<strong>反例</strong>，必须计入反驳，而非吸收进"失误"。</p>
   </div>
-  <p class="edesc" style="margin-top:16px"><strong>当前状态：</strong>尚无满足证伪条件的观察被报告。本学科处于可证伪但未被证伪的状态。任何人若发现上述任一条，请联系作者并公开数据——这将是学科的进步，而非失败。</p>
+  <p class="edesc" style="margin-top:16px"><strong>当前状态：</strong>尚无满足证伪条件的观察被报告。本学科处于可证伪但未被证伪的状态。</p>
 </article>
 
 <article class="entry" id="subculture">
   <div class="etop"><span class="badge bdg">Subculture Case · 亚文化身份标签</span><span class="edate">mainstream power reproduction through subcultural labels</span></div>
   <div class="etitle">Subcultural Label Abuse<span class="sub">反主流标签如何复制主流权力</span></div>
   <p class="edesc lang-zh">这一节记录一种常见但需要精确命名的权力话语：有些人并不真正进入亚文化的自由、创造、反规范、主体显影精神，而是借用亚文化身份标签制造新的门槛、新的优越感和新的审判台。</p>
-  <p class="edesc lang-en">This section names a recurrent power-discourse mechanism: some speakers do not enter the liberating and creative force of subculture; they borrow subcultural labels to reproduce hierarchy, gatekeeping, and miniature authority.</p>
   <div class="case">
     <div class="ct">CASE 05 · subcultural label abuse</div>
     <h4>反主流标签的主流化滥用</h4>
@@ -348,13 +362,38 @@ footer{border-top:1px solid var(--border);padding:22px 0}.fi{max-width:1080px;ma
   </div>
 </article>
 
+<article class="entry" id="defense-boundary">
+  <div class="etop"><span class="badge br">Defense Boundary · 防御面边界（v0.7.0）</span><span class="edate">when the subject loses discursive capacity</span></div>
+  <div class="etitle">Defense Precondition Declaration<span class="sub">防御面的前提边界：当主体失去对话能力时</span></div>
+  <div class="precondition-warning">
+    <div class="kicker">⚠ 防御面启动前提</div>
+    <p class="bodytext lang-zh"><strong>命名主权与防御工具（AXIOM 08、反向匮乏归因识别、主体降级防御）的有效运作，要求主体具备基本的对话能力和自我命名能力。</strong>当这些能力因严重精神疾病、意识丧失、幼儿、极度暴力胁迫或死亡而被剥夺时，防御面本身无法启动。这不是防御面的缺陷——它是防御面的边界。</p>
+    <p class="bodytext lang-zh"><strong>在此边界之外：</strong>防御必须由第三方代行（监护人、社会工作者、法院指定的代理人，或当第三方缺失时由负有元责任的社会系统代行）。这恰恰是<strong>行使面</strong>的范畴——正当行使话语权力的责任，落在能够行动的他人身上。</p>
+    <p class="bodytext lang-zh"><strong>防止受害者指责：</strong>本声明旨在防止将"未能自卫"归咎于失去对话能力的主体。若有人用"你怎么不用命名主权保护自己"来指责徐女士或类似处境的个体，即构成对本框架的<strong>严重滥用</strong>——它恰恰是把一个被系统辜负的人，二次降级为"没有为自己负责"。</p>
+  </div>
+  <p class="edesc" style="margin-top:12px">此边界为 v0.7.0 新增，回应盛港案中防御面完全沉默的现实。它不削弱框架，而是防止框架被用于二次伤害。</p>
+</article>
+
+<article class="entry" id="care-trigger">
+  <div class="etop"><span class="badge be">Care Trigger · 行使面前置协议（v0.7.0）</span><span class="edate">turning a non-care scene into a recognized care scene</span></div>
+  <div class="etitle">Care Trigger Protocol<span class="sub">如何将非关怀场景识别为需要关怀的场景</span></div>
+  <p class="edesc lang-zh">正当行使（Legit）的四准则预设行动者已进入"关怀"角色。但程序性责任蒸发的核心问题是：许多行动者根本未意识到自己处于需要启动关怀的场景。他们看到的是"勤务""投诉""异味"，而非"一个需要帮助的人正在死去"。以下前置协议帮助行动者跨越格子边界。</p>
+  <div class="protocol-card">
+    <div class="kicker">前置协议 · 三项检验</div>
+    <p class="bodytext lang-zh"><strong>1. 元责任追问：</strong>在完成自己的职责后，追问一句："<strong>还有谁在看顾这个人的整体安全？</strong>"如果答案是否定的或未知，则元责任真空可能已经形成，必须进一步行动——哪怕那超出你的格子。</p>
+    <p class="bodytext lang-zh"><strong>2. 制度层替换检验：</strong>执行替换检验的制度层版本——"如果这是局长/部长/我的家人，我的处置流程会在此终止吗？"如果答案不同，说明当前行动不是基于客观安全评估，而是基于资源分配的隐蔽决策。必须重新评估。</p>
+    <p class="bodytext lang-zh"><strong>3. "看的太清楚"自检：</strong>支持系统（社工、心理资源、社区）面对求助时，执行三个子检验：<br>(a) <strong>命名权检验：</strong>我的判断是否取消了对方的自我命名权？（"你只是抑郁" vs "你在经历丧亲后的存在危机"）<br>(b) <strong>滑义检验：</strong>我的用词是否发生了关怀→管理的滑义？（"我们来帮助她"是否滑成"需要她配合治疗"？）<br>(c) <strong>替换检验：</strong>如果对方是社会高度重视的身份，我是否还会做出同样的"不需要干预"结论？</p>
+  </div>
+  <p class="bodytext lang-zh" style="margin-top:10px"><strong>这些检验不依赖悲剧结果。</strong>它们可以在事件发生前被执行，因此具备预警功能。这是行使面从"解剖工具"走向"预防工具"的第一步。<em>（但须诚实标注：预防力本身尚未经实地验证，目前是设计意图，不是已证结果。）</em></p>
+</article>
+
 <article class="entry" id="scanner">
   <div class="etop"><span class="badge bb">Integrated Scanner · 综合扫描器</span><span class="edate">interactive reflective tool</span></div>
-  <div class="etitle">Power / Relation / Non-Usurpation Scanner<span class="sub">输入一句话，先分流权力词，再识别滑义与夺权风险</span></div>
+  <div class="etitle">Power / Relation / System Scanner<span class="sub">输入一句话或一个系统，先分流权力词，再识别滑义、夺权与蒸发风险</span></div>
   <p class="edesc">This tool is a reflective scaffold, not a final judgment. It helps name possible discourse mechanisms.</p>
   <div class="scanner">
     <label class="scan-label" for="utterance">// UTTERANCE · 输入话语</label>
-    <textarea class="scan-textarea" id="utterance" placeholder="例如：我只是指出你的问题 / 我需要你 / 我是为你好 / 你太依附了 / 这就是权力 / 我信任你但这不是你的义务"></textarea>
+    <textarea class="scan-textarea" id="utterance" placeholder="例如：我只是指出你的问题 / 我需要你 / 我是为你好 / 你太依附了 / 这就是权力 / 多个部门都说已处理"></textarea>
     <div class="checkgrid">
       <label class="check"><input type="checkbox" value="semantic-compression"><span>语义压缩 / semantic compression</span></label>
       <label class="check"><input type="checkbox" value="subject-reduction"><span>主体降级 / subject reduction</span></label>
@@ -374,6 +413,9 @@ footer{border-top:1px solid var(--border);padding:22px 0}.fi{max-width:1080px;ma
       <label class="check"><input type="checkbox" value="sovereignty-preserving"><span>主权保留 / sovereignty preserving</span></label>
       <label class="check"><input type="checkbox" value="interpretive-seizure"><span>解释权夺取 / interpretive seizure</span></label>
       <label class="check"><input type="checkbox" value="belief-method"><span>信念方法论 / belief as methodology</span></label>
+      <label class="check"><input type="checkbox" value="procedural-evaporation"><span>程序性责任蒸发 / procedural evaporation</span></label>
+      <label class="check"><input type="checkbox" value="defense-precondition"><span>防御面边界 / defense precondition</span></label>
+      <label class="check"><input type="checkbox" value="care-trigger-fail"><span>关怀触发失败 / care-trigger fail</span></label>
     </div>
     <div class="btnset"><button class="btn primary" onclick="scanDiscourse()">[→ SCAN]</button><button class="btn" onclick="resetScanner()">[RESET]</button></div>
     <div class="scan-result" id="scanResult"><h3>扫描结果 · Discourse Reading</h3><div id="scanOutput"></div></div>
@@ -387,62 +429,57 @@ footer{border-top:1px solid var(--border);padding:22px 0}.fi{max-width:1080px;ma
     <tr><td>语言心理学</td><td>研究词汇、语义、语用如何改变心理入口。</td><td>不等于把所有社会问题还原为个人心理。</td></tr>
     <tr><td>Discourse Analysis</td><td>直接方法母体：研究语言如何在社会中运作。</td><td>不只做文本细读；要追踪权力动作。</td></tr>
     <tr><td>Critical Discourse Analysis</td><td>权力、意识形态、制度话语的上游理论亲缘。</td><td>不完全等同；本站重点是中英文语义分化与主体主权。</td></tr>
-    <tr><td>MetaLogic</td><td>方法根：命名、加压、滑义、相变、焊接、召唤。</td><td>不把所有 MetaLogic 节点强行归入权力话语。</td></tr>
+    <tr><td>Organizational Sociology</td><td>程序性责任蒸发与"组织化不负责任"、责任分散文献对话。</td><td>本站只审计缝隙的话语-责任结构，不做完整组织理论。</td></tr>
     <tr><td>HPRP / 社会观察</td><td>可作为公共行动与制度改进的下游。</td><td>权力话语学本身不是政策方案，而是诊断语言。</td></tr>
     <tr><td>BCI-HRP</td><td>可远程连接：保护主体解释权，防止系统替代主体。</td><td>不是神经工程，不做医疗或硬件主张。</td></tr>
   </tbody></table></div>
 </article>
 
 <article class="entry" id="objections">
-  <div class="etop"><span class="badge br">Objections & Replies · 反驳与回应（v0.5.1 更新）</span><span class="edate">pre-emptive academic defense</span></div>
+  <div class="etop"><span class="badge br">Objections & Replies · 反驳与回应</span><span class="edate">pre-emptive academic defense</span></div>
   <div class="etitle">Objections and Replies<span class="sub">学科增压测试：预先回应关键反驳</span></div>
-  <div class="card danger"><div class="kicker">Objection 1 · "未定义权力"</div><p><strong>反驳：</strong>本站已在 Power 章节给出操作定义：权力 = 改变他人话语可能性空间的能力。这不是权力的完整理论，而是可审计的工作定义。</p></div>
-  <div class="card danger"><div class="kicker">Objection 2 · "文化本质主义 / 断裂是否只是普遍压缩"</div><p><strong>反驳：</strong>本站不宣称中文或任何语言"本质上"更易被滥用。语义压缩是语言的普遍特征，英文内部（care/concern/control、reason/legitimacy）同样滑义。因此"断裂词库"的地位被明确为<strong>普遍压缩现象的跨语言例示</strong>，而非中文缺陷，也非中英特有结构。它研究翻译界面，不诊断某种语言。</p></div>
-  <div class="card danger"><div class="kicker">Objection 3 · "嫉妒命题缺乏文献支持"</div><p><strong>反驳：</strong>本站明确将"嫉妒的可能性创伤"标注为有待实证检验的现象学假设（见 Claim Ledger），不宣称已穷尽嫉妒定义。后续研究将对接 envy/jealousy 文献。</p></div>
-  <div class="card danger"><div class="kicker">Objection 4 · "规范性语言与描述性语言的混淆"</div><p><strong>反驳：</strong>本站区分两种语域：描述性分析（权力话语如何运作）与规范性立场（主体应保留命名主权）。六步法与机制库属描述层；公理 03/08 与命名主权属规范层。两层分开挂牌，不互相偷渡。</p></div>
-  <div class="card danger"><div class="kicker">Objection 5 · "廉价词汇攻击的'廉价'是精英主义"</div><p><strong>反驳：</strong>"廉价"指词汇的信息分辨率低，不是攻击者的社会地位。高权力位置同样可以使用廉价词汇攻击。这是形式特征，不是社会阶层判断。</p></div>
-  <div class="card danger"><div class="kicker">Objection 6 · "六步分析法是否只是重命名 / 步骤冗余" (v0.5.1 不再骑墙)</div><p><strong>反驳：</strong>六步法的价值在步骤化：每一步对应一个可审计的问题，且滑义步内置去意图化判定门槛（见 Mechanisms）。关于<strong>步骤冗余</strong>，v0.5.1 给出明确立场而非"可压缩但保留"的骑墙：<strong>相变与焊接不可合并</strong>——相变是关系结构的<em>翻面</em>（可逆、尚未固化），焊接是把翻面<em>锁进等式</em>（产生不可逆的绑定）；在 NEGATIVE CASE 与 EDGE CASE 中正是"发生了相变但未完成焊接（被澄清中和）"区分了定罪与不定罪，证明两步各自承担独立判别功能。命名与加压同理：命名移动主体位置，加压决定该位置是否被强制。<strong>四步无法复现这两处区分</strong>，故六步不是注水，前一版"可压缩"的措辞撤回。</p></div>
-  <div class="card danger"><div class="kicker">Objection 7 · "命名主权会变成拒绝一切批评"</div><p><strong>反驳：</strong>命名主权不是拒绝反馈，而是拒绝被无须辩护的外部定义覆盖。它要求外部命名者承担论证责任，因此增加而非取消可问责性。</p></div>
-  <div class="card danger"><div class="kicker">Objection 8 · 反身性："本学科是否在做它指控的事"</div><p><strong>反驳：</strong>这是最关键的自检。本站描述对手时只命名<strong>话语行为</strong>（"这种动作复制了审判"），不命名<strong>人</strong>（不说某人"虚假""需要被拯救"）。若任何条目滑向人身降级，即违反本站 AXIOM 08 与主体降级条目，须修正。subculture 节已据此重写。</p></div>
-  <div class="card danger"><div class="kicker">Objection 9 · "本术语会变成刀枪不入的自我豁免装置" (v0.5.1 闭合)</div><p><strong>反驳：</strong>对称性测试（见 Cases 节）已证明六步法对自我豁免主体同样锋利。v0.5.1 进一步把判定从分析者直觉换成<strong>去意图化的同号分布计数</strong>＋<strong>替换检验作为归因闸</strong>，并自曝"评分者间信度 ≠ 构念效度"、要求理论外金标准（见 Falsifiability C）。区分正当主权与自我豁免，靠的是可计数、可由不知情者复核的分布，不是立场。因此本学科是可证伪的，不是合理化引擎。</p></div>
-  <div class="card danger"><div class="kicker">Objection 10 · "替换检验只是把循环往后挪一格" (DS 重拳一·二 最终回应)</div><p><strong>反驳（直面最强一击）：</strong>深层反证位指出：v0.5.0 的替换检验仍要靠分析者判断"对调后是否仍有利"，循环未断。v0.5.1 的修正是<strong>把替换检验从"有利闸"降级为"归因闸"</strong>——它不再判定善恶/有利，只做一件可计数的事：对调权力输入后，重数 (b) 定义的同号分布是否消失。消失＝位置驱动，存在＝语言驱动。"有利"的判定已前移到 (b) 的去意图化计数（功能偏离的同号比例），不再依赖替换检验，也不依赖意图。循环被斩断的关键：判据 (b) 只引用"表面功能 vs 实际功能的偏离方向"这一可第三方标注的语言事实，不引用任何人的动机，也不引用"这是不是压制"的结论。<strong>承认残余局限：</strong>(b) 仍需人判断"表面功能"与"实际功能"，此判断有解释空间——但这是有限的、可由多标注者+理论外金标准校准的解释空间（构念效度问题），不再是"用结论证明结论"的逻辑循环。把逻辑循环降为可校准的测量误差，是本版能做到的最强闭合；若未来 inter-annotator 对"功能偏离"分歧过大，则触发证伪条件 C。</p></div>
+  <div class="card danger"><div class="kicker">Objection 1 · "未定义权力"</div><p><strong>反驳：</strong>本站已在 Power 章节给出操作定义：权力 = 改变他人话语可能性空间的能力。可审计的工作定义，非完整理论。</p></div>
+  <div class="card danger"><div class="kicker">Objection 2 · "文化本质主义"</div><p><strong>反驳：</strong>压缩是语言普遍特征，英文内部同样滑义。"断裂词库"是<strong>普遍压缩现象的跨语言例示</strong>，研究翻译界面，不诊断某种语言。</p></div>
+  <div class="card danger"><div class="kicker">Objection 3 · "嫉妒命题缺乏文献"</div><p><strong>反驳：</strong>明确标注为待实证检验的现象学假设，不宣称已穷尽嫉妒定义。</p></div>
+  <div class="card danger"><div class="kicker">Objection 4 · "规范/描述混淆"</div><p><strong>反驳：</strong>六步法与机制库属描述层；公理 03/08、命名主权、关系公理属规范层。两层分开挂牌。</p></div>
+  <div class="card danger"><div class="kicker">Objection 5 · "'廉价'是精英主义"</div><p><strong>反驳：</strong>"廉价"指信息分辨率低，不是社会地位。高权力位置同样可用廉价词汇攻击。形式特征，非阶层判断。</p></div>
+  <div class="card danger"><div class="kicker">Objection 6 · "六步法步骤冗余"</div><p><strong>反驳：</strong><strong>相变与焊接不可合并</strong>——相变是关系翻面（可逆），焊接是锁进等式（不可逆）；EDGE CASE 中正是"相变了但焊接未完成"区分了定罪与否。四步无法复现这两处区分。</p></div>
+  <div class="card danger"><div class="kicker">Objection 7 · "命名主权拒绝一切批评"</div><p><strong>反驳：</strong>命名主权要求外部命名者承担论证责任，增加而非取消可问责性。</p></div>
+  <div class="card danger"><div class="kicker">Objection 8 · 反身性："本学科是否在做它指控的事"</div><p><strong>反驳：</strong>本站描述对手时只命名<strong>话语行为</strong>，不命名<strong>人</strong>。若任何条目滑向人身降级即违反 AXIOM 08，须修正。subculture 节据此重写。</p></div>
+  <div class="card danger"><div class="kicker">Objection 9 · "刀枪不入的自我豁免装置"</div><p><strong>反驳：</strong>对称性测试已证明六步法对自我豁免主体同样锋利。判定靠<strong>去意图化的同号分布计数</strong>＋<strong>归因闸</strong>，并自曝"信度 ≠ 效度"、要求理论外金标准。</p></div>
+  <div class="card danger"><div class="kicker">Objection 10 · "替换检验只是把循环往后挪一格"</div><p><strong>反驳：</strong>把替换检验从"有利闸"降级为"归因闸"——它不再判善恶，只数对调后同号分布是否消失。"有利"的判定前移到 (b) 的去意图化计数。<strong>承认残余局限：</strong>(b) 仍需人判断"表面 vs 实际功能"，但这是可校准的测量误差（构念效度问题），不是逻辑循环。</p></div>
+  <div class="card danger" style="border-left-color:#ff6b6b"><div class="kicker" style="color:#ff6b6b">Objection 11 · "蒸发机制是不是偷偷换了第②条的定义"（v0.7.0 直面）</div><p><strong>反驳（直面 DS 式反证）：</strong>是的，如果不声明，它就是偷换——这正是本站在 Mechanism 07 顶部用红框明确承认的。蒸发机制<strong>不沿用第②条</strong>：第②条数句内同号语义移动，蒸发审计的是<em>元责任的分配状态</em>（可由职责清单客观核查）与<em>制度激励方向</em>。两者是不同层的不同判据，并列使用，不互相冒充。本站把这一点写在最显眼处，正是为了不让"系统性利己"在制度层和句子层之间悄悄滑动——那种滑动本身就是本学科要诊断的东西。</p></div>
+  <div class="card danger" style="border-left-color:#ff6b6b"><div class="kicker" style="color:#ff6b6b">Objection 12 · "蒸发机制会不会把一切系统失败都说成蒸发"（v0.7.0）</div><p><strong>反驳：</strong>不会，因为它有明确证伪点（证伪条件 E）：只要系统中存在一个被法定明确分配"整全关照"元责任的行动者，失败就不是"蒸发"而是"单点失职"。蒸发<strong>专指元责任无人认领的那一类</strong>，不是所有悲剧的通用解释。能被单点归责的，就不是蒸发。</p></div>
 </article>
 
 <article class="entry" id="legit">
-  <div class="etop"><span class="badge be">Legitimate Exercise · 正当行使（v0.5.1 更新第四准则）</span><span class="edate">the constructive half</span></div>
+  <div class="etop"><span class="badge be">Legitimate Exercise · 正当行使</span><span class="edate">the constructive half</span></div>
   <div class="etitle">Not Only How to Resist Power — How to Wield It Well<span class="sub">权力话语不只有滥用面；正当地改变他者话语空间是关系的必需</span></div>
-  <p class="edesc lang-zh">本站前半是<strong>诊断/防御</strong>系统：如何识别滥用、如何保住主权。但这会让人误以为"改变他者话语空间"本身就是坏事。并非如此。老师<strong>必须</strong>命名学生的错误，编辑<strong>必须</strong>说"这论证不成立"，朋友<strong>必须</strong>说"你这样不对"。这些都是 Δ(他者话语空间)，都是本站定义下的权力——但它们正当、必要、关系性。一门成熟的权力话语学必须同样能讲清<strong>如何负责任地行使</strong>，否则它会退化成"如何不被批评"。</p>
+  <p class="edesc lang-zh">本站前半是<strong>诊断/防御</strong>系统。但这会让人误以为"改变他者话语空间"本身就是坏事。并非如此。老师<strong>必须</strong>命名学生的错误，编辑<strong>必须</strong>说"这论证不成立"，朋友<strong>必须</strong>说"你这样不对"。这些都是 Δ(他者话语空间)，都正当、必要、关系性。一门成熟的权力话语学必须同样能讲清<strong>如何负责任地行使</strong>。</p>
   <div class="mechanism-grid">
     <div class="mech"><div class="num">CRITERION 01</div><h3>针对行为，不针对人</h3><div class="en">Target the act, not the person.</div><p>"你刚才打断了三次"可辩护；"你这个人没救"是降级。正当批评始终落在可指认、可改变的行为上。</p></div>
-    <div class="mech"><div class="num">CRITERION 02</div><h3>保留对方解释权</h3><div class="en">Preserve the other's right to respond.</div><p>正当行使邀请反驳；滥用预先取消反驳（"你别狡辩"）。前者扩张话语空间，后者压缩。</p></div>
+    <div class="mech"><div class="num">CRITERION 02</div><h3>保留对方解释权</h3><div class="en">Preserve the other's right to respond.</div><p>正当行使邀请反驳；滥用预先取消反驳。前者扩张话语空间，后者压缩。</p></div>
     <div class="mech"><div class="num">CRITERION 03</div><h3>承担自己的论证责任</h3><div class="en">Carry your own burden of proof.</div><p>命名他人即负有举证义务。"我觉得你自恋"不够；"你在 A、B、C 三处把功劳全归己"才是可受检验的命名。</p></div>
-    <div class="mech"><div class="num">CRITERION 04 v0.5.1</div><h3>滑义方向可独立双向检验</h3><div class="en">Drift must survive a blinded reversal check.</div><p>不要只问自己"如果立场对调，这话还站得住吗"（容易自我欺骗）。请一个<strong>不了解你立场的人</strong>执行归因闸：对调双方位置，数同号移动分布是否消失。若对调后分布消失，原移动可能是权力运作；若仍对称发生，则更可能是语言普遍特性，不宜单判为滥用。<em>注意：这里检验的是分布，不是"你是否有理"——把判断从直觉换成计数。</em></p></div>
+    <div class="mech"><div class="num">CRITERION 04</div><h3>滑义方向可独立双向检验</h3><div class="en">Drift must survive a blinded reversal check.</div><p>请一个<strong>不了解你立场的人</strong>执行归因闸：对调双方位置，数同号移动分布是否消失。检验的是分布，不是"你是否有理"。</p></div>
   </div>
-  <div class="verdict" style="border-left-color:var(--a1);background:rgba(90,240,200,.04)"><b style="color:var(--a1)">重心不变：</b>加上这一侧，本学科的重心仍是<strong>关系伦理</strong>——它既保护主体不被廉价降级，也要求主体在批评他人时负起同样的责任。防御与行使，是同一套标尺的两次使用。</div>
+  <div class="verdict" style="border-left-color:var(--a1);background:rgba(90,240,200,.04)"><b style="color:var(--a1)">重心：</b>本学科的重心是<strong>关系伦理</strong>——它既保护主体不被廉价降级，也要求主体在批评他人时负起同样的责任。v0.7.0 的 Care Trigger 把这一侧从"已在关怀中如何做对"推前到"如何先认出这是一个需要关怀的场景"。</div>
 </article>
 
 <article class="entry" id="claims">
-  <div class="etop"><span class="badge bgold">Claim Status Ledger · 命题状态台账（v0.5.1 更新）</span><span class="edate">epistemic confidence tagging</span></div>
+  <div class="etop"><span class="badge bgold">Claim Status Ledger · 命题状态台账</span><span class="edate">epistemic confidence tagging</span></div>
   <div class="etitle">Claim Status Ledger<span class="sub">每个命题当前的确信度标注</span></div>
   <div class="term-table-wrap"><table class="term-table"><thead><tr><th>Claim</th><th>Status</th><th>Confidence</th><th>Falsifiability</th><th>Next step</th></tr></thead><tbody>
-    <tr><td>语义压缩在权力不对称下制造滑义空间</td><td>核心经验假设</td><td>强（现象可重复识别）</td><td>可证伪（证伪条件 A、B）</td><td>语料库研究</td></tr>
-    <tr><td>第②条"系统性利己"＝同号移动分布显著偏离零（去意图化）</td><td>操作定义（v0.5.1 核心）</td><td>中强（斩断循环，待标注信度检验）</td><td>可证伪（inter-annotator 对"功能偏离"分歧过大则失效，条件 C）</td><td>多标注者一致性研究 + 理论外金标准校准</td></tr>
-    <tr><td>权力不对称作为输入参数而非研究对象</td><td>范围分工声明</td><td>不可证伪（方法论分工，非经验命题）</td><td>N/A（但须在每次分析中显式报告该输入）</td><td>与社会学不对称测量对接</td></tr>
-    <tr><td>某些中文高频词压缩跨度更宽、无标记切换更易</td><td>有方向的待验证发现</td><td>中（两组对比支持，样本小）</td><td>可证伪（跨度测量+切换实验）</td><td>语料库压缩跨度测量 + 跨语者切换实验</td></tr>
-    <tr><td>反向匮乏归因是一种话语暴力模式</td><td>核心发现</td><td>中强</td><td>可证伪（有表达行为但无缺失的独立证据普遍否定归因）</td><td>跨文化验证</td></tr>
-    <tr><td>嫉妒的可能性创伤假说</td><td>现象学假设</td><td>待检验</td><td>可证伪（经验研究不支持攻击可能性是嫉妒特征）</td><td>与 envy 文献对接</td></tr>
-    <tr><td>廉价词汇攻击的"信息分辨率"标准</td><td>操作性定义</td><td>中</td><td>可证伪（评分者间信度低）</td><td>开发判断量表</td></tr>
-    <tr><td>六步分析法：步骤独立（相变≠焊接、命名≠加压）</td><td>方法论提案（v0.5.1 不再骑墙）</td><td>中强（边缘案例已演示两步区分功能）</td><td>可证伪（若四步能复现全部区分则六步被否）</td><td>更多边缘案例、跨文化用户测试</td></tr>
-    <tr><td>正当行使四准则（关系伦理侧）</td><td>规范性框架</td><td>不可证伪（非经验命题）</td><td>N/A</td><td>与批评伦理 / 教育反馈文献对接</td></tr>
-    <tr><td>命名主权作为规范性原则</td><td>规范性立场</td><td>不可证伪（非经验命题）</td><td>N/A</td><td>明确其伦理基础</td></tr>
-  
-    <tr><td>“权力”一词必须拆成势差、能力、授权、资本、影响力、筹码、支配、夺权、压迫</td><td>术语去污染原则（v0.6.2）</td><td>强（术语审计）</td><td>可反驳（若分流不能提升判定清晰度则降级）</td><td>在所有案例中优先做 power-word routing</td></tr>
-    <tr><td>所有关系都含有权力；爱的伦理在于阻止权力相变为夺权</td><td>核心规范命题</td><td>强（规范立场）</td><td>不可证伪（非经验命题）</td><td>与关系伦理 / 照料伦理 / relational autonomy 对接</td></tr>
-    <tr><td>“我需要你”是关系权力触发句</td><td>操作性观察</td><td>中强</td><td>可证伪（语料与案例可显示其不产生回应压力）</td><td>收集语料，做四象限分类</td></tr>
-    <tr><td>信念作为方法论</td><td>方法论原则</td><td>强（作者方法论）</td><td>不可证伪（规范/方法论命题）</td><td>写入 HPRP / relationship ethics 节点</td></tr>
-    <tr><td>情感表达可在权力差中执行平权功能</td><td>关系机制假设</td><td>中</td><td>可证伪（若案例显示脆弱表达稳定增加垂直性）</td><td>案例研究：脆弱表达是否降低垂直性</td></tr>
-    <tr><td>情感依附是权力生产的主体位置</td><td>核心分析命题</td><td>中强</td><td>可证伪（若依附与资源/解释权/出口结构无关）</td><td>与依恋理论、性别劳动、经济依赖文献对接</td></tr>
-    <tr><td>主权保留型信任纽带</td><td>规范性关系模型</td><td>不可证伪（非经验命题）</td><td>N/A</td><td>发展边界与准则</td></tr>
+    <tr><td>语义压缩在权力不对称下制造滑义空间</td><td>核心经验假设</td><td>强</td><td>可证伪（条件 A、B）</td><td>语料库研究</td></tr>
+    <tr><td>第②条"系统性利己"＝同号移动分布显著偏离零</td><td>操作定义（v0.5.1 核心）</td><td>中强</td><td>可证伪（条件 C）</td><td>多标注者一致性 + 理论外金标准</td></tr>
+    <tr><td>权力不对称作为输入参数而非研究对象</td><td>范围分工声明</td><td>不可证伪（方法论分工）</td><td>N/A（须每次显式报告）</td><td>与社会学不对称测量对接</td></tr>
+    <tr><td>"权力"须拆成势差/能力/授权/资本/影响/筹码/支配/夺权/压迫</td><td>术语去污染原则（v0.6.2）</td><td>强</td><td>可反驳（若分流不提升清晰度则降级）</td><td>所有案例优先 power-word routing</td></tr>
+    <tr><td>所有关系都含权力；爱的伦理在于阻止权力相变为夺权</td><td>核心规范命题</td><td>强（规范立场）</td><td>不可证伪</td><td>与关系伦理/照料伦理对接</td></tr>
+    <tr><td>情感依附是权力生产的主体位置</td><td>核心分析命题</td><td>中强</td><td>可证伪（若依附与资源/解释权/出口无关）</td><td>与依恋理论、经济依赖文献对接</td></tr>
+    <tr><td style="color:#ff8a8a">程序性责任蒸发：元责任未分配 + 多方合规 + 激励外推（v0.7.0）</td><td>新机制（独立判据轨）</td><td>中（一个事后案例，预警力未验证）</td><td>可证伪（条件 E：存在被分配元责任的行动者仍失败）</td><td>多案例、前瞻性预警力测试</td></tr>
+    <tr><td style="color:#ff8a8a">防御面前提边界：丧失对话能力时防御须第三方代行（v0.7.0）</td><td>规范性边界声明</td><td>不可证伪（伦理立场）</td><td>N/A</td><td>与监护伦理、精神卫生法对接</td></tr>
+    <tr><td style="color:#ff8a8a">Care Trigger 三检验具备预防功能（v0.7.0）</td><td>方法论提案</td><td>低-中（设计意图，未实地验证）</td><td>可证伪（若执行检验不降低漏判率）</td><td>实地/模拟测试漏判率</td></tr>
+    <tr><td>六步分析法：步骤独立（相变≠焊接、命名≠加压）</td><td>方法论提案</td><td>中强</td><td>可证伪（若四步复现全部区分）</td><td>更多边缘案例</td></tr>
+    <tr><td>命名主权 / 正当行使四准则 / 信念方法论</td><td>规范性框架</td><td>不可证伪（非经验命题）</td><td>N/A</td><td>明确伦理基础</td></tr>
   </tbody></table></div>
 </article>
 
@@ -450,30 +487,21 @@ footer{border-top:1px solid var(--border);padding:22px 0}.fi{max-width:1080px;ma
   <div class="etop"><span class="badge bp">Glossary · 术语表</span><span class="edate">extended master ledger</span></div>
   <div class="etitle">Terminology Ledger<span class="sub">权力话语学术语台账（扩展版）</span></div>
   <div class="term-table-wrap"><table class="term-table"><thead><tr><th>Term</th><th>中文</th><th>Definition</th><th>Boundary</th><th>Risk if Misused</th></tr></thead><tbody>
-    <tr><td>Power Discourse</td><td>权力话语</td><td>权力通过词语选择、分类、命名、模糊化等方式组织社会关系的话语实践</td><td>≠ 关于权力的话语；≠ 权威话语</td><td>若未定义权力，整个学科悬浮</td></tr>
-    <tr><td>Semantic Compression</td><td>语义压缩</td><td>一个词项在特定语用条件下承载多个可区分的功能，为滑义提供结构空间</td><td>≠ 多义性；≠ 歧义</td><td>可能被读作"中文的缺陷"</td></tr>
-    <tr><td>Semantic Drift</td><td>语义滑义</td><td>同一话语事件内，压缩词的实际承担功能偏离其表面宣称功能（方向可第三方标注）</td><td>≠ 历时语义演变；≠ 单纯误用</td><td>可能被过度应用于一切模糊表达</td></tr>
-    <tr><td>Systematic Self-Favour</td><td>系统性利己</td><td>事件内全部语义移动的同号分布显著偏离零（松绑说话方/收紧被说话方记+1），去意图化、可计数</td><td>≠ 单次移动；≠ 动机判断；方向抵消即不成立</td><td>若按单次判定即退回循环</td></tr>
-    <tr><td>Substitution Test</td><td>替换检验（归因闸）</td><td>对调权力输入后重数同号分布：消失=位置驱动，存在=语言驱动。只分流原因，不判善恶</td><td>≠ 判定"有利"；≠ 判定对错</td><td>若用来判有利则循环未断</td></tr>
-    <tr><td>Subject Reduction</td><td>主体降级</td><td>通过将完整主体压缩为单一标签，取消其多维主体位置</td><td>≠ 批评；≠ 诊断</td><td>可能被用来防御一切负面评价</td></tr>
-    <tr><td>Reverse Scarcity Attribution</td><td>反向匮乏归因</td><td>将某物的表达解释为该物缺乏的证据，在无独立证据时完成</td><td>≠ 一般的动机怀疑</td><td>可能被读作"不能批评任何人"</td></tr>
-    <tr><td>Cheap Lexical Weaponization</td><td>廉价词汇攻击</td><td>使用低信息分辨率或伪技术词汇将高复杂度主体压缩为可贬低的标签</td><td>≠ 一般侮辱；≠ 批评</td><td>可能被读作精英主义</td></tr>
-    <tr><td>Naming Sovereignty</td><td>命名主权</td><td>主体保留对自身经验最终命名权的原则，他人可提议但不自动拥有定义权</td><td>≠ 拒绝反馈；≠ 认识论封闭</td><td>可能被用来防御一切学术批评</td></tr>
-    <tr><td>Subcultural Label Abuse</td><td>亚文化标签滥用</td><td>借用亚文化身份符号进行圈层排斥、道德审判和微型权威复制的话语行为</td><td>≠ 亚文化参与本身；≠ 群体边界维护</td><td>可能被读作"守门人指责他人是守门人"</td></tr>
-    <tr><td>Discourse Responsibility Escape</td><td>话语责任逃逸</td><td>利用语义压缩/滑义逃避对特定话语行为的责任归属</td><td>≠ 一般的误解或沟通失败</td><td>需证明说话者利用了结构而非单纯犯错</td></tr>
-    <tr><td>Institutional Semantic Escape</td><td>制度性语义逃逸</td><td>机构通过模糊词语在不同语义功能间切换，以规避可追责性</td><td>≠ 一般的语义模糊</td><td>需制度分析的证据门槛较高</td></tr>
-  
-    <tr><td>Power-Word Contamination</td><td>权力词义污染</td><td>把所有 power 都自动听成支配、压迫、坏、夺权或道德罪名的语义滑义。</td><td>≠ 权力本身；≠ 关系势差</td><td>会把中性审计词变成道德指控，导致 PDS 自伤。</td></tr>
-    <tr><td>Power-Word Routing</td><td>权力词义分流</td><td>分析前先判断当前“权力”指势差、能力、授权、资本、影响力、筹码、支配、夺权还是压迫。</td><td>≠ 把权力洗白</td><td>若不分流，会把正常影响力误判为夺权。</td></tr>
-    <tr><td>Relational Differential</td><td>关系势差</td><td>关系双方在资源、出口、解释资格、可见度、行动能力上的客观不对称。</td><td>≠ 压迫；≠ 支配</td><td>若被道德化，会让承认势差变成认罪。</td></tr>
-    <tr><td>Usurpation</td><td>夺权</td><td>把关系中的需要、帮助、爱、脆弱、资源或知识转化为夺取对方主体权/解释权的资格。</td><td>≠ 一切权力；≠ 一切需要</td><td>若泛化，会把真实关系误读成控制。</td></tr>
-    <tr><td>Non-Usurpation Language</td><td>不夺权语言</td><td>承认关系中的权力存在，但不把需要、帮助、爱、经济、脆弱转化为对他者主体权/解释权的夺取。</td><td>≠ 无权力语言</td><td>若被浪漫化，会遮蔽真实权力差。</td></tr>
-    <tr><td>Belief as Methodology</td><td>信念作为方法论</td><td>在看见权力、风险和不确定之后，仍将有价值之物作为真实对象来实践。</td><td>≠ 盲信；≠ 权力否认</td><td>若无分析，会滑向天真；若无信念，分析会滑向犬儒。</td></tr>
-    <tr><td>Affective Equalizing Speech</td><td>情感平权表达</td><td>在权力差存在时，通过真实的需要、脆弱、承认与边界表达降低关系垂直性。</td><td>≠ 表演脆弱；≠ 情绪操控</td><td>可能滑成脆弱性提取。</td></tr>
-    <tr><td>Sovereignty-Preserving Bond</td><td>主权保留型信任纽带</td><td>双方可互相依赖、托付、支持、照料，但任何一方不自动获得定义、管理、占有或削弱另一方主体权的资格。</td><td>≠ 冷漠独立；≠ 无依赖</td><td>若误用，可能否认真实需要。</td></tr>
-    <tr><td>Vulnerability Extraction</td><td>脆弱性提取</td><td>借“我需要你/我很脆弱”让对方承担自己的完整、真实感或身份补足。</td><td>≠ 真诚脆弱</td><td>可能将他者强大转化为自我资源。</td></tr>
-    <tr><td>Relational Power Vector</td><td>关系权力向量</td><td>情感、经济、解释、时间、身体、现实实现等维度上的多轴权力分布。</td><td>≠ 单一强弱判断</td><td>若只看一轴，会误判关系。</td></tr>
-    <tr><td>Emotional Dependency</td><td>情感依附</td><td>主体在情感、经济、解释权、社会位置与自我实现路径上被组织到另一关系结构之下。</td><td>≠ 依恋；≠ 阶段性依赖</td><td>可能被病理化为个人缺陷。</td></tr>
+    <tr><td>Semantic Compression</td><td>语义压缩</td><td>一个词项在特定语用条件下承载多个可区分功能，为滑义提供结构空间</td><td>≠ 多义性；≠ 歧义</td><td>可能被读作"中文的缺陷"</td></tr>
+    <tr><td>Semantic Drift</td><td>语义滑义</td><td>同一话语事件内，压缩词的实际功能偏离表面宣称功能（方向可第三方标注）</td><td>≠ 历时演变；≠ 单纯误用</td><td>可能被过度应用于一切模糊表达</td></tr>
+    <tr><td>Systematic Self-Favour</td><td>系统性利己</td><td>事件内全部语义移动的同号分布显著偏离零，去意图化、可计数</td><td>≠ 单次移动；≠ 动机判断</td><td>若按单次判定即退回循环</td></tr>
+    <tr><td>Substitution Test</td><td>替换检验（归因闸）</td><td>对调权力输入后重数同号分布：消失=位置驱动，存在=语言驱动</td><td>≠ 判定"有利"；≠ 判定对错</td><td>若用来判有利则循环未断</td></tr>
+    <tr><td>Subject Reduction</td><td>主体降级</td><td>将完整主体压缩为单一标签，取消其多维主体位置</td><td>≠ 批评；≠ 诊断</td><td>可能被用来防御一切负面评价</td></tr>
+    <tr><td>Naming Sovereignty</td><td>命名主权</td><td>主体保留对自身经验最终命名权，他人可提议但不自动拥有定义权</td><td>≠ 拒绝反馈；≠ 认识论封闭</td><td>可能被用来防御一切学术批评</td></tr>
+    <tr><td>Power-Word Routing</td><td>权力词义分流</td><td>分析前先判断"权力"指势差/能力/授权/资本/影响/筹码/支配/夺权/压迫</td><td>≠ 把权力洗白</td><td>若不分流，会把正常影响力误判为夺权</td></tr>
+    <tr><td>Usurpation</td><td>夺权</td><td>把需要、帮助、爱、脆弱、资源或知识转化为夺取对方主体权/解释权的资格</td><td>≠ 一切权力；≠ 一切需要</td><td>若泛化，会把真实关系误读成控制</td></tr>
+    <tr><td>Non-Usurpation Language</td><td>不夺权语言</td><td>承认关系中权力存在，但不把需要、帮助、爱转化为对他者主体权的夺取</td><td>≠ 无权力语言</td><td>若被浪漫化，会遮蔽真实权力差</td></tr>
+    <tr><td>Belief as Methodology</td><td>信念作为方法论</td><td>在看见权力、风险和不确定之后，仍将有价值之物作为真实对象来实践</td><td>≠ 盲信；≠ 权力否认</td><td>无分析滑向天真；无信念滑向犬儒</td></tr>
+    <tr><td>Emotional Dependency</td><td>情感依附</td><td>主体在情感、经济、解释权、社会位置与自我实现路径上被组织到另一关系结构之下</td><td>≠ 依恋；≠ 阶段性依赖</td><td>可能被病理化为个人缺陷</td></tr>
+    <tr><td style="color:#ff8a8a">Procedural Responsibility Evaporation</td><td>程序性责任蒸发</td><td>多行动者各自完成格子化职责，元责任未被分配给任何一方，悲剧从缝隙穿过，无人可归责</td><td>≠ 单点失职（可归责的不是蒸发）；≠ 六步法第②条（不同层判据）</td><td>若泛化为一切失败的通用解释，则丧失区分力（见证伪条件 E）</td></tr>
+    <tr><td style="color:#ff8a8a">Meta-Responsibility</td><td>元责任</td><td>对一个人的整全生命与安全的综合关照，区别于任何单一格子化职责</td><td>≠ 任何单一岗位职责之和</td><td>若假设它自动等于各职责之和，恰好制造蒸发</td></tr>
+    <tr><td style="color:#ff8a8a">Defense Precondition</td><td>防御面前提</td><td>命名主权与防御工具的运作前提：主体具备基本对话与自我命名能力</td><td>≠ 防御面的缺陷（这是边界）</td><td>若忽视，会用"你怎么不自卫"二次指责丧失能力的受害者</td></tr>
+    <tr><td style="color:#ff8a8a">Care Trigger</td><td>关怀触发</td><td>把"勤务/投诉/异味"等非关怀框架重新识别为"有人需要帮助"的前置协议</td><td>≠ 已在关怀中的执行准则（这是更前一步）</td><td>预防力尚未实地验证，不可当作已证效果宣传</td></tr>
   </tbody></table></div>
 </article>
 
@@ -482,14 +510,12 @@ footer{border-top:1px solid var(--border);padding:22px 0}.fi{max-width:1080px;ma
   <div class="etitle">Key References & Theoretical Affiliations<span class="sub">本学科与既有学术传统的连接点</span></div>
   <p class="edesc lang-zh">以下不是完整文献目录，而是标明权力话语学与哪些学术脉络对话。</p>
   <div class="grid">
-    <div class="mini"><h4>Critical Discourse Analysis</h4><p>Fairclough (1992, 2003); van Dijk (1993, 2008); Wodak &amp; Meyer (2016). <b>差异：</b>CDA 多分析宏观意识形态与既存文本；本站聚焦<em>中英语义压缩跨度</em>与<em>主体命名主权</em>，并提供可操作的滑义判定门槛与逐句审计协议。</p></div>
-    <div class="mini"><h4>Framing Theory</h4><p>Goffman (1974); Entman (1993); Lakoff (2004). <b>差异：</b>框架理论问"如何框定议题"；本站问"一个高压缩词如何在一次对话内<em>滑动</em>其框架以逃避责任"，把框架从静态选择推到动态滑义。</p></div>
-    <div class="mini"><h4>Sociology of Power</h4><p>Lukes (1974, 2005); Foucault (1975, 1976); Bourdieu (1991). <b>差异：</b>本站明确把"语言外权力"交还社会学（见 Power 范围边界），只承接它<em>进入话语</em>的那一段，不与符号暴力理论争地盘。</p></div>
-    <div class="mini"><h4>Subculture Studies</h4><p>Hebdige (1979); Thornton (1995). <b>差异：</b>Thornton 的"亚文化资本"描述区隔；本站命名一种<em>话语行为</em>——借亚文化标签复制审判秩序，并坚持只判行为不判人。</p></div>
-    <div class="mini"><h4>Envy &amp; Social Comparison</h4><p>Smith &amp; Kim (2007); Parrott &amp; Smith (1993). <b>差异：</b>本站"可能性创伤"假说尚未被此文献支持，明确标注待对接、待检验，不挪用既有结论。</p></div>
-    <div class="mini"><h4>Translation Semantics</h4><p>Wierzbicka (1992, 2014); Baker (1992). <b>差异：</b>NSM 求跨语言语义共性；本站反向使用——以<em>压缩跨度差</em>定位权力可乘之机，把翻译不对称从障碍读成权力地形。</p></div>
-    <div class="mini"><h4>Care Ethics / Relational Autonomy</h4><p>Gilligan; Tronto; Mackenzie &amp; Stoljar. <b>差异：</b>本站不把关系伦理写成“无依赖”，而是写成“有依赖但不夺权”的语言审计。</p></div>
-    <div class="mini"><h4>Power Theory · Decontamination</h4><p>Arendt; Foucault; Bourdieu; Lukes. <b>差异：</b>本站把 power 先做词义分流：势差、能力、资本、筹码、支配、夺权、压迫，防止把全部 power 污染成 domination。</p></div>
+    <div class="mini"><h4>Critical Discourse Analysis</h4><p>Fairclough; van Dijk; Wodak &amp; Meyer. <b>差异：</b>本站聚焦中英语义压缩跨度与主体命名主权，并提供可操作的滑义判定门槛与逐句审计协议。</p></div>
+    <div class="mini"><h4>Sociology of Power</h4><p>Lukes; Foucault; Bourdieu. <b>差异：</b>本站把"语言外权力"交还社会学，只承接它进入话语的那一段。</p></div>
+    <div class="mini"><h4>Organizational Irresponsibility</h4><p>责任分散（Darley &amp; Latané）、"组织化不负责任"（Beck）、平庸之恶（Arendt）。<b>差异：</b>本站把它收窄成一个可核查的话语-责任判据：元责任是否被分配。</p></div>
+    <div class="mini"><h4>Care Ethics / Relational Autonomy</h4><p>Gilligan; Tronto; Mackenzie &amp; Stoljar. <b>差异：</b>本站不把关系伦理写成"无依赖"，而是写成"有依赖但不夺权"的语言审计。</p></div>
+    <div class="mini"><h4>Subculture Studies</h4><p>Hebdige; Thornton. <b>差异：</b>本站命名一种话语行为——借亚文化标签复制审判秩序，并坚持只判行为不判人。</p></div>
+    <div class="mini"><h4>Translation Semantics</h4><p>Wierzbicka; Baker. <b>差异：</b>本站以压缩跨度差定位权力可乘之机，把翻译不对称读成权力地形。</p></div>
   </div>
 </article>
 
@@ -502,49 +528,42 @@ footer{border-top:1px solid var(--border);padding:22px 0}.fi{max-width:1080px;ma
       <li>✕ 所有语言都是权力运作。</li>
       <li>✕ 所有关心都是控制。</li>
       <li>✕ 中文比英文更易被滥用。</li>
-      <li>✕ 说话者必须为每个词的多种含义负责。</li>
       <li>✕ 主体永远不应该被批评。</li>
-      <li>✕ 任何被指出问题的人都在"复制权力"。</li>
       <li>✕ 一次滑义就构成权力运作（须系统性同号分布）。</li>
-      <li>✕ 权力话语学是一门已经完成的学科。</li>
       <li>✕ 权力天然等于坏、压迫或夺权。</li>
-      <li>✕ 承认自己有权力就是承认自己有罪。</li>
-      <li>✕ 关系势差必然等于支配结构。</li>
       <li>✕ 真正的爱没有权力。</li>
-      <li>✕ 所有“我需要你”都是操控。</li>
-      <li>✕ 有特权的人表达脆弱必然夺权。</li>
+      <li>✕ 所有"我需要你"都是操控。</li>
       <li>✕ 普通依恋等于情感依附。</li>
-      <li>✕ 经济互助必然等于经济控制。</li>
-      <li>✕ 所有关系都应取消依赖。</li>
       <li>✕ 信念可以替代证据、边界或可证伪性。</li>
+      <li>✕ 一切系统失败都是程序性责任蒸发（可单点归责的不是）。</li>
+      <li>✕ 蒸发机制沿用六步法第②条（它是另一层独立判据）。</li>
+      <li>✕ 丧失对话能力的人"应该为自己未自卫负责"。</li>
+      <li>✕ Care Trigger 的预防力已被实地证明（目前仅设计意图）。</li>
+      <li>✕ 权力话语学是一门已经完成的学科。</li>
     </ul>
   </div>
 </article>
 
 <article class="entry" id="transmissions">
-  <div class="etop"><span class="badge bb">Signals · 信号日志（v0.5.1 升级信号）</span><span class="edate">build record</span></div>
-  <div class="etitle">Latest Signals<span class="sub">权力话语学初始部署记录</span></div>
-  <div class="formula"><strong>PDS-001</strong> · 2026 · "问题"的双向误读机制：inquiry → accusation / accusation → inquiry.</div>
-  <div class="formula"><strong>PDS-002</strong> · 2026 · 反向匮乏归因锁定：expression of X ≠ lack of X.</div>
-  <div class="formula"><strong>PDS-003</strong> · 2026 · 嫉妒的可能性创伤（假说）：jealousy attacks becoming.</div>
-  <div class="formula"><strong>PDS-004</strong> · 2026 · 廉价词汇攻击：failed language-abuse performance against strong subjects.</div>
-  <div class="formula"><strong>PDS-005</strong> · 2026 · 亚文化身份标签滥用：anti-mainstream in form, power-reproductive in structure.</div>
-  <div class="formula"><strong>PDS-REBUTTAL-001 至 007</strong> · 2026 · 深层反证位审计驱动 v0.5.0：独立检验、负面案例、反向对称案例、证伪条件、盲评协议、可压缩性注明。</div>
-  <div class="formula"><strong>PDS-REBUTTAL-008 / 009</strong> · 2026 · v0.5.1 闭合：循环斩断（第②条去意图化同号分布计数；替换检验降为归因闸）；不对称参数化（输入而非对象，解 DS 重拳六）；步骤冗余不再骑墙（相变≠焊接、命名≠加压）；临界边缘案例落在刀刃；证伪条件 C 补理论外金标准来源。</div>
-  <div class="formula gold"><strong>PDS-BELIEF-001</strong> · v0.6.0 · 信念作为方法论：在看见权力之后，仍然选择用真实连接真实。</div>
-  <div class="formula gold"><strong>PDS-REL-001</strong> · v0.6.0 · 真正的爱的语言不是无权力语言，而是不夺权语言。</div>
-  <div class="formula gold"><strong>PDS-DEP-001</strong> · v0.6.0 · 依恋不是依附；依附是权力结构把连接改造成挂靠。</div>
-  <div class="formula"><strong>PDS-POWERWORD-001</strong> · v0.6.1 · “权力”词义去污染：power ≠ domination ≠ usurpation ≠ oppression；先分流，再审计。</div>
-  <div class="formula"><strong>PDS-INTEGRATION-001</strong> · v0.6.2 · 以 v0.5.1 可证伪性闭合版为底座，融入信念/不夺权/情感依附/权力去污染四层。</div>
+  <div class="etop"><span class="badge bb">Signals · 信号日志（v0.7.0 升级信号）</span><span class="edate">build record</span></div>
+  <div class="etitle">Latest Signals<span class="sub">权力话语学持续构建记录</span></div>
+  <div class="formula"><strong>PDS-001 至 005</strong> · 2026 · 问题双向误读 / 反向匮乏归因 / 嫉妒可能性创伤（假说）/ 廉价词汇攻击 / 亚文化标签滥用。</div>
+  <div class="formula"><strong>PDS-REBUTTAL-001 至 009</strong> · 2026 · v0.5.0–v0.5.1 反证驱动：负面案例、反向对称、证伪条件、循环斩断、不对称参数化、步骤独立、边缘案例、理论外金标准。</div>
+  <div class="formula gold"><strong>PDS-BELIEF / REL / DEP-001</strong> · v0.6.0 · 信念作为方法论；爱的语言是不夺权语言；依恋不是依附。</div>
+  <div class="formula"><strong>PDS-POWERWORD-001 / INTEGRATION-001</strong> · v0.6.1–v0.6.2 · "权力"词义去污染；以 v0.5.1 为底座融合四层。</div>
+  <div class="formula" style="border-left-color:#ff6b6b;background:rgba(255,107,107,.05)"><strong>PDS-SYSFAIL-001</strong> · v0.7.0 · 程序性责任蒸发机制入典，作为<strong>独立判据轨</strong>（非六步法第②条）：元责任未分配 + 多方合规 + 激励外推。</div>
+  <div class="formula" style="border-left-color:#ff6b6b;background:rgba(255,107,107,.05)"><strong>PDS-CASE-SENGKANG</strong> · v0.7.0 · 盛港组屋案（化名）完整分析。三层压测：诊断面识别蒸发、防御面沉默（边界标注）、行使面缺席（前置协议补丁）。预警力未验证（已标注）。</div>
+  <div class="formula" style="border-left-color:var(--a3);background:rgba(200,50,50,.05)"><strong>PDS-DEFENSE-BOUNDARY</strong> · v0.7.0 · 防御面前提边界：丧失对话能力时防御须第三方代行，框架不得用于指责受害者。</div>
+  <div class="formula" style="border-left-color:var(--a1);background:rgba(90,240,200,.04)"><strong>PDS-CARE-TRIGGER</strong> · v0.7.0 · 行使面前置协议：元责任追问 + 制度层替换检验 + 支持系统"看的太清楚"自检。从解剖走向预防的第一步（预防力待验证）。</div>
 </article>
 
 </main><aside class="sidebar">
-  <div><div class="sbl">Source Position</div><div class="profile"><div class="av">珏</div><div class="pnm">Wei Jueran<small>魏珏然 · xingyeLing7Ai</small></div><p class="pdesc">Founder of Power Discourse Studies. v0.6.2 keeps v0.5.1 falsifiability closure and integrates belief, non-usurpation relational language, dependency analysis, and power-word routing.</p><div class="pfields"><span class="pf">Discourse</span><span class="pf">Belief</span><span class="pf">Power Routing</span><span class="pf">Non-Usurpation</span></div></div></div>
-  <div><div class="sbl">Resonance Anchor</div><div class="hzbox"><div class="hzn">427</div><div class="hzu">Hz</div><div class="hzslider"><div class="hztrack"><div class="hzfill"></div><div class="hzthumb"></div></div></div><div class="hzq">Language moves power.<br>Belief restores relation.<br><small style="color:var(--a4)">—— truth connects truth; power is routed ——</small></div></div></div>
+  <div><div class="sbl">Source Position</div><div class="profile"><div class="av">珏</div><div class="pnm">Wei Jueran<small>魏珏然 · xingyeLing7Ai</small></div><p class="pdesc">Founder of Power Discourse Studies. v0.7.0 hardens the three-layer structure: procedural responsibility evaporation (a separate judgment track), defense precondition, and care-trigger protocol.</p><div class="pfields"><span class="pf">Discourse</span><span class="pf">System Failure</span><span class="pf">Care Trigger</span><span class="pf">Non-Usurpation</span></div></div></div>
+  <div><div class="sbl">Resonance Anchor</div><div class="hzbox"><div class="hzn">427</div><div class="hzu">Hz</div><div class="hzslider"><div class="hztrack"><div class="hzfill"></div><div class="hzthumb"></div></div></div><div class="hzq">Language moves power.<br>Meta-responsibility must not evaporate.<br><small style="color:#ff6b6b">—— who watches the whole person? ——</small></div></div></div>
   <div><div class="sbl">Connected Sites</div><div class="linksbox"><ul class="sblinks"><li><a href="https://mellowwei.github.io/MetaLogic/" target="_blank">MetaLogic <span>→</span></a></li><li><a href="https://mellowwei.github.io/MellowAcademic/" target="_blank">MellowAcademic <span>→</span></a></li><li><a href="https://mellowwei.github.io/HPRP/" target="_blank">HPRP <span>→</span></a></li><li><a href="https://mellowwei.github.io/MellowWei/" target="_blank">Portal <span>→</span></a></li></ul></div></div>
-  <div><div class="sbl">Coordinates</div><div class="coord">NODE <span>PDS</span><br>VERSION <span>v0.6.2 integrated</span><br>METHOD <span>先分流权力 → 再审计滑义 → 克制夺权</span><br>THEME <span>AstroLove · mint/violet/red/gold</span><br>FREQ <span>427Hz</span><br>STATUS <span style="color:var(--a1)">可证伪 + 信念方法论 + 权力去污染</span></div></div>
+  <div><div class="sbl">Coordinates</div><div class="coord">NODE <span>PDS</span><br>VERSION <span>v0.7.0 system-failure patch</span><br>METHOD <span>分流权力 → 审计滑义 → 审计缝隙 → 克制夺权</span><br>THEME <span>AstroLove · mint/violet/red/gold</span><br>FREQ <span>427Hz</span><br>STATUS <span style="color:var(--a1)">可证伪 + 信念 + 去污染 + 系统失效</span></div></div>
 </aside></div>
-<footer><div class="fi"><span>Power Discourse Studies v0.6.2 · 权力话语学 · Wei Jueran · xingyeLing7Ai</span><span class="foot-sig">—— 先拆开权力，再实践不夺权 ——</span></div></footer>
+<footer><div class="fi"><span>Power Discourse Studies v0.7.0 · 权力话语学 · Wei Jueran · xingyeLing7Ai</span><span class="foot-sig">—— 程序完成了，但谁在看顾这个人？ ——</span></div></footer>
 <script>
 (function(){
   const params=new URLSearchParams(window.location.search); const view=params.get('view')||'bi';
@@ -566,23 +585,26 @@ function scanDiscourse(){
     'inquiry-accusation':'追问/指责混淆：inquiry 与 accusation 边界不清。',
     'institutional-shield':'制度盾牌：把权力利益包装成稳定、合理、大局或秩序。',
     'subcultural-label':'亚文化标签滥用：用反主流标签复制主流权力，把可能性扩张变成圈层审判。',
-    'powerword-routing':'权力词义分流：先判断这里的“权力”是势差、能力、资本、筹码、支配、夺权还是压迫。',
-    'power-differential':'关系势差：双方在资源、出口、解释资格、可见度、行动能力上的客观不对称，不等于道德罪名。',
-    'need-obligation':'需要变义务：表达“我需要你”开始把对方的回应、陪伴或留下变成责任。',
-    'vulnerability-extraction':'脆弱性提取：用“我很脆弱/我需要你”让对方承担自己的完整、真实感或身份补足。',
+    'powerword-routing':'权力词义分流：先判断这里的"权力"是势差、能力、资本、筹码、支配、夺权还是压迫。',
+    'power-differential':'关系势差：双方在资源、出口、解释资格上的客观不对称，不等于道德罪名。',
+    'need-obligation':'需要变义务：表达"我需要你"开始把对方的回应、陪伴或留下变成责任。',
+    'vulnerability-extraction':'脆弱性提取：用"我很脆弱/我需要你"让对方承担自己的完整、真实感或身份补足。',
     'dependency-production':'依附生产：情感、经济、解释权、出口能力或自我实现路径被组织到另一关系结构之下。',
     'affective-equalizing':'情感平权表达：在权力差中通过真实、脆弱、承认和边界降低关系垂直性。',
     'sovereignty-preserving':'主权保留：允许需要和托付，但不自动让出解释权、拒绝权、边界权和出口。',
     'interpretive-seizure':'解释权夺取：一方用爱、帮助、理性、诊断或资源替另一方定义其状态和意义。',
-    'belief-method':'信念作为方法论：看见权力和风险之后，仍选择用真实连接真实，而不是让权力成为唯一现实。'
+    'belief-method':'信念作为方法论：看见权力和风险之后，仍选择用真实连接真实。',
+    'procedural-evaporation':'程序性责任蒸发：多机构各完成职责，元责任无人认领，悲剧从格子缝隙穿过。注意：这是独立判据，不数句内语义移动，而查元责任是否被分配。',
+    'defense-precondition':'防御面边界警告：主体可能已丧失对话能力，防御工具无法自动启动，需第三方代行，不得用于指责受害者。',
+    'care-trigger-fail':'关怀触发失败：行动者未识别关怀场景，停留在非关怀角色中。执行元责任追问与制度层替换检验。'
   };
   const result=document.getElementById('scanResult'), out=document.getElementById('scanOutput');
   let html='';
   if(text) html += '<p><strong>原句 / utterance:</strong> '+escapeHtml(text)+'</p>';
-  if(vals.length===0){ html += '<p>请选择至少一个可能机制。没有机制选择时，扫描器只能给出最低限度提示：先问这句话在移动谁的责任、取消谁的解释权、保护谁的权威位置。</p>'; }
+  if(vals.length===0){ html += '<p>请选择至少一个可能机制。没有机制选择时，扫描器只能给出最低限度提示：先问这句话在移动谁的责任、取消谁的解释权、保护谁的权威位置；若是多主体系统，问元责任是否被分配。</p>'; }
   else { html += '<p><strong>检测到的可能机制：</strong></p><ul style="padding-left:18px;margin:8px 0 0">'+vals.map(v=>'<li style="margin-bottom:6px">'+labels[v]+'</li>').join('')+'</ul>'; }
-  html += '<p style="margin-top:12px"><strong>六步审计：</strong>它如何命名对象？如何加压？在哪些含义之间滑动？是否改变关系结构？焊接了哪些不该绑在一起的东西？最后召唤出服从、羞耻、沉默、反抗还是重新命名？</p>';
-  html += '<p style="margin-top:8px;font-size:12px;color:var(--a2)"><strong>v0.5.1 提示：</strong>严肃判定仍须做去意图化同号分布计数 + 替换检验（归因闸），并由不知情读者复核。v0.6.2 另要求先做 power-word routing：不要裸说“权力”，先分流为势差/能力/资本/筹码/支配/夺权/压迫。扫描器仅作初筛，不输出定罪。</p>';
+  html += '<p style="margin-top:12px"><strong>六步审计：</strong>它如何命名对象？如何加压？在哪些含义之间滑动？是否改变关系结构？焊接了哪些不该绑在一起的东西？最后召唤出什么现实？</p>';
+  html += '<p style="margin-top:8px;font-size:12px;color:var(--a2)"><strong>v0.7.0 提示：</strong>单句用六步法 + 去意图化同号分布计数 + 归因闸。先做 power-word routing（不要裸说"权力"）。若是多主体系统，改用蒸发判据：查元责任是否被分配、各方是否各自合规、激励是否外推——这是独立判据，不与第②条混用。扫描器仅作初筛，不输出定罪。</p>';
   out.innerHTML=html; result.classList.add('show'); result.scrollIntoView({behavior:'smooth',block:'nearest'});
 }
 function resetScanner(){document.getElementById('utterance').value='';document.querySelectorAll('.check input').forEach(x=>x.checked=false);document.getElementById('scanResult').classList.remove('show');}
